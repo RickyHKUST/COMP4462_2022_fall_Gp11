@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/RickyHKUST/COMP4462_2022_fall_Gp11#readme",
   "dependencies": {
-    "bootstrap": "^5.2.2"
-  }
+    "bootstrap": "^5.2.2",
+    "express": "^4.18.2"
+  },
+  "type":"commonjs"
 }
