@@ -1,0 +1,28 @@
+body{
+    height:99vh;
+    display:flex;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+#canvas{
+    margin: 5px;
+    width: 70%;
+    border: black solid 1px;
+}
+
+#map{
+    width: 100%;
+    height: 100%;
+}
+
+#panel{
+    margin: 5px;
+    width: 25%;
+    border: black solid 1px;
+}
+
+#timeline{
+    bottom: 30px;
+    position: relative;
+}

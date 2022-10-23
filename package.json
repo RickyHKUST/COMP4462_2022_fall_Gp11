@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/RickyHKUST/COMP4462_2022_fall_Gp11/issues"
   },
-  "homepage": "https://github.com/RickyHKUST/COMP4462_2022_fall_Gp11#readme"
+  "homepage": "https://github.com/RickyHKUST/COMP4462_2022_fall_Gp11#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
 }
