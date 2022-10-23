@@ -1,0 +1,19 @@
+{
+  "name": "comp4462_2022_fall_gp11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RickyHKUST/COMP4462_2022_fall_Gp11.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RickyHKUST/COMP4462_2022_fall_Gp11/issues"
+  },
+  "homepage": "https://github.com/RickyHKUST/COMP4462_2022_fall_Gp11#readme"
+}
