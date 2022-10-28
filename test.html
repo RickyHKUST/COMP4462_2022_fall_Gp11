@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link href="css/size.css" type="text/css" rel="stylesheet "/>
+
+    </head>
+    
+    <body>
+        <h1>City Dashboard</h1>
+        <div id="map"></div>
+        <script src="js/selectADistrict.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr30gUlrpF5Qwhr4t0R_IrqmqKxHLB1IU&callback=initMap" async defer></script>
+        
+        <label for="place-names">Choose a place:</label>
+        <select name="place-names" id="place-names">
+            <option value="Hong Kong Islands">Islands</option>
+            <option value="Hong Kong Kwai Tsing">Kwai Tsing</option>
+            <option value="Hong Kong North">North</option>
+            <option value="Hong Kong Sai Kung">Sai Kung</option>
+            <option value="Hong Kong Sha Tin">Sha Tin</option>
+            <option value="Hong Kong Tai Po">Tai Po</option>
+            <option value="Hong Kong Tsuen Wan">Tsuen Wan</option>
+            <option value="Hong Kong Tuen Mun">Tuen Mun</option>
+            <option value="Hong Kong Yuen Long">Yuen Long</option>
+            <option value="Hong Kong Kowloon City">Kowloon City</option>
+            <option value="Hong Kong Kwun Tong">Kwun Tong</option>
+            <option value="Hong Kong Sham Shui Po">Sham Shui Po</option>
+            <option value="Hong Kong Wong Tai Sin">Wong Tai Sin</option>
+            <option value="Hong Kong Yau Tsim Mong">Yau Tsim Mong</option>
+            <option value="Hong Kong Central and Western">Central and Western</option>
+            <option value="Hong Kong Eastern">Eastern</option>
+            <option value="Hong Kong Southern">Southern</option>
+            <option value="Hong Kong Wan Chai">Wan Chai</option>
+        </select>
+        
+    </body>
+</html>
+
