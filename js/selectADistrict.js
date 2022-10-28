@@ -24,8 +24,8 @@ geocoder.geocode( { 'address': defaultLocation}, function(results, status) {
   }
 });
 
-google.maps.event.addDomListener(newSlect,"click",()=>{
-  var selectedText = newSlect.options[newSlect.selectedIndex].text;
+google.maps.event.addDomListener(newSlect,"change",()=>{
+  var selectedText = newSlect.options[newSlect.selectedIndex].value;
   geocoder.geocode( { 'address': selectedText}, function(results, status) {
     if (status == 'OK') {
       map.setCenter(results[0].geometry.location);
