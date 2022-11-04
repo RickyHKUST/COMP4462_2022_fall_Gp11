@@ -6,6 +6,11 @@ function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 11,
     center: uluru,
+
+    //disable street view and zoom
+    gestureHandling: "none",
+    zoomControl: false,
+    disableDefaultUI: true
   });
 
 const geocoder = new google.maps.Geocoder();

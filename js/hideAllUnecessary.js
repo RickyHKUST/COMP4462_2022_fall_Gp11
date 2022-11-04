@@ -8,7 +8,12 @@ function initMap() {
     zoom: 11,
     center: uluru,
     //import a map with no unecessary element such as park
-    mapId:'9f05925d813d14c6'
+    mapId:'9f05925d813d14c6',
+
+    //disable street view and zoom
+    gestureHandling: "none",
+    zoomControl: false,
+    disableDefaultUI: true
 
   });
 
