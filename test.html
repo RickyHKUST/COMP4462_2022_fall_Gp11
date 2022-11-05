@@ -3,6 +3,7 @@
     <head>
     <link href="css/size.css" type="text/css" rel="stylesheet "/>
     <script src="//d3js.org/d3.v4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.5.0/proj4.js" integrity="sha256-KJI74PS1qv3+hue+yyIWK/l8TxvS9u4WX7QDrtHkHOo=" crossorigin="anonymous"></script>
     </head>
     
     <body>
@@ -39,8 +40,8 @@
                min="2021-03" max="2022-11" value="2021-03">
 
         <p id="myPara">Testing: Select a time.</p>
-        
-        <script src="js/readcsvBySelectedMonth.js"></script>
+
+        <script src="js/FixedUnreadableCoordinate.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr30gUlrpF5Qwhr4t0R_IrqmqKxHLB1IU&region=HK&language=en&callback=initMap" async defer></script>
     </body>
 </html>
