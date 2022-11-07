@@ -33,6 +33,6 @@ Two Accordions
     - Hints: search bootstrap
 Details in Filter
     - Transportation
-    - Hosuing
+    - Housing
 Good styling of the whole panel
 */
