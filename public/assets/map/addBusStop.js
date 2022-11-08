@@ -6,12 +6,6 @@ var busStopLocation = []; //an array to store the bus stop location (latitude, l
 var markers = []; // to manipulate the markers after created
 
 let renderBusStop = e => {
-		//delete all the markers before (otherwise the previous makers still exist)
-	//have some delay, may need to improve it later (maybe only show the markers within a region)
-	for (var i = 0; i < markers.length; i++) {
-		markers[i].setMap(null);
-	}
-	markers.length = 0;
 
 	//use d3 to read the csv according to the name of selected date
 	d3.csv("assets/data/busStop/" + $("#targetMonth")[0].value + ".csv", function (data) {
@@ -23,17 +17,15 @@ let renderBusStop = e => {
 		 so here we convert it to WGS84 degree
 		 After that we use an array to store the result
 		*/
-		var len = data.length;
-		for (var i = 0; i < len; i++) {
-			[easting, northing] = [parseInt(data[i].X), parseInt(data[i].Y)]; //be careful to the matching
-			[longitude, latitude] = proj4('EPSG:2326', 'EPSG:4326', [easting, northing]);
+		data.forEach(busStop => {
+			[longitude, latitude] = proj4('EPSG:2326', 'EPSG:4326', [parseInt(busStop.X), parseInt(busStop.Y)]);
 
 			//push the objects one by one
 			busStopLocation.push({
 				position: new google.maps.LatLng(latitude, longitude),
 				type: "bus",
 			});
-		}
+		})
 
 		// Create the icon of the markers.
 		// some icon provided by google: http://kml4earth.appspot.com/icons.html
@@ -46,17 +38,18 @@ let renderBusStop = e => {
 			anchor: new google.maps.Point(0, 0) // anchor
 		};
 
+		markers.forEach(data => data.setMap(null));
+
 		//add marker to the array of busStopLocation
-		for (let i = 0; i < busStopLocation.length; i++) {
-			const marker = new google.maps.Marker({
-				position: busStopLocation[i].position,
+		busStopLocation.forEach(location =>{
+			marker = new google.maps.Marker({
+				position: location.position,
 				//icon: iconBase + 'parking_lot_maps.png',
 				icon: icon,
 				map: map,
 			});
-			markers.push(marker); //store the marker for next time renew (see setMap(null)); otherwise it will exist forever
-
-		} //end of for loop
+			markers.push(marker);//store the marker for next time renew (see setMap(null)); otherwise it will exist forever
+		}) //end of for loop
 
 	});
 
