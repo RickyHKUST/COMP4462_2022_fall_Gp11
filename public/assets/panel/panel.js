@@ -28,8 +28,8 @@ var optionForDistrict = [
 
 for (i = 0; i <= 18; i++){
     $('#place-names').append($('<option>', {
-        value: optionForDistrict[i].value,
-        text: optionForDistrict[i].name
+        value: optionForDistrict[i]?.value,
+        text: optionForDistrict[i]?.name
     }));
 }
 
