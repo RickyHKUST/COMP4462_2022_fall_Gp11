@@ -1,7 +1,7 @@
 # COMP4462_2022_fall_Gp11
 
 ## Loading modules
-`no`
+`npm install`
 
 ## Start the webpage
 Double click on the start.bat
