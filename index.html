@@ -6,17 +6,59 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>City Dashboard - Housing and Transportation</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/map/map.js"></script>
+        <script src="//d3js.org/d3.v4.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.5.0/proj4.js" integrity="sha256-KJI74PS1qv3+hue+yyIWK/l8TxvS9u4WX7QDrtHkHOo=" crossorigin="anonymous"></script>
+        
+
     </head>
     <body>
         <div id="canvas">
+             <div id="googleMap"></div>
+
             <svg id="map"></svg>
             <input id="timeline" type="range">
         </div>
         <div id="panel">
             <div id="filter"></div>
             <div id="statistics"></div>
+
+            <label for="place-names">Choose a district:</label>
+            <select name="place-names" id="place-names">
+                <option value="Hong Kong Islands">Islands</option>
+                <option value="Hong Kong Kwai Tsing">Kwai Tsing</option>
+                <option value="Hong Kong North">North</option>
+                <option value="Hong Kong Sai Kung">Sai Kung</option>
+                <option value="Hong Kong Sha Tin">Sha Tin</option>
+                <option value="Hong Kong Tai Po">Tai Po</option>
+                <option value="Hong Kong Tsuen Wan">Tsuen Wan</option>
+                <option value="Hong Kong Tuen Mun">Tuen Mun</option>
+                <option value="Hong Kong Yuen Long">Yuen Long</option>
+                <option value="Hong Kong Kowloon City">Kowloon City</option>
+                <option value="Hong Kong Kwun Tong">Kwun Tong</option>
+                <option value="Hong Kong Sham Shui Po">Sham Shui Po</option>
+                <option value="Hong Kong Wong Tai Sin">Wong Tai Sin</option>
+                <option value="Hong Kong Yau Tsim Mong">Yau Tsim Mong</option>
+                <option value="Hong Kong Central and Western">Central and Western</option>
+                <option value="Hong Kong Eastern">Eastern</option>
+                <option value="Hong Kong Southern">Southern</option>
+                <option value="Hong Kong Wan Chai">Wan Chai</option>
+            </select>
+           
+            <br>
+            <label for="start">Time:</label>
+    
+            <input type="month" id="targetMonth" name="targetMonth"
+                   min="2021-03" max="2022-11" value="2021-03">
+    
+            <p id="myPara">Testing: Select a time.</p>
+    
         </div>
+        
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr30gUlrpF5Qwhr4t0R_IrqmqKxHLB1IU&region=HK&language=en&callback=initMap" async defer></script>
     </body>
     <link rel="stylesheet" type="text/css" href="/assets/index/index.css">
+    <link rel="stylesheet" type="text/css" href="/assets/map/map.css">
     <script type="text/javascript" src="/assets/panel/panel.js"></script>
+    
 </html>
