@@ -26,8 +26,8 @@ function initMap() {
 function selectPlace(e){
   //turn the selected name to location
   var defaultLocation = "Hong Kong";
-  var region = e?e.target.value:defaultLocation
-  console.log(region);
+  var region = e?e.target.value:defaultLocation;
+  geocoder = new google.maps.Geocoder();
   geocoder.geocode( { 'address': region}, function(results, status) {
     if (status == 'OK') {
       map.setCenter(results[0].geometry.location); //set center but don't add any marker
@@ -41,17 +41,10 @@ function selectPlace(e){
     }
   });
  //enlarge to appropriate level: larger the number => zoom in closer
-  map.setZoom(15);
+  e?map.setZoom(15):null;
 }
 
-$("#place-names").change(selectPlace)
-  
+$("#place-names").on("change",selectPlace);
+
 var map;
-var geocoder = new google.maps.Geocoder();
-initMap();
-  
-  
-  
-  
-  
-  
+window.initMap = initMap;
