@@ -5,7 +5,7 @@ proj4.defs('EPSG:2326', '+proj=tmerc +lat_0=22.31213333333334 +lon_0=114.1785555
 var busStopLocation = []; //an array to store the bus stop location (latitude, longitude)
 var markers = []; // to manipulate the markers after created
 
-let renderBusStop = e => {
+let renderBusStop = () => {
 
 	//use d3 to read the csv according to the name of selected date
 	d3.csv("assets/data/busStop/" + $("#targetMonth")[0].value + ".csv", function (data) {

@@ -26,10 +26,10 @@ var optionForDistrict = [
     {value:"Hong Kong Wan Chai",name:"Wan Chai"},
 ]
 
-for (i = 0; i <= 18; i++){
+optionForDistrict.forEach(district => {
     $('#place-names').append($('<option>', {
-        value: optionForDistrict[i]?.value,
-        text: optionForDistrict[i]?.name
+        value: district.value,
+        text: district.name
     }));
-}
+})
 

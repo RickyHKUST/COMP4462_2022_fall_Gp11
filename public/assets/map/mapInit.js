@@ -1,4 +1,3 @@
-// Initialize and add the map
 function initMap() {
     // The location of Uluru
     const uluru = { lat: 22.318567, lng: 114.179606 };
@@ -20,31 +19,36 @@ function initMap() {
   
   /*The geocoder decode the name to lat lng. 
   By default the location is Hong Kong*/
-  geocoder = new google.maps.Geocoder(); //The geocoder decode the name to lat lng. 
+  selectPlace();
+  
+} // end of the init function
+  
+function selectPlace(e){
+  //turn the selected name to location
   var defaultLocation = "Hong Kong";
-  geocoder.geocode( { 'address': defaultLocation}, function(results, status) {
+  var region = e?e.target.value:defaultLocation
+  console.log(region);
+  geocoder.geocode( { 'address': region}, function(results, status) {
     if (status == 'OK') {
-      map.setCenter(results[0].geometry.location);
-
-      //add marker to the result of the geocoder
-      /*
+      map.setCenter(results[0].geometry.location); //set center but don't add any marker
+      /* 
       var marker = new google.maps.Marker({
           map: map,
           position: results[0].geometry.location
-      });*/
+        });*/
     } else {
       console.log(status);
     }
   });
+ //enlarge to appropriate level: larger the number => zoom in closer
+  map.setZoom(15);
+}
+
+$("#place-names").change(selectPlace)
   
-  } // end of the init function
-  
-  
-  
-  var map;
-  var geocoder;
-  //init the map
-  window.initMap = initMap;
+var map;
+var geocoder = new google.maps.Geocoder();
+initMap();
   
   
   
