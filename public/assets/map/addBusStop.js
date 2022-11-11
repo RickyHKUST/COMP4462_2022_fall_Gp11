@@ -7,7 +7,7 @@ var markers = []; // to manipulate the markers after created
 let renderBusStop = () => {
 
 	//use d3 to read the csv according to the name of selected date
-	d3.csv("assets/data/minibusStop/" + $("#targetMonth")[0].value + ".csv", function (data) {
+	d3.csv("assets/data/busStop/" + $("#targetMonth")[0].value + ".csv", function (data) {
 		//Now you can use 'data' variable as an array of objects
 
 		/*There are many row, each contains a XY coordinate.
