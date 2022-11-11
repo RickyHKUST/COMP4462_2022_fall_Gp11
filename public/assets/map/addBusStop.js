@@ -2,14 +2,12 @@
 proj4.defs('EPSG:2326', '+proj=tmerc +lat_0=22.31213333333334 +lon_0=114.1785555555556 +k=1 +x_0=836694.05 +y_0=819069.8 +ellps=intl +towgs84=-162.619,-276.959,-161.764,0.067753,-2.24365,-1.15883,-1.09425 +units=m +no_defs');
 
 //After a time is selected, import corresponding csv by d3 and display the bus stop on map
-var busStopLocation = []; //an array to store the bus stop location (latitude, longitude)
 var markers = []; // to manipulate the markers after created
 
 let renderBusStop = () => {
 
 	//use d3 to read the csv according to the name of selected date
-	d3.csv("assets/data/busStop/" + $("#targetMonth")[0].value + ".csv", function (data) {
-		
+	d3.csv("assets/data/minibusStop/" + $("#targetMonth")[0].value + ".csv", function (data) {
 		//Now you can use 'data' variable as an array of objects
 
 		/*There are many row, each contains a XY coordinate.
@@ -17,6 +15,10 @@ let renderBusStop = () => {
 		 so here we convert it to WGS84 degree
 		 After that we use an array to store the result
 		*/
+
+		//bug fixed: clear this array when option changed
+		var busStopLocation = []; //an array to store the bus stop location (latitude, longitude)
+
 		data.forEach(busStop => {
 			[longitude, latitude] = proj4('EPSG:2326', 'EPSG:4326', [parseInt(busStop.X), parseInt(busStop.Y)]);
 
