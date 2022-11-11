@@ -6,8 +6,15 @@ var markers = []; // to manipulate the markers after created
 
 let renderBusStop = () => {
 
-	//use d3 to read the csv according to the name of selected date
-	d3.csv("assets/data/busStop/" + $("#targetMonth")[0].value + ".csv", function (data) {
+	//bug fixed: clear this array when option changed
+	var busStopLocation = []; //an array to store the bus stop location (latitude, longitude)
+
+
+	//get and store the values of the checkboxs selected 
+	$.each($("input[name='selectTypes']:checked"), function(){
+
+		//use d3 to read the csv according to the name of selected date
+		d3.csv("assets/data/"+$(this).val()+"/" + $("#targetMonth")[0].value + ".csv", function (data) {
 		//Now you can use 'data' variable as an array of objects
 
 		/*There are many row, each contains a XY coordinate.
@@ -16,8 +23,6 @@ let renderBusStop = () => {
 		 After that we use an array to store the result
 		*/
 
-		//bug fixed: clear this array when option changed
-		var busStopLocation = []; //an array to store the bus stop location (latitude, longitude)
 
 		data.forEach(busStop => {
 			[longitude, latitude] = proj4('EPSG:2326', 'EPSG:4326', [parseInt(busStop.X), parseInt(busStop.Y)]);
@@ -55,7 +60,31 @@ let renderBusStop = () => {
 
 	});
 
+
+	});
+
 }
 
 $("#targetMonth")[0].addEventListener("change", renderBusStop);
-renderBusStop()
+
+$('input[name=selectTypes]').change(function() {
+	if($(this).is(':checked'))
+	renderBusStop()
+	else
+	{
+		markers.forEach(data => data.setMap(null));
+
+		//add marker to the array of busStopLocation
+		busStopLocation.forEach(location =>{
+			marker = new google.maps.Marker({
+				position: location.position,
+				//icon: iconBase + 'parking_lot_maps.png',
+				icon: icon,
+				map: map,
+			});
+			markers.push(marker);//store the marker for next time renew (see setMap(null)); otherwise it will exist forever
+		}) //end of for loop
+	}
+
+  });
+  
