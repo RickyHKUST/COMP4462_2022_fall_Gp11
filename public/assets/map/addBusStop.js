@@ -3,12 +3,13 @@ proj4.defs('EPSG:2326', '+proj=tmerc +lat_0=22.31213333333334 +lon_0=114.1785555
 
 //After a time is selected, import corresponding csv by d3 and display the bus stop on map
 var markers = []; // to manipulate the markers after created
+//clear this array when option changed
+var busStopLocation = []; //an array to store the bus stop location (latitude, longitude)
 
 let renderBusStop = () => {
 
-	//bug fixed: clear this array when option changed
-	var busStopLocation = []; //an array to store the bus stop location (latitude, longitude)
-
+	busStopLocation = []; //clear this array when option changed
+	markers.forEach(data => data.setMap(null));
 
 	//get and store the values of the checkboxs selected 
 	$.each($("input[name='selectTypes']:checked"), function(){
@@ -22,8 +23,6 @@ let renderBusStop = () => {
 		 so here we convert it to WGS84 degree
 		 After that we use an array to store the result
 		*/
-
-
 		data.forEach(busStop => {
 			[longitude, latitude] = proj4('EPSG:2326', 'EPSG:4326', [parseInt(busStop.X), parseInt(busStop.Y)]);
 
@@ -45,7 +44,7 @@ let renderBusStop = () => {
 			anchor: new google.maps.Point(0, 0) // anchor
 		};
 
-		markers.forEach(data => data.setMap(null));
+	
 
 		//add marker to the array of busStopLocation
 		busStopLocation.forEach(location =>{
@@ -59,7 +58,6 @@ let renderBusStop = () => {
 		}) //end of for loop
 
 	});
-
 
 	});
 
@@ -68,23 +66,6 @@ let renderBusStop = () => {
 $("#targetMonth")[0].addEventListener("change", renderBusStop);
 
 $('input[name=selectTypes]').change(function() {
-	if($(this).is(':checked'))
-	renderBusStop()
-	else
-	{
-		markers.forEach(data => data.setMap(null));
-
-		//add marker to the array of busStopLocation
-		busStopLocation.forEach(location =>{
-			marker = new google.maps.Marker({
-				position: location.position,
-				//icon: iconBase + 'parking_lot_maps.png',
-				icon: icon,
-				map: map,
-			});
-			markers.push(marker);//store the marker for next time renew (see setMap(null)); otherwise it will exist forever
-		}) //end of for loop
-	}
-
+	renderBusStop();
   });
   
