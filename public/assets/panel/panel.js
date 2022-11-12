@@ -19,29 +19,57 @@ var filtering_context = ''+
     '</div>'
 $('#filter').append(filtering_context);
 
-/*
-terms:
-refactor - optimization
+const ctx = 'chart';
+const myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Mong Kok', 'Central', 'Wan Chai', 'Sha Tin', 'Admiralty', 'Sai Ying Pun'],
+        datasets: [{
+            label: '# of Housing Estates',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
 
-TO DO:
-Two Accordions
-    - One for filtering
-    - One for statistics
-    - Hints: search bootstrap
-Details in Filter
-    - Transportation
-    - Housing
-Good styling of the whole panel
-Accordions Styling
-According lab6, show some statistics under the 'div#statistics'
-    mock some data
-    - scatter plot
-    - histogram
-Study the refactored code
-*/
+var acc = document.getElementsByClassName("accordion");
+var i;
 
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
 
-//zoom in after selected
 var optionForDistrict = [
     {value:"Hong Kong Islands",name:"Islands"},
     {value:"Hong Kong Kwai Tsing",name:"Kwai Tsing"},
