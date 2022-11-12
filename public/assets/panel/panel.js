@@ -33,16 +33,19 @@ optionForDistrict.forEach(district => {
     }));
 })
 
-var optionForBusCheckbox = [
-    {input:'<input type="checkbox" id="bus" name="selectTypes" value="busStop">',label:'<label for="bus">Bus Stops</label>'},
-    {input:'<input type="checkbox" id="minibus" name="selectTypes" value="miniBusStop">',label:'<label for="minibus">Minibus Stops</label>'}
+var busAndMtrCheckbox = [
+    {input:'<input type="checkbox" id="bus" name="selectTypesBus" value="busStop">',label:'<label for="bus">Bus Stops</label>'},
+    {input:'<input type="checkbox" id="minibus" name="selectTypesBus" value="miniBusStop">',label:'<label for="minibus">Minibus Stops</label>'},
+    {input:'<input type="checkbox" id="mtr" name="selectTypesMtr" value="mtr">',label:'<label for="mtr">MTR Stations</label>'},
+    {input:'<input type="checkbox" id="lightRail" name="selectTypeslightRail" value="lightRail">',label:'<label for="mtr">Light Rail Stations</label>'}
 ]
 
-optionForBusCheckbox.forEach(option=>{
+busAndMtrCheckbox.forEach(option=>{
 
     $('#checkboxForbus')
     .append(option.input)
     .append(option.label)
     .append('<br>');
     });
+    
     
