@@ -37,7 +37,9 @@ var busAndMtrCheckbox = [
     {input:'<input type="checkbox" id="bus" name="selectTypesBus" value="busStop">',label:'<label for="bus">Bus Stops</label>'},
     {input:'<input type="checkbox" id="minibus" name="selectTypesBus" value="miniBusStop">',label:'<label for="minibus">Minibus Stops</label>'},
     {input:'<input type="checkbox" id="mtr" name="selectTypesMtr" value="mtr">',label:'<label for="mtr">MTR Stations</label>'},
-    {input:'<input type="checkbox" id="lightRail" name="selectTypeslightRail" value="lightRail">',label:'<label for="mtr">Light Rail Stations</label>'}
+    {input:'<input type="checkbox" id="lightRail" name="selectTypeslightRail" value="lightRail">',label:'<label for="mtr">Light Rail Stations</label>'},
+    {input:'<input type="checkbox" id="clustering" name="clustering" value="clustering">',label:'<label for="clustering">Clustering Display for bus and minibus</label>'}
+
 ]
 
 busAndMtrCheckbox.forEach(option=>{
