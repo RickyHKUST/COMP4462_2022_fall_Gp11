@@ -13,9 +13,10 @@
     </head>
     <body>
         <div id="canvas">
-             <div id="googleMap"></div>
+            <div id="googleMap"></div>
+            <input id="timeline" type="range" min="0" max="20" step="1" value="0">
+            <span id="timeline_value">2021-03</span>
             <svg id="map"></svg>
-            <input id="timeline" type="range">
         </div>
         <div id="panel">
             <button class="accordion">Filtering</button>
@@ -46,11 +47,6 @@
             </div>
             <label for="place-names">Choose a district:</label>
             <select name="place-names" id="place-names"> </select>
-            <br>
-            <label for="start">Time:</label>
-            <input type="month" id="targetMonth" name="targetMonth"
-                   min="2021-03" max="2022-11" value="2021-03"></input>
-            <p id="myPara">Testing: Select a time.</p>
         </div>
     </body>
     <link rel="stylesheet" type="text/css" href="/assets/index/index.css">
