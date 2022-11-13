@@ -19,7 +19,7 @@ function hideShowMtrStations() {
     mtrMarkers.forEach(data => data.setMap(null));
     mtrMarkers = [];
 
-    if ($(this).is(':checked')) {
+    if ($("#mtr").is(':checked')) {
         //use d3 to read the csv according to the name of selected date
         d3.csv("assets/data/mtrStations/geocodedMtr.csv", function (data) {
 
@@ -37,22 +37,22 @@ function hideShowMtrStations() {
         });
     }
     else {
-        if(map.getZoom()>12){
-        //use d3 to read the csv according to the name of selected date
-        d3.csv("assets/data/mtrStations/geocodedMtr.csv", function (data) {
+        if (map.getZoom() > 12) {
+            //use d3 to read the csv according to the name of selected date
+            d3.csv("assets/data/mtrStations/geocodedMtr.csv", function (data) {
 
-            data.forEach(data => {
-                var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(data.lat, data.lon),
-                    icon: hideMtr,
-                    map: map,
+                data.forEach(data => {
+                    var marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(data.lat, data.lon),
+                        icon: hideMtr,
+                        map: map,
 
+                    });
+
+                    mtrMarkers.push(marker);//store the marker for next time renew (see setMap(null)
                 });
 
-                mtrMarkers.push(marker);//store the marker for next time renew (see setMap(null)
             });
-
-        });
 
         }
 
@@ -61,6 +61,6 @@ function hideShowMtrStations() {
 
 }
 
-$("#place-names").on("change",hideShowMtrStations);
+$("#place-names").on("change", hideShowMtrStations);
 
 $('input[name=selectTypesMtr]').change(hideShowMtrStations);

@@ -19,7 +19,7 @@ function hideShowlightRail() {
     lighRailMarkers.forEach(data => data.setMap(null));
     lighRailMarkers = [];
 
-    if ($(this).is(':checked')) {
+    if ($("#lightRail").is(':checked')) {
         //use d3 to read the csv according to the name of selected date
         d3.csv("assets/data/mtrStations/geocodedLightRail.csv", function (data) {
 
