@@ -37,7 +37,7 @@ function hideShowlightRail() {
         });
     }
     else {
-        if(map.getZoom()>13){
+        if(map.getZoom()>12){
         //use d3 to read the csv according to the name of selected date
         d3.csv("assets/data/mtrStations/geocodedLightRail.csv", function (data) {
 
