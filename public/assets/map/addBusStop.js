@@ -5,10 +5,10 @@ proj4.defs('EPSG:2326', '+proj=tmerc +lat_0=22.31213333333334 +lon_0=114.1785555
 var busStopLocation = []; //an array to store the bus stop location (latitude, longitude)
 var markers = []; // to manipulate the markers after created
 
-let renderBusStop = () => {
+let renderBusStop = (month) => {
 
 	//use d3 to read the csv according to the name of selected date
-	d3.csv("assets/data/busStop/" + $("#targetMonth")[0].value + ".csv", function (data) {
+	d3.csv("assets/data/busStop/" + month + ".csv", function (data) {
 		
 		//Now you can use 'data' variable as an array of objects
 
@@ -55,5 +55,16 @@ let renderBusStop = () => {
 
 }
 
-$("#targetMonth")[0].addEventListener("change", renderBusStop);
-renderBusStop()
+function getFormattedMonth(offset){
+	const startMonth = 3;
+	const startYear = 2021;
+	month = (startMonth-1+parseInt(offset))%12+1;
+	if(month<10){month = '0'+month;}
+	year = Math.floor(startYear + ((2+parseInt(offset))/12));
+	return year+'-'+month;
+}
+
+$('#timeline').on('input',(e)=> $("#timeline_value").html(getFormattedMonth(e.target.value)))
+$('#timeline').change((e) => renderBusStop(getFormattedMonth(e.target.value)))
+
+renderBusStop('2021-03')
