@@ -1,6 +1,3 @@
-// $('#statistics').append('<p>later add graph?</p>')
-
-
 $(".accordion").click(function(e){
     e.target.classList.toggle("active");
     e.target.nextElementSibling.classList.toggle("active");
@@ -50,26 +47,3 @@ new Chart("chart", {
         }
     }
 });
-
-// var map_modal = 
-// '<div class="container">'+
-//     '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Graph</button>'+
-//         '<div class="modal fade" id="myModal2" role="dialog">'+
-//         '<div class="modal-dialog">'+
-//             '<div class="modal-content">'+
-//             '<div class="modal-header">'+
-//                 '<button type="button" class="close" data-dismiss="modal">&times;</button>'+
-//                 '<h4 class="modal-title">Graph</h4>'+
-//             '</div>'+
-//             '<div class="modal-body">'+
-//                 '<canvas id="chart" width="400" height="400"></canvas>'+
-//             '</div>'+
-//             '<div class="modal-footer">'+
-//                 '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>'+
-//             '</div>'+
-//             '</div>'+
-//         '</div>'+
-//         '</div>'+
-// '</div>'
-
-// $('#statistics').append(map_modal);
