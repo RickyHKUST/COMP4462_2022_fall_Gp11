@@ -1,12 +1,6 @@
 $(".accordion").click(function(e){
     e.target.classList.toggle("active");
     e.target.nextElementSibling.classList.toggle("active");
-    if (e.target.nextElementSibling.style.display === "block") {
-        e.target.nextElementSibling.style.display = "none";
-    } 
-    else {
-        e.target.nextElementSibling.style.display = "block";
-    }
 })
 
 var filtering_context = ''+
