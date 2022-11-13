@@ -1,4 +1,4 @@
-$('#statistics').append('<p>later add graph?</p>')
+// $('#statistics').append('<p>later add graph?</p>')
 
 
 $(".accordion").click(function(e){
@@ -25,38 +25,51 @@ var filtering_context = ''+
     '</div>'
 $('#filter').append(filtering_context);
 
-const ctx = 'chart';
-const myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Mong Kok', 'Central', 'Wan Chai', 'Sha Tin', 'Admiralty', 'Sai Ying Pun'],
-        datasets: [{
-            label: '# of Housing Estates',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
+new Chart("chart", {
+    type: 'scatter',
+    // type: 'bar',
+    data: data_scatter,
+    // data: data_bar,
     options: {
         scales: {
+            x:{
+                type: 'linear',
+                position: 'bottom',
+                title:{
+                    display: true,
+                    text: '# of housing estates'
+                }
+            },
             y: {
-                beginAtZero: true
+                // beginAtZero: true,
+                title:{
+                    display: true,
+                    text: '# of bus stops'
+                }
             }
         }
     }
 });
+
+// var map_modal = 
+// '<div class="container">'+
+//     '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Graph</button>'+
+//         '<div class="modal fade" id="myModal2" role="dialog">'+
+//         '<div class="modal-dialog">'+
+//             '<div class="modal-content">'+
+//             '<div class="modal-header">'+
+//                 '<button type="button" class="close" data-dismiss="modal">&times;</button>'+
+//                 '<h4 class="modal-title">Graph</h4>'+
+//             '</div>'+
+//             '<div class="modal-body">'+
+//                 '<canvas id="chart" width="400" height="400"></canvas>'+
+//             '</div>'+
+//             '<div class="modal-footer">'+
+//                 '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>'+
+//             '</div>'+
+//             '</div>'+
+//         '</div>'+
+//         '</div>'+
+// '</div>'
+
+// $('#statistics').append(map_modal);
