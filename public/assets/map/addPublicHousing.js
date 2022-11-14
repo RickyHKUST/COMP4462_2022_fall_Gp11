@@ -1,23 +1,27 @@
 let publichousingloc = [];
 let publicmarkers = [];
-// let publichousingname = [];
 
 let createpublichousing = () => {
     fetch("assets/data/housing/public.json")
-    .then(response => {
-        return response.json();
-    })
+    .then(response => response.json())
     .then(data => {
         data.forEach(publichousing => {
-            let latitude = [publichousing["Estate Map Latitude"]];
-            let longitude = [publichousing["Estate Map Longitude"]];
-            let name = publichousing["Estate Name"]["en"];
 
-            publichousingloc.push({
-                position: new google.maps.LatLng(latitude, longitude),
-                title: name,
-                type: "public housing"
-            });
+            let year = $("#targetMonth")[0].value.substring(0,4)
+            let yearofintake = publichousing["Year of Intake"]["en"].substring(0,4)
+            
+            if (parseInt(yearofintake) < parseInt(year)) {
+                let latitude = [publichousing["Estate Map Latitude"]];
+                let longitude = [publichousing["Estate Map Longitude"]];
+                let name = publichousing["Estate Name"]["en"];
+
+                publichousingloc.push({
+                    position: new google.maps.LatLng(latitude, longitude),
+                    title: name,
+                    type: "public housing"
+                });
+            }
+
         });
 
         const icon = {
@@ -41,7 +45,9 @@ let createpublichousing = () => {
         });
     });
 
+    publichousingloc = []
+
 }
 
- $("#targetMonth")[0].addEventListener("change", createpublichousing);
+$("#targetMonth")[0].addEventListener("change", createpublichousing);
 createpublichousing()
