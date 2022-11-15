@@ -11,8 +11,8 @@ let createpublichousing = () => {
             let yearofintake = publichousing["Year of Intake"]["en"].substring(0,4)
             
             if (parseInt(yearofintake) < parseInt(year)) {
-                let latitude = [publichousing["Estate Map Latitude"]];
-                let longitude = [publichousing["Estate Map Longitude"]];
+                let latitude = publichousing["Estate Map Latitude"];
+                let longitude = publichousing["Estate Map Longitude"];
                 let name = publichousing["Estate Name"]["en"];
 
                 publichousingloc.push({
