@@ -30,13 +30,13 @@ let createprivatehousing = () => {
                 position: location.position,
                 icon: icon,
                 map: map,
-                title: location.title
             });
+
+            showInfoWindow(marker, location.title)
 
             privatemarkers.push(marker);
         });
     })
 }
 
-$("#targetMonth")[0].addEventListener("change", createprivatehousing);
 createprivatehousing();

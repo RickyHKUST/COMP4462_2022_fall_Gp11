@@ -37,16 +37,16 @@ let createpublichousing = () => {
             marker = new google.maps.Marker({
                 position: location.position,
                 icon: icon,
-                map: map,
-                title: location.title
+                map: map,  
             });
+
+            showInfoWindow(marker, location.title);
 
             publicmarkers.push(marker);
         });
     });
 
     publichousingloc = []
-
 }
 
 $("#targetMonth")[0].addEventListener("change", createpublichousing);
