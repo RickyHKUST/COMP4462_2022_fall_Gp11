@@ -16,28 +16,3 @@ var filtering_context = ''+
     '</div>'
 $('#filter').append(filtering_context);
 
-new Chart("chart", {
-    type: 'scatter',
-    // type: 'bar',
-    data: data_scatter,
-    // data: data_bar,
-    options: {
-        scales: {
-            x:{
-                type: 'linear',
-                position: 'bottom',
-                title:{
-                    display: true,
-                    text: '# of housing estates'
-                }
-            },
-            y: {
-                // beginAtZero: true,
-                title:{
-                    display: true,
-                    text: '# of bus stops'
-                }
-            }
-        }
-    }
-});

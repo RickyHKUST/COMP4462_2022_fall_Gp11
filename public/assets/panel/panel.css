@@ -28,10 +28,28 @@
     overflow: hidden;
 }
 
-.accordion:focus {
+.accordion:focus{
     outline: none;
 }
 
 .active#filter, .active#statistics{
     display:block;
+}
+
+.modal-btn{
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: #747474;
+    border: none;
+    color: white;
+    padding: 18px 20px;
+    font-size: 18px;
+}
+
+.mapOptions{
+    padding: 18px;
+}
+
+.mapFiltering{
+    padding: 28px;
 }
