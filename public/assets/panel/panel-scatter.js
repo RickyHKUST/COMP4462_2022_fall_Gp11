@@ -55,28 +55,35 @@ var data_scatter = {
     }],
     };
 
-new Chart("chart", {
-    type: 'scatter',
-    // type: 'bar',
-    data: data_scatter,
-    // data: data_bar,
-    options: {
-        scales: {
-            x:{
-                type: 'linear',
-                position: 'bottom',
-                title:{
-                    display: true,
-                    text: document.querySelector('#X-axis').value
-                }
-            },
-            y: {
-                // beginAtZero: true,
-                title:{
-                    display: true,
-                    text: '# of bus stops'
+var chart;
+
+$(".modal-btn").click(e=>{
+
+    if(chart){chart.destroy()}
+
+    chart = new Chart("chart", {
+        type: 'scatter',
+        // type: 'bar',
+        data: data_scatter,
+        // data: data_bar,
+        options: {
+            scales: {
+                x:{
+                    type: 'linear',
+                    position: 'bottom',
+                    title:{
+                        display: true,
+                        text: $('#X-axis')[0].value
+                    }
+                },
+                y: {
+                    // beginAtZero: true,
+                    title:{
+                        display: true,
+                        text: $('#Y-axis')[0].value
+                    }
                 }
             }
         }
-    }
-});
+    });
+})
