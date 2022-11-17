@@ -1,11 +1,31 @@
 let buscount = 0;
 let meter = 0;
 
-let showInfoWindow = (marker, name) => {
+let infowindowarr = [];
 
-    let infowindow = new google.maps.InfoWindow()
+let showInfoWindow = (marker, name) => {
+    const delay = 10000;
 
     google.maps.event.addListener(marker, "click", function () {
+        if (infowindowarr.length > 2) {
+            infowindowarr[0][0].set("marker", null);
+            infowindowarr[0][0].close();
+            infowindowarr[0][1].setMap(null);
+            infowindowarr.shift();
+        }
+
+        let circle = new google.maps.Circle({
+            strokeColor: "#00FF00",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#00FF00",
+            fillOpacity: 0.35,
+            map,
+            center: {"lat": marker.position.lat(), "lng": marker.position.lng()},
+            radius: parseInt(meter),
+        })
+
+        let infowindow = new google.maps.InfoWindow()
         showTotalBusStops(marker);
         infowindow.setContent(
             "<h3>" + name + "</h3>" +
@@ -13,10 +33,15 @@ let showInfoWindow = (marker, name) => {
             "<p>Nearby Minibus Stops (" + meter + "m): " + "count" + "</p>" +
             "<p>Nearby Lightrail Station (" + meter + "m): " + "count" + "</p>" +
             "<p>Nearby MTR Stations (" + meter + "m): " + "count" + "</p>"
-
         )
+        
         infowindow.open(marker.map, marker)
-        setTimeout(() => {infowindow.close()}, 10000);
+        setTimeout(() => {
+            infowindow.close();
+            circle.setMap(null);
+        }, delay);
+
+        infowindowarr.push([infowindow, circle]);
     })
 }
 
@@ -39,7 +64,7 @@ let showTotalBusStops = (house_marker) => {
     })
     .on("change", function() { 
         meter = slider[0].value;
-        counting(new_lat, new_long, house_lat, house_lng, meter);
+        counting(house_lat, house_lng, meter);
     })
 
 }
