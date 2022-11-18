@@ -55,52 +55,31 @@ let showTotalStops = (house_marker) => {
     let house_lat = house_marker.position.lat();
     let house_lng = house_marker.position.lng();
 
-    let busMarkers = [];
-    let minibusMarkers = [];
+    let minibusStopLocation = [];
+
+    if ($("#minibus").prop('checked') && !($("#bus").prop('checked'))) {
+        console.log($("#minibus").prop('checked'));
+        console.log($("#bus").prop('checked'));
+        if (busStopLocation.length === 0) {
+            
+        }
+        minibusStopLocation = busStopLocation;
+        busStopLocation = [];
+        console.log("mb checked");
+    }
+    if ($("#minibus").prop('checked') && $("#bus").prop('checked')) {
+        console.log($("#minibus").prop('checked'));
+        console.log($("#bus").prop('checked'));
+        minibusStopLocation = busStopLocation.slice(-minibusdata)
+        busStopLocation = busStopLocation.slice(0, -minibusdata)
+        console.log("both checked");
+    }
+
     let transport = [lighRailMarkers, mtrMarkers, busStopLocation, minibusStopLocation]
     console.log(busStopLocation);
     console.log(minibusStopLocation);
-    // if (!transport.includes((lighRailMarkers, mtrMarkers))) {transport.push(lighRailMarkers, mtrMarkers)}
 
     meter = $("#slider")[0].value;
-
-    // for (let i in $("input[name='selectTypesBus']:checked")){
-    //     switch ($("input[name='selectTypesBus']:checked")[i].value) {
-    //     case "busStop":
-    //         if (transport.length == 3) {
-    //             let temp = transport[2];
-    //             if (transport[2].length > 5000) {
-    //                 transport.push(transport[2].filter((item, index), transport[2].indexOf(item) !== index));
-    //                 transport[2] = transport[2].filter((item, index), transport[2].indexOf(item) === index);
-    //             }
-    //         }   
-    //         else if (transport.length == 4) {
-    //                 if (transport[2] == transport[3]) {
-    //                     transport[2] = transport[2].filter((item, index), transport[2].indexOf(item) === index);
-    //                 }
-    //         }
-            
-    //         else {
-    //             busMarkers = markers
-    //             transport.push(busMarkers)
-    //             console.log(transport)
-    //         }
-    //         break;
-    //     case "miniBusStop":
-    //         console.log("MBUS")
-    //         minibusMarkers = markers
-    //         console.log(busMarkers)
-    //         if (busMarkers.length != 0) {
-    //             console.log("in");
-    //             minibusMarkers = minibusMarkers.filter(x => busMarkers.indexOf(x) == -1)
-    //         }
-    //         transport.push(minibusMarkers)
-    //         console.log("iner mbus") 
-    //         console.log(minibusMarkers)
-    //         console.log(transport);
-    //         break;
-    //     }
-    // }
 
     transport.forEach(t => {
         count = counting(house_lat, house_lng, meter, t);

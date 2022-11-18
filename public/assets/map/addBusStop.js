@@ -5,7 +5,7 @@ proj4.defs('EPSG:2326', '+proj=tmerc +lat_0=22.31213333333334 +lon_0=114.1785555
 var markers = []; // to manipulate the markers after created
 //clear this array when option changed
 var busStopLocation = []; //an array to store the bus stop location (latitude, longitude)
-var minibusStopLocation = [];
+var minibusdata = 0;
 
 let renderBusStop = () => {
 
@@ -18,6 +18,10 @@ let renderBusStop = () => {
 		//use d3 to read the csv according to the name of selected date
 		d3.csv("assets/data/" + $(this).val() + "/" + $("#targetMonth")[0].value + ".csv", function (data) {
 			//Now you can use 'data' variable as an array of objects
+
+			if ($("#minibus").prop('checked')){
+				minibusdata = data.length;
+			}
 
 			/*There are many row, each contains a XY coordinate.
 			 However, this XY is using HK1980 Grid coordinate(not supported by google), 
@@ -33,16 +37,6 @@ let renderBusStop = () => {
 					type: "bus",
 				});
 			})
-
-			if ($("#bus").prop('checked') && $("#minibus").prop('checked') && busStopLocation) {
-				// if ($("input[name='selectTypesBus']:checked")[1].value == "miniBusStop") {
-					busStopLocation = 
-					minibusStopLocation = busStopLocation.slice(-data.length)
-				// }
-			}
-			
-			console.log(busStopLocation);
-			console.log(minibusStopLocation);
 
 			// Create the icon of the markers.
 			// some icon provided by google: http://kml4earth.appspot.com/icons.html
