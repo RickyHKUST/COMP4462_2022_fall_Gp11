@@ -27,9 +27,12 @@ optionForScatterY.forEach(Y => {
 })
 
 var optionForScatterColor = [
-    {value:'rgb(255, 0, 0)',name:"Red"},
-    {value:'rgb(0, 255, 0)',name:"Green"},
-    {value:'rgb(0, 0, 255)',name:"Blue"},
+    {value: "#FF69B4", name:"Hot Pink"},
+    {value: "#FF7F50", name:"Coral"},
+    {value: "#EE82EE", name:"Violet"},
+    {value: "#20B2AA", name:"Light Sea Green"},
+    {value: "#1E90FF", name: "Dodger Blue"},
+    {value: "#808080", name: "Gray"}
 ]
 
 optionForScatterColor.forEach(Color => {
@@ -38,22 +41,6 @@ optionForScatterColor.forEach(Color => {
         text: Color.name
     }));
 })
-
-
-var data_scatter = {
-    datasets: [{
-        label: 'Scatter Plot Testing',
-        data: [
-            {x: 30,y: 25},
-            {x: -10,y: 0},
-            {x: -10,y: 0},
-            {x: 0,y: 10},
-            {x: 10,y: 5},
-            {x: 0.5,y: 5.5}
-        ],
-        backgroundColor: $('#Color').value
-    }],
-    };
 
 var chart;
 
@@ -64,7 +51,20 @@ $(".modal-btn").click(e=>{
     chart = new Chart("chart", {
         type: 'scatter',
         // type: 'bar',
-        data: data_scatter,
+        data: {
+            datasets: [{
+                label: 'Scatter Plot Testing',
+                data: [
+                    {x: 30,y: 25},
+                    {x: -10,y: 0},
+                    {x: -10,y: 0},
+                    {x: 0,y: 10},
+                    {x: 10,y: 5},
+                    {x: 0.5,y: 5.5}
+                ],
+                backgroundColor: $('#Color')[0].value
+            }],
+        },
         // data: data_bar,
         options: {
             scales: {

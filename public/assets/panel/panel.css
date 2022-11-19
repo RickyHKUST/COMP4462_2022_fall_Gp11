@@ -39,11 +39,15 @@
 .modal-btn{
     border-radius: 12px;
     cursor: pointer;
-    background-color: #747474;
+    background-color: #6a698b;
     border: none;
     color: white;
     padding: 18px 20px;
     font-size: 18px;
+}
+
+.d-flex{
+    display: flex;
 }
 
 .mapOptions{
@@ -52,4 +56,124 @@
 
 .mapFiltering{
     padding: 28px;
+}
+
+#panel{
+    background-color: white;
+}
+
+/* https://www.sliderrevolution.com/resources/css-select-styles/ (mostafa)*/
+.container {
+    width: 500px;
+    margin: 20px auto 0;
+    text-align: center
+}
+
+    .dropdown {
+    width: 100%;
+    display: inline-block;
+    background-color: rgb(251, 251, 251);
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
+    transition: all .5s ease;   
+    position: relative;
+    font-size: 18px;
+    color: #474747;
+    height: 100%;
+    text-align: left;
+}
+
+select {
+    cursor: pointer;
+    display: block;
+    padding: 5px;
+}
+
+select:focus{
+    outline: none;
+}
+
+#Color option{
+    cursor: pointer;
+}
+
+select:hover{
+    background-color: rgb(254, 254, 254);
+    transition: all .5s ease;
+}
+
+/* .dropdown .select > i {
+    font-size: 13px;
+    color: #888;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    float: right;
+    line-height: 20px
+} */
+.dropdown:hover {
+    box-shadow: 0 0 10px rgb(204, 204, 204)
+}
+.dropdown:active {
+    background-color: #f8f8f8
+}
+.dropdown.active:hover,
+.dropdown.active {
+    box-shadow: 0 0 4px rgb(204, 204, 204);
+    border-radius: 2px 2px 0 0;
+    background-color: #f8f8f8
+}
+/* .dropdown.active .select > i {
+    transform: rotate(-90deg)
+} */
+/* .dropdown .dropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    margin-top: 1px;
+    box-shadow: 0 1px 2px rgb(204, 204, 204);
+    border-radius: 0 1px 2px 2px;
+    overflow: hidden;
+    display: none;
+    max-height: 144px;
+    overflow-y: auto;
+    z-index: 9
+} */
+/* .dropdown .dropdown-menu li {
+    padding: 10px;
+    transition: all .2s ease-in-out;
+    cursor: pointer
+} 
+.dropdown .dropdown-menu {
+    padding: 0;
+    list-style: none
+}
+.dropdown .dropdown-menu li:hover {
+    background-color: #f2f2f2
+}
+.dropdown .dropdown-menu li:active {
+    background-color: #e2e2e2
+} */
+
+.modal-btn{ 
+    background-color: gray;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(153, 153, 153);
+    transition: all .5s ease;
+}
+
+.modal-btn:hover {
+    box-shadow: 0 0 10px rgb(54, 54, 54)
+}
+
+.modal-btn:focus {
+    outline: none;
+}
+
+.modalbutton{
+    padding: 10px;
+}
+
+.dropdown label{
+    padding-left: 5px;
 }
