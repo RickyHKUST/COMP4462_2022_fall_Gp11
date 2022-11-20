@@ -10,6 +10,8 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="//d3js.org/d3.v4.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.5.0/proj4.js" integrity="sha256-KJI74PS1qv3+hue+yyIWK/l8TxvS9u4WX7QDrtHkHOo=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/@sgratzl/chartjs-chart-boxplot@3.6.0/build/index.umd.min.js"></script>
     </head>
     <body>
         <div id="canvas">
@@ -97,7 +99,8 @@
                                 <h2 class="modal-title">Generated graph</h2>
                             </div>
                             <div class="modal-body">
-                                <canvas id="chart" width="400" height="400"></canvas>
+                                <canvas id="chart-scatter" class="chart" width="400" height="400"></canvas>
+                                <canvas id="chart-boxplot" class="chart" width="400" height="400"></canvas>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -121,6 +124,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/map/map.css">
     <script type="text/javascript" src="/assets/panel/panel-bar.js"></script>
     <script type="text/javascript" src="/assets/panel/panel-scatter.js"></script>
+    <script type="module" src="/assets/panel/panel-boxplot.js"></script>
     <script type="text/javascript" src="/assets/panel/panel.js"></script>
     <script type="text/javascript" src="/assets/panel/panel-data-options.js"></script>
     <script type="text/javascript" src="assets/map/mapInit.js"></script>

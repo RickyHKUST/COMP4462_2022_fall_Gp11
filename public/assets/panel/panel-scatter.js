@@ -1,54 +1,10 @@
-var optionForScatterX = [
-    {value:"Private Housing",name:"Private Housing"},
-    {value:"Public Housing",name:"Public Housing"},
-    {value:"Bus Stops",name:"Bus Stops"},
-    {value:"MTR",name:"MTR"},
-]
-
-optionForScatterX.forEach(X => {
-    $('#X-axis').append($('<option>', {
-        value: X.value,
-        text: X.name
-    }));
-})
-
-var optionForScatterY = [
-    {value:"Private Housing",name:"Private Housing"},
-    {value:"Public Housing",name:"Public Housing"},
-    {value:"Bus Stops",name:"Bus Stops"},
-    {value:"MTR",name:"MTR"},
-]
-
-optionForScatterY.forEach(Y => {
-    $('#Y-axis').append($('<option>', {
-        value: Y.value,
-        text: Y.name
-    }));
-})
-
-var optionForScatterColor = [
-    {value: "#FF69B4", name:"Hot Pink"},
-    {value: "#FF7F50", name:"Coral"},
-    {value: "#EE82EE", name:"Violet"},
-    {value: "#20B2AA", name:"Light Sea Green"},
-    {value: "#1E90FF", name: "Dodger Blue"},
-    {value: "#808080", name: "Gray"}
-]
-
-optionForScatterColor.forEach(Color => {
-    $('#Color').append($('<option>', {
-        value: Color.value,
-        text: Color.name
-    }));
-})
-
 var chart;
 
-$(".modal-btn").click(e=>{
+$(".modal-btn").click(()=>{
 
     if(chart){chart.destroy()}
 
-    chart = new Chart("chart", {
+    chart = new Chart("chart-scatter", {
         type: 'scatter',
         // type: 'bar',
         data: {
