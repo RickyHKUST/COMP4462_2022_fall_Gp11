@@ -28,7 +28,7 @@ var optionForScatterColor = [
 
 function appendScatterOption(list, jQueryObject){
     list.forEach(e => {
-        jQueryObject.append($('<option>', {
+        jQueryObject.append($('<li>', {
             value: e.value,
             text: e.name
         }
@@ -36,6 +36,11 @@ function appendScatterOption(list, jQueryObject){
     })
 }
 
-appendScatterOption(optionForScatterX,$('#X-axis'));
-appendScatterOption(optionForScatterY,$('#Y-axis'));
-appendScatterOption(optionForScatterColor,$('#Color'));
+appendScatterOption(optionForScatterX,$('#X-axis > ul'));
+appendScatterOption(optionForScatterY,$('#Y-axis > ul'));
+appendScatterOption(optionForScatterColor,$('#Color > ul'));
+
+$('.select ul li').click((e)=>{
+    $(e.target).siblings().toggle();
+  }
+);

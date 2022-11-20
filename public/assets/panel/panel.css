@@ -12,7 +12,6 @@
     padding: 18px;
     width: 100%;
     border: none;
-    text-align: left;
     font-size: 20px;
     transition: 0.5s;
     margin-top:15px;
@@ -22,18 +21,22 @@
     text-align: center;
 }
 
-.active, .accordion:hover{
+.active.accordion, .accordion:hover{
     background-color:#a0ebff;
 }
 
+.active.accordion{
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
 #filter, #statistics{
-    padding: 0 10px;
     display: none;
     background-color: white;
     overflow: hidden;
     background: #e8faff;
-    margin-top: 5px;
-    border-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .accordion:focus{
@@ -52,10 +55,6 @@
     color: white;
     padding: 18px 20px;
     font-size: 18px;
-}
-
-.d-flex{
-    display: flex;
 }
 
 .mapOptions{
@@ -83,59 +82,29 @@ select {
     padding: 5px;
 }
 
-select:focus{
-    outline: none;
+.select {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
 }
 
-#Color option{
-    cursor: pointer;
+.select > ul > li{
+    list-style: none;
+    display: none;
+}
+
+.select > ul > li:first-child{
+    display: block;
+}
+
+select:focus{
+    outline: none;
 }
 
 select:hover{
     background-color: rgb(254, 254, 254);
     transition: all .5s ease;
 }
-
-/* .dropdown .select > i {
-    font-size: 13px;
-    color: #888;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-    float: right;
-    line-height: 20px
-} */
-/* .dropdown.active .select > i {
-    transform: rotate(-90deg)
-} */
-/* .dropdown .dropdown-menu {
-    position: absolute;
-    background-color: #fff;
-    width: 100%;
-    left: 0;
-    margin-top: 1px;
-    box-shadow: 0 1px 2px rgb(204, 204, 204);
-    border-radius: 0 1px 2px 2px;
-    overflow: hidden;
-    display: none;
-    max-height: 144px;
-    overflow-y: auto;
-    z-index: 9
-} */
-/* .dropdown .dropdown-menu li {
-    padding: 10px;
-    transition: all .2s ease-in-out;
-    cursor: pointer
-} 
-.dropdown .dropdown-menu {
-    padding: 0;
-    list-style: none
-}
-.dropdown .dropdown-menu li:hover {
-    background-color: #f2f2f2
-}
-.dropdown .dropdown-menu li:active {
-    background-color: #e2e2e2
-} */
 
 .modal-btn{ 
     background-color: gray;

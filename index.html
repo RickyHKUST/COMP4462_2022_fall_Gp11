@@ -33,48 +33,28 @@
             </div>
             <button class="accordion">Statistics</button>
             <div id="statistics">
-
-
-
-                <!-- <div class="container">
-                    <span class="choose">Choose Gender</span>
-                  
-                      <div class="dropdown">
-                        <div class="select">
-                          <span>Select Gender</span>
-                          <i class="fa fa-chevron-left"></i>
-                        </div>
-                        <input type="hidden" name="gender">
-                        <ul class="dropdown-menu">
-                          <li id="male">Male</li>
-                          <li id="female">Female</li>
-                        </ul>
-                      </div>
-                  
-                  <span class="msg"></span>
-                </div> -->
-
-
-
                 <div class="container">
                     <h5>Options for scatter plot:</h5>
-                        <div class="dropdown">
+                        <div class="dropdown" style="z-index:2">
                             <label for="X-axis">X-axis:</label>
-                            <select name="X-axis" id="X-axis">
-                                <option selected disabled></option>
-                            </select>
+                            <div class="select" name="X-axis" id="X-axis">
+                                <ul>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="dropdown">
+                        <div class="dropdown" style="z-index:1">
                             <label for="Y-axis">Y-axis:</label>
-                            <select name="Y-axis" id="Y-axis">
-                                <option selected disabled></option>
-                            </select>
+                            <div class="select" name="Y-axis" id="Y-axis">
+                                <ul>
+                                </ul>
+                            </div>
                         </div>
                         <div class="dropdown">
                             <label for="Color">Color:</label>
-                            <select name="Color" id="Color">
-                                <option selected disabled></option>
-                            </select>
+                            <div class="select" name="Color" id="Color">
+                                <ul>
+                                </ul>
+                            </div>
                         </div>
                 </div>
                 <div class="modalbutton">
