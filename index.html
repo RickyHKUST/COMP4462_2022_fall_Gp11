@@ -23,21 +23,11 @@
         <div id="panel">
             <button class="accordion">Filtering</button>
             <div id="filter">
-                <div class="mapFiltering">
+                <div class="container">
                     <h5>Map filtering</h5>
-                    <label for="place-names">Choose a district:</label>
-                    <br>
-                    <select name="place-names" id="place-names"> </select>
-                </div>
-                <div class="context">Select which kinds of data you would like to filter</context>
-                    <br>
-                    <div class="box">
-                        <input type="checkbox" class="checkbox" id="housing" value="Housing">
-                        <label for="Housing">Housing</label>
-                    </div>
-                    <div class="box">
-                        <input type="checkbox" class="checkbox" id="transportation" value="Transportation">
-                        <label for="Transportation">Transportation</label>
+                    <div class="dropdown">
+                        <label for="place-names">Choose a district:</label>
+                        <select name="place-names" id="place-names"> </select>
                     </div>
                 </div>
             </div>
@@ -70,21 +60,18 @@
                     <h5>Options for scatter plot:</h5>
                         <div class="dropdown">
                             <label for="X-axis">X-axis:</label>
-                            <br>
                             <select name="X-axis" id="X-axis">
                                 <option selected disabled></option>
                             </select>
                         </div>
                         <div class="dropdown">
                             <label for="Y-axis">Y-axis:</label>
-                            <br>
                             <select name="Y-axis" id="Y-axis">
                                 <option selected disabled></option>
                             </select>
                         </div>
                         <div class="dropdown">
                             <label for="Color">Color:</label>
-                            <br>
                             <select name="Color" id="Color">
                                 <option selected disabled></option>
                             </select>
