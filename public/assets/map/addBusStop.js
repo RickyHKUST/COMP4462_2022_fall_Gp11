@@ -5,38 +5,49 @@ proj4.defs('EPSG:2326', '+proj=tmerc +lat_0=22.31213333333334 +lon_0=114.1785555
 var markers = []; // to manipulate the markers after created
 //clear this array when option changed
 var busStopLocation = []; //an array to store the bus stop location (latitude, longitude)
-var minibusdata = 0;
+var minibusStopLocation = []; 
 
 let renderBusStop = () => {
 
 	busStopLocation = []; //clear this array when option changed
+	minibusStopLocation = [];
 	markers.forEach(data => data.setMap(null));
 
 	//get and store the values of the checkboxs selected 
 	$.each($("input[name='selectTypesBus']:checked"), function () {
-
+		let temp = $(this).val();
 		//use d3 to read the csv according to the name of selected date
 		d3.csv("assets/data/" + $(this).val() + "/" + $("#targetMonth")[0].value + ".csv", function (data) {
 			//Now you can use 'data' variable as an array of objects
-
-			if ($("#minibus").prop('checked')){
-				minibusdata = data.length;
-			}
-
+			
 			/*There are many row, each contains a XY coordinate.
-			 However, this XY is using HK1980 Grid coordinate(not supported by google), 
-			 so here we convert it to WGS84 degree
-			 After that we use an array to store the result
+			However, this XY is using HK1980 Grid coordinate(not supported by google), 
+			so here we convert it to WGS84 degree
+			After that we use an array to store the result
 			*/
-			data.forEach(busStop => {
-				[longitude, latitude] = proj4('EPSG:2326', 'EPSG:4326', [parseInt(busStop.X), parseInt(busStop.Y)]);
+			if (temp == "miniBusStop") {
+				data.forEach(minibusStop => {
+					[longitude, latitude] = proj4('EPSG:2326', 'EPSG:4326', [parseInt(minibusStop.X), parseInt(minibusStop.Y)]);
+	
+					//push the objects one by one
+					minibusStopLocation.push({
+						position: new google.maps.LatLng(latitude, longitude),
+						type: "minibus",
+					});
+				})
+			}
+			else {
+				data.forEach(busStop => {
+					[longitude, latitude] = proj4('EPSG:2326', 'EPSG:4326', [parseInt(busStop.X), parseInt(busStop.Y)]);
 
-				//push the objects one by one
-				busStopLocation.push({
-					position: new google.maps.LatLng(latitude, longitude),
-					type: "bus",
-				});
-			})
+					//push the objects one by one
+					busStopLocation.push({
+						position: new google.maps.LatLng(latitude, longitude),
+						type: "bus",
+					});
+				})
+			}
+			
 
 			// Create the icon of the markers.
 			// some icon provided by google: http://kml4earth.appspot.com/icons.html
@@ -62,10 +73,19 @@ let renderBusStop = () => {
 				markers.push(marker);//store the marker for next time renew (see setMap(null)); otherwise it will exist forever
 			}) //end of for loop
 
+			minibusStopLocation.forEach(location => {
+				marker = new google.maps.Marker({
+					position: location.position,
+					//icon: iconBase + 'parking_lot_maps.png',
+					icon: icon,
+					map: map,
+				});
+				markers.push(marker);//store the marker for next time renew (see setMap(null)); otherwise it will exist forever
+			}) //end of for loop
 		});
 
 	});
-
+	
 }
 
 $("#targetMonth")[0].addEventListener("change", renderBusStop);
