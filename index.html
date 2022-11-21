@@ -62,40 +62,22 @@
                         </div>
                 </div>
                 <div class="modalbutton">
-                    <button type="button" class="modal-btn" data-toggle="modal" data-target="#scatterModal">Generate graph</button>
-                    <div class="modal fade" id="scatterModal" role="dialog">
+                    <button type="button" class="modal-btn" data-toggle="modal" data-target="#statisticsModal">Generate graph</button>
+                    <div class="modal fade" id="statisticsModal" role="dialog">
                         <div class="modal-dialog">
                             <div class="modal-content">
-                            <div class="modal-header">
-                                <h2 class="modal-title">Generated graph</h2>
-                            </div>
-                            <div class="modal-body">
-                                <canvas id="chart-scatter" class="chart" width="400" height="400"></canvas>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <h5>Options for box plot:</h5>
-                </div>
-                <div class="modalbutton">
-                    <button type="button" class="modal-btn" data-toggle="modal" data-target="#boxplotModal">Generate graph</button>
-                    <div class="modal fade" id="boxplotModal" role="dialog">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <h2 class="modal-title">Generated graph</h2>
-                            </div>
-                            <div class="modal-body">
-                                <canvas id="chart-boxplot" class="chart" width="400" height="400"></canvas>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
+                                <div class="modal-header">
+                                    <h2 class="modal-title">Generated graph</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <h2>We suggest these graphs...</h2>
+                                    <button id="scatter">Scatter Plot</button>
+                                    <button id="boxplot">Box Plot</button>
+                                    <canvas id="chart-scatter" class="chart" width="400" height="400"></canvas>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -114,8 +96,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/assets/map/map.css">
     <script type="text/javascript" src="/assets/panel/panel-bar.js"></script>
-    <script type="text/javascript" src="/assets/panel/panel-scatter.js"></script>
-    <script type="module" src="/assets/panel/panel-boxplot.js"></script>
+    <script type="text/javascript" src="/assets/panel/panel-statistics.js"></script>
     <script type="text/javascript" src="/assets/panel/panel.js"></script>
     <script type="text/javascript" src="/assets/panel/panel-data-options.js"></script>
     <script type="text/javascript" src="assets/map/mapInit.js"></script>
