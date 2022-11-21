@@ -21,7 +21,6 @@ let createpublichousing = () => {
                     type: "public housing"
                 });
             }
-
         });
 
         const icon = {
@@ -31,23 +30,31 @@ let createpublichousing = () => {
             anchor: new google.maps.Point(0, 0)
         };
 
-        publicmarkers.forEach(data => data.setMap(null));
+        if (!($("#public").prop("checked"))){
+            publicmarkers.forEach(data => data.setMap(null));
+        }
+        else {
+            publichousingloc.forEach(location => {
+                marker = new google.maps.Marker({
+                    position: location.position,
+                    icon: icon,
+                    map: map,  
+                });
 
-        publichousingloc.forEach(location => {
-            marker = new google.maps.Marker({
-                position: location.position,
-                icon: icon,
-                map: map,  
+                showInfoWindow(marker, location.title);
+
+                publicmarkers.push(marker);
             });
-
-            showInfoWindow(marker, location.title);
-
-            publicmarkers.push(marker);
-        });
+        }
     });
 
     publichousingloc = []
 }
 
 $("#targetMonth")[0].addEventListener("change", createpublichousing);
+
+$("#public").change(function() {
+    createpublichousing()
+})
+
 createpublichousing()

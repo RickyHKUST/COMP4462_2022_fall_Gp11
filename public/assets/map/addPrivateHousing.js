@@ -2,6 +2,7 @@ let privatehousingloc = [];
 let privatemarkers = [];
 
 let createprivatehousing = () => {
+    privatehousingloc = [];
     d3.csv("assets/data/housing/private.csv", function (data) {
 
         data.forEach(privatehousing => {
@@ -23,20 +24,26 @@ let createprivatehousing = () => {
             anchor: new google.maps.Point(0, 0)
         };
 
-        privatemarkers.forEach(data => data.setMap(null));
+        if (!($("#private").prop("checked"))){
+            privatemarkers.forEach(data => data.setMap(null));
+        }
+        else{
+            privatehousingloc.forEach(location => {
+                marker = new google.maps.Marker({
+                    position: location.position,
+                    icon: icon,
+                    map: map,
+                });
 
-        privatehousingloc.forEach(location => {
-            marker = new google.maps.Marker({
-                position: location.position,
-                icon: icon,
-                map: map,
+                showInfoWindow(marker, location.title)
+
+                privatemarkers.push(marker);
             });
-
-            showInfoWindow(marker, location.title)
-
-            privatemarkers.push(marker);
-        });
+        }
     })
 }
+$("#private").change(function() {
+    createprivatehousing();
+})
 
 createprivatehousing();

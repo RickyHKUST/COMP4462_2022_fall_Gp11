@@ -43,6 +43,11 @@ let showInfoWindow = (marker, name) => {
             infowindow.close();
             circle.setMap(null);
         }, delay);
+        
+        //circle will be disappeared when mannually close the infowindow
+        infowindow.addListener("closeclick", () => {
+            circle.setMap(null);
+        });
 
         infowindowarr.push([infowindow, circle]);
     })
@@ -55,29 +60,7 @@ let showTotalStops = (house_marker) => {
     let house_lat = house_marker.position.lat();
     let house_lng = house_marker.position.lng();
 
-    let minibusStopLocation = [];
-
-    if ($("#minibus").prop('checked') && !($("#bus").prop('checked'))) {
-        console.log($("#minibus").prop('checked'));
-        console.log($("#bus").prop('checked'));
-        if (busStopLocation.length === 0) {
-            
-        }
-        minibusStopLocation = busStopLocation;
-        busStopLocation = [];
-        console.log("mb checked");
-    }
-    if ($("#minibus").prop('checked') && $("#bus").prop('checked')) {
-        console.log($("#minibus").prop('checked'));
-        console.log($("#bus").prop('checked'));
-        minibusStopLocation = busStopLocation.slice(-minibusdata)
-        busStopLocation = busStopLocation.slice(0, -minibusdata)
-        console.log("both checked");
-    }
-
     let transport = [lighRailMarkers, mtrMarkers, busStopLocation, minibusStopLocation]
-    console.log(busStopLocation);
-    console.log(minibusStopLocation);
 
     meter = $("#slider")[0].value;
 
@@ -85,17 +68,13 @@ let showTotalStops = (house_marker) => {
         count = counting(house_lat, house_lng, meter, t);
 
         switch (t) {
-            case busStopLocation:
-                buscount = count;
+            case busStopLocation: buscount = count;
                 break;
-            case minibusStopLocation:
-                minibuscount = count;
+            case minibusStopLocation: minibuscount = count;
                 break;
-            case lighRailMarkers:
-                lightrailcount = count;
+            case lighRailMarkers: lightrailcount = count;
                 break;
-            case mtrMarkers:
-                mtrcount = count;
+            case mtrMarkers: mtrcount = count;
                 break;
         }
     })
@@ -126,7 +105,7 @@ let counting = (house_lat, house_lng, meter, transportloc) => {
 
         let result = Math.sqrt(dx * dx + dy * dy) <= (meter/1000)
 
-        if (result) {++count;}
+        if (result) ++count;
     })
     return count;
 }
