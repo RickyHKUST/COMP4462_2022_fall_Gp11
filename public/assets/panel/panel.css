@@ -33,7 +33,6 @@
 #filter, #statistics{
     display: none;
     background-color: white;
-    overflow: hidden;
     background: #e8faff;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -62,8 +61,7 @@
 }
 
 .container {
-    width: 500px;
-    margin: 20px auto 0;
+    padding: 20px;
     text-align: center
 }
 
@@ -95,6 +93,7 @@ select {
     border-radius: 2px;
     border:1px solid #e8faff;
     box-shadow: 0 0 4px #719ECE;
+    margin-bottom: 10px;
 }
 
 .select > ul > li:hover{
