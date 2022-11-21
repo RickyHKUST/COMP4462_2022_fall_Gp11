@@ -37,9 +37,9 @@ var busAndMtrCheckbox = [
     {input:'<input type="checkbox" id="bus" name="selectTypesBus" value="busStop">',label:'<label for="bus">Bus Stops</label>'},
     {input:'<input type="checkbox" id="minibus" name="selectTypesBus" value="miniBusStop">',label:'<label for="minibus">Minibus Stops</label>'},
     {input:'<input type="checkbox" id="mtr" name="selectTypesMtr" value="mtr">',label:'<label for="mtr">MTR Stations</label>'},
-    {input:'<input type="checkbox" id="lightRail" name="selectTypeslightRail" value="lightRail">',label:'<label for="mtr">Light Rail Stations</label>'},
-    {input:'<input type="checkbox" id="public" name="publichousing" value="publichousing">',label:'<label for="publichousing">Public Housing</label>'},
-    {input:'<input type="checkbox" id="private" name="sprivatehousing" value="publichousing">',label:'<label for="privatehousing">Private Housing</label>'}
+    {input:'<input type="checkbox" id="lightRail" name="selectTypeslightRail" value="lightRail">',label:'<label for="lightRail">Light Rail Stations</label>'},
+    {input:'<input type="checkbox" id="public" name="publichousing" value="publichousing">',label:'<label for="public">Public Housing</label>'},
+    {input:'<input type="checkbox" id="private" name="sprivatehousing" value="publichousing">',label:'<label for="private">Private Housing</label>'}
 ]
 
 busAndMtrCheckbox.forEach(option=>{

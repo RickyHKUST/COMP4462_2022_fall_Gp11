@@ -34,6 +34,7 @@ function selectPlace(e){
   geocoder.geocode( { 'address': region}, function(results, status) {
     if (status == 'OK') {
       map.setCenter(results[0].geometry.location); //set center but don't add any marker
+      console.log(results[0].geometry.location)
       /* 
       var marker = new google.maps.Marker({
           map: map,
