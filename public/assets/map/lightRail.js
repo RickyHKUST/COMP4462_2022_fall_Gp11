@@ -10,10 +10,10 @@ function hideShowlightRail() {
     };
 
     const showlightRail = {
-        url: "assets/map/icons/lightRail.png", // url (local icon)
-        scaledSize: new google.maps.Size(20, 20), // scaled size
+        url: "http://maps.google.com/mapfiles/ms/icons/rail.png", // url (local icon)
+        scaledSize: new google.maps.Size(25, 25), // scaled size
         origin: new google.maps.Point(0, 0), // origin
-        anchor: new google.maps.Point(10, 10) // anchor
+        anchor: new google.maps.Point(12, 12) // anchor
     };
 
     lighRailMarkers.forEach(data => data.setMap(null));
