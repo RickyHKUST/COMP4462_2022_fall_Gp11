@@ -21,7 +21,7 @@ let createprivatehousing = () => {
             url: "https://maps.google.com/mapfiles/kml/pal3/icon21.png",
             scaledSize: new google.maps.Size(10, 10),
             origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(0, 0)
+            anchor: new google.maps.Point(5, 5)
         };
 
         if (!($("#private").prop("checked"))){
