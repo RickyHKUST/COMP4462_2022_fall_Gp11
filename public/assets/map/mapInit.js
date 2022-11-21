@@ -23,10 +23,10 @@ function initMap() {
   
 } // end of the init function
   
-function selectPlace(e){
+function selectPlace(locationName){
   //turn the selected name to location
   var defaultLocation = "Hong Kong";
-  var region = e?e.target.value:defaultLocation;
+  var region = locationName?locationName:defaultLocation;
   geocoder = new google.maps.Geocoder();
   geocoder.geocode( { 'address': region}, function(results, status) {
     if (status == 'OK') {
@@ -41,15 +41,13 @@ function selectPlace(e){
     }
   });
  //enlarge to appropriate level: larger the number => zoom in closer
-  e?map.setZoom(15):null;
+ locationName?map.setZoom(15):null;
 }
-
-$("#place-names").on("change",selectPlace);
 
 $("[name='place-names'] ul li").click(() => {
   if($("[name='place-names'] ul li:visible").length==1){
-    location = $("[name='place-names'] ul li:visible")[0].dataset.value;
-    selectPlace(location);
+    locationName = $("[name='place-names'] ul li:visible")[0].dataset.value;
+    selectPlace(locationName);
   }
 });
 
