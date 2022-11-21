@@ -56,6 +56,7 @@ var optionForScatterColor = [
 ]
 
 var optionForDistrict = [
+    {value:"Hong Kong",name:"Hong Kong"},
     {value:"Hong Kong Islands",name:"Islands"},
     {value:"Hong Kong Kwai Tsing",name:"Kwai Tsing"},
     {value:"Hong Kong North",name:"North"},

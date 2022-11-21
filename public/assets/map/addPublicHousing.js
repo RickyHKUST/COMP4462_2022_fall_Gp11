@@ -5,9 +5,11 @@ let createpublichousing = () => {
     fetch("assets/data/housing/public.json")
     .then(response => response.json())
     .then(data => {
+        region = ($("[name='place-names'] ul li:visible").length!=0)?$("[name='place-names'] ul li:visible")[0].dataset.value:"Hong Kong"
+		month = getFormattedMonth($('#timeline')[0].value)
         data.forEach(publichousing => {
 
-            let year = $("#targetMonth")[0].value.substring(0,4)
+            let year = month.substring(0,4)
             let yearofintake = publichousing["Year of Intake"]["en"].substring(0,4)
             
             if (parseInt(yearofintake) < parseInt(year)) {
@@ -51,10 +53,15 @@ let createpublichousing = () => {
     publichousingloc = []
 }
 
-$("#targetMonth")[0].addEventListener("change", createpublichousing);
+function getFormattedMonth(offset) {
+	const startMonth = 3;
+	const startYear = 2021;
+	month = (startMonth - 1 + parseInt(offset)) % 12 + 1;
+	if (month < 10) { month = '0' + month; }
+	year = Math.floor(startYear + ((2 + parseInt(offset)) / 12));
+	return year + '-' + month;
+}
 
-$("#public").change(function() {
-    createpublichousing()
-})
-
-createpublichousing()
+$('#timeline').change(e=>createpublichousing())
+$("#public").change(e=>createpublichousing())
+createpublichousing('2021-03')

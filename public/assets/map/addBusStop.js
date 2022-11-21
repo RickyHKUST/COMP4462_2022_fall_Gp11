@@ -95,7 +95,7 @@ var minibusStopLocation = [];
 // 	return groups
 // }
 
-let renderBusStop = (month) => {
+let renderBusStop = () => {
 
 	busStopLocation = []; //clear this array when option changed
 	minibusStopLocation = [];
@@ -111,12 +111,12 @@ let renderBusStop = (month) => {
 	//get and store the values of the checkboxs selected 
 	$.each($("input[name='selectTypesBus']:checked"), function () {
 
-		region = $('#place-names')[0].value
-
+		region = ($("[name='place-names'] ul li:visible").length!=0)?$("[name='place-names'] ul li:visible")[0].dataset.value:"Hong Kong"
+		month = getFormattedMonth($('#timeline')[0].value)
 
 		var busType = $(this).val();
 		//use d3 to read the csv according to the name of selected date
-		d3.csv("assets/data/" + $(this).val() + "/" + $("#targetMonth")[0].value + ".csv", function (data) {
+		d3.csv("assets/data/" + $(this).val() + "/" + month + ".csv", function (data) {
 			//Now you can use 'data' variable as an array of objects
 
 			/*There are many row, each contains a XY coordinate.
@@ -130,7 +130,6 @@ let renderBusStop = (month) => {
 			geocoder.geocode({ 'address': region }, function (results, status) {
 				if (status == 'OK') {
 					regionLatLng = results[0].geometry.location
-
 					data.forEach(busStop => {
 						[longitude, latitude] = proj4('EPSG:2326', 'EPSG:4326', [parseInt(busStop.X), parseInt(busStop.Y)]);
 
@@ -141,7 +140,7 @@ let renderBusStop = (month) => {
 						busPosition = new google.maps.LatLng(latitude, longitude)
 						distance = google.maps.geometry.spherical.computeDistanceBetween(regionLatLng, busPosition)
 
-						if (distance < 5000 || region === 'Hong Kong Tung Chung Station') {
+						if (distance < 5000 || region === 'Hong Kong') {
 							if (busType == "busStop")
 								//push the objects one by one
 								busStopLocation.push({
@@ -163,9 +162,6 @@ let renderBusStop = (month) => {
 
 					})
 
-					console.log(busStopLocation)
-					console.log(minibusStopLocation)
-
 					// console.log(kMeans(processedData, 10))
 
 					// Create the icon of the markers.
@@ -173,7 +169,7 @@ let renderBusStop = (month) => {
 					var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';  //can use or not use
 
 					const icon = {
-						url: $("#targetMonth")[0].value == "2022-11" ? "http://maps.google.com/mapfiles/ms/icons/red-pushpin.png" : "http://maps.google.com/mapfiles/ms/icons/red-dot.png", // url (local icon)
+						url: month == "2022-11" ? "http://maps.google.com/mapfiles/ms/icons/red-pushpin.png" : "http://maps.google.com/mapfiles/ms/icons/red-dot.png", // url (local icon)
 						scaledSize: new google.maps.Size(10, 10), // scaled size
 						origin: new google.maps.Point(0, 0), // origin
 						anchor: new google.maps.Point(0, 0) // anchor
@@ -213,7 +209,7 @@ let renderBusStop = (month) => {
 
 
 			const icon2 = {
-				url: $("#targetMonth")[0].value == "2022-11" ? "http://maps.google.com/mapfiles/ms/icons/blue-pushpin.png" : "http://maps.google.com/mapfiles/ms/icons/blue-dot.png", // url (local icon)
+				url: month == "2022-11" ? "http://maps.google.com/mapfiles/ms/icons/blue-pushpin.png" : "http://maps.google.com/mapfiles/ms/icons/blue-dot.png", // url (local icon)
 				scaledSize: new google.maps.Size(10, 10), // scaled size
 				origin: new google.maps.Point(0, 0), // origin
 				anchor: new google.maps.Point(0, 0) // anchor
@@ -234,8 +230,8 @@ function getFormattedMonth(offset) {
 	return year + '-' + month;
 }
 
-$('#timeline').on('input', (e) => $("#timeline_value").html(getFormattedMonth(e.target.value)))
-$('#timeline').change((e) => renderBusStop(getFormattedMonth(e.target.value)))
-$('input').change(e => renderBusStop(getFormattedMonth($('#timeline').value)))
+$('#timeline').on('input', e=>renderBusStop())
+$('#timeline').change(e=>renderBusStop())
+$('input').change(e=>renderBusStop())
 
-renderBusStop('2021-03')
+renderBusStop()
