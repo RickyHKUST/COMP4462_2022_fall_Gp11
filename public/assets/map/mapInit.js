@@ -10,9 +10,12 @@ function initMap() {
       this would not affect adding markers, zoom in zoom out*/
       mapId:'9f05925d813d14c6',
   
-      //disable street view and zoom (avoid user to change it)
-      gestureHandling: "none",
-      zoomControl: false,
+      gestureHandling: "cooperative", //allow mouse drag the map
+      zoomControl: false, //disable street view and zoom (avoid user to change it)
+      //limit the size of zoom
+      maxZoom:15,
+      minZoom:10,
+      scrollwheel:false, //disable scrolling by mouse
       disableDefaultUI: true
   
     });
@@ -31,6 +34,7 @@ function selectPlace(locationName){
   geocoder.geocode( { 'address': region}, function(results, status) {
     if (status == 'OK') {
       map.setCenter(results[0].geometry.location); //set center but don't add any marker
+      console.log(results[0].geometry.location)
       /* 
       var marker = new google.maps.Marker({
           map: map,
