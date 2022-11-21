@@ -6,24 +6,24 @@ $(".accordion").click(function(e){
 var optionForScatterX = [
     {value:"bus_dist",name:"Nearest bus stop distance"},
     {value:"minibus_dist",name:"Nearest minibus stop distance"},
+    {value:"mtr_dist",name:"Nearest MTR station distance"},
     {value:"#bus_100",name:"Number of bus stops within 100m"},
     {value:"#minibus_100",name:"Number of minibus stops within 100m"},
+    {value:"#mtr_100",name:"Number of MTR stations within 100m"}
 ]
 
 var optionForScatterY = [
     {value:"bus_dist",name:"Nearest bus stop distance"},
     {value:"minibus_dist",name:"Nearest minibus stop distance"},
+    {value:"mtr_dist",name:"Nearest MTR station distance"},
     {value:"#bus_100",name:"Number of bus stops within 100m"},
     {value:"#minibus_100",name:"Number of minibus stops within 100m"},
+    {value:"#mtr_100",name:"Number of MTR stations within 100m"}
 ]
 
 var optionForScatterColor = [
-    {value: "#FF69B4", name:"Hot Pink"},
-    {value: "#FF7F50", name:"Coral"},
-    {value: "#EE82EE", name:"Violet"},
-    {value: "#20B2AA", name:"Light Sea Green"},
-    {value: "#1E90FF", name: "Dodger Blue"},
-    {value: "#808080", name: "Gray"}
+    {value: "", name:"By district"},
+    {value: "", name:"By distance"}
 ]
 
 var optionForDistrict = [
