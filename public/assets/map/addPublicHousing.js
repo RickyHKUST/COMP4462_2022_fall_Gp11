@@ -27,7 +27,7 @@ let createpublichousing = () => {
             url: "https://maps.google.com/mapfiles/kml/pal3/icon56.png",
             scaledSize: new google.maps.Size(10, 10),
             origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(0, 0)
+            anchor: new google.maps.Point(5, 5)
         };
 
         if (!($("#public").prop("checked"))){
