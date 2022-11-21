@@ -10,6 +10,8 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="//d3js.org/d3.v4.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.5.0/proj4.js" integrity="sha256-KJI74PS1qv3+hue+yyIWK/l8TxvS9u4WX7QDrtHkHOo=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/@sgratzl/chartjs-chart-boxplot@3.6.0/build/index.umd.min.js"></script>
     </head>
     <body>
         <div id="canvas">
@@ -20,44 +22,82 @@
         </div>
         <div id="panel">
             <button class="accordion">Filtering</button>
-            <div id="filter"></div>
+            <div class="accordion-child" id="filter">
+                <h5>Map filtering</h5>
+                <div class="dropdown" style="z-index:3">
+                    <label for="place-names">Choose a district:</label>
+                    <div class="select" name="place-names" id="place-names">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+                <div id="checkboxForbus"></div>
+                <div id="slidecontainer">
+                        <label>Meters: </label>
+                        <input id="slider" type="range" min="100" max="500" value="100">
+                        <span id="m_value">100</span>
+                </div>
+            </div>
             <button class="accordion">Statistics</button>
-            <div id="statistics">
-
-            <div class="container">
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Graph</button>
-                <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h2 class="modal-title">Graph</h2>
-                    </div>
-                    <div class="modal-body">
-                        <canvas id="chart" width="400" height="400"></canvas>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
+            <div class="accordion-child" id="statistics">
+                <h5>Options for scatter plot:</h5>
+                <div class="dropdown" style="z-index:2">
+                    <label for="X-axis">X-axis:</label>
+                    <div class="select" name="x-axis" id="x-axis">
+                        <ul>
+                        </ul>
                     </div>
                 </div>
+                <div class="dropdown" style="z-index:1">
+                    <label for="Y-axis">Y-axis:</label>
+                    <div class="select" name="y-axis" id="y-axis">
+                        <ul>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-
-            </div>
-            <label for="place-names">Choose a district:</label>
-            <select name="place-names" id="place-names"> </select>
-            <br>
-            <label for="start">Time:</label>
-            <input type="month" id="targetMonth" name="targetMonth"
-                   min="2021-03" max="2022-11" value="2021-03"></input>
-            <div id="checkboxForbus"></div>
-            <div id="slidecontainer">
-                    <label>Meters: </label>
-                    <input id="slider" type="range" min="100" max="500" value="100">
-                    <span id="m_value">100</span>
+                <div class="dropdown">
+                    <label for="Color">Color:</label>
+                    <div class="select" name="color" id="color">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modalbutton">
+                    <button type="button" class="modal-btn" data-toggle="modal" data-target="#statisticsModal">Generate graph</button>
+                    <div class="modal fade" id="statisticsModal" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title">Generated graph</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <h6>We suggest these graphs...</h6>
+                                    <div class="d-flex justify-content-around">
+                                        <div class="plotOption">
+                                            <button id="scatter" style="background-image: url('./assets/panel/icons/scatter-plot.png');"></button>
+                                            scatter plot
+                                        </div>
+                                        <div class="plotOption">
+                                            <button id="barChart" style="background-image: url('./assets/panel/icons/bar-chart.png');"></button>
+                                            bar chart
+                                        </div>
+                                        <div class="plotOption">
+                                            <button id="boxplot" style="background-image: url('./assets/panel/icons/box-plot.png');"></button>
+                                            box plot
+                                        </div>
+                                    </div>
+                                    <canvas id="statistics-modal-chart" class="chart" width="400" height="400"></canvas>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script> -->
     </body>
     <link rel="stylesheet" type="text/css" href="/assets/index/index.css">
     <link rel="stylesheet" type="text/css" href="/assets/panel/panel.css">
@@ -65,14 +105,13 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/assets/map/map.css">
-    <script type="text/javascript" src="/assets/panel/panel-bar.js"></script>
-    <script type="text/javascript" src="/assets/panel/panel-scatter.js"></script>
+    <script type="text/javascript" src="/assets/panel/panel-statistics.js"></script>
     <script type="text/javascript" src="/assets/panel/panel.js"></script>
-    <script type="text/javascript" src="/assets/panel/panel-data-options.js"></script>
     <script type="text/javascript" src="assets/map/mapInit.js"></script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr30gUlrpF5Qwhr4t0R_IrqmqKxHLB1IU&region=HK&language=en&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr30gUlrpF5Qwhr4t0R_IrqmqKxHLB1IU&region=HK&language=en&libraries=geometry&callback=initMap" async defer></script>
 
     <script type="text/javascript" src="assets/map/addBusStop.js"></script>
     <script type="text/javascript" src="assets/map/mtrStation.js"></script>
