@@ -6,9 +6,9 @@ function render(){
 
 //zoom in after selected
 var optionForDistrict = [
-    {value:"Hong Kong Islands",name:"Islands"},
+    {value:"Hong Kong Tung Chung Station",name:"Islands"},
     {value:"Hong Kong Kwai Tsing",name:"Kwai Tsing"},
-    {value:"Hong Kong North",name:"North"},
+    {value:"Hong Kong Sheung Shui",name:"North"},
     {value:"Hong Kong Sai Kung",name:"Sai Kung"},
     {value:"Hong Kong Sha Tin",name:"Sha Tin"},
     {value:"Hong Kong Tai Po",name:"Tai Po"},
@@ -18,7 +18,7 @@ var optionForDistrict = [
     {value:"Hong Kong Kowloon City",name:"Kowloon City"},
     {value:"Hong Kong Kwun Tong",name:"Kwun Tong"},
     {value:"Hong Kong Sham Shui Po",name:"Sham Shui Po"},
-    {value:"Hong Kong Wong Tai Sin",name:"Wong Tai Sin"},
+    {value:"Hong Kong Wong Tai Sin station",name:"Wong Tai Sin"},
     {value:"Hong Kong Yau Tsim Mong",name:"Yau Tsim Mong"},
     {value:"Hong Kong Central and Western",name:"Central and Western"},
     {value:"Hong Kong Eastern",name:"Eastern"},
@@ -51,3 +51,46 @@ busAndMtrCheckbox.forEach(option=>{
     });
     
     
+$(".accordion").click(function(e){
+    e.target.classList.toggle("active");
+    e.target.nextElementSibling.classList.toggle("active");
+})
+
+var filtering_context = ''+
+'<div class="context"> Select which kinds of data you would like to filter </context>'+
+'<br>'+
+    '<div class="box">'+
+        '<input type="checkbox" class="checkbox" id="housing" value="Housing">'+
+        '<label for="Housing"> Housing </label>'+
+    '</div>'+
+    '<div class="box">'+
+        '<input type="checkbox" class="checkbox" id="transportation" value="Transportation>'+
+        '<label for="Transportation"> Transportation </label>'+
+    '</div>'
+$('#filter').append(filtering_context);
+
+new Chart("chart", {
+    type: 'scatter',
+    // type: 'bar',
+    data: data_scatter,
+    // data: data_bar,
+    options: {
+        scales: {
+            x:{
+                type: 'linear',
+                position: 'bottom',
+                title:{
+                    display: true,
+                    text: '# of housing estates'
+                }
+            },
+            y: {
+                // beginAtZero: true,
+                title:{
+                    display: true,
+                    text: '# of bus stops'
+                }
+            }
+        }
+    }
+});

@@ -10,16 +10,16 @@ function hideShowlightRail() {
     };
 
     const showlightRail = {
-        url: "assets/map/icons/lightRail.png", // url (local icon)
-        scaledSize: new google.maps.Size(20, 20), // scaled size
+        url: "http://maps.google.com/mapfiles/ms/icons/rail.png", // url (local icon)
+        scaledSize: new google.maps.Size(25, 25), // scaled size
         origin: new google.maps.Point(0, 0), // origin
-        anchor: new google.maps.Point(10, 10) // anchor
+        anchor: new google.maps.Point(12, 12) // anchor
     };
 
     lighRailMarkers.forEach(data => data.setMap(null));
     lighRailMarkers = [];
 
-    if ($(this).is(':checked')) {
+    if ($("#lightRail").is(':checked')) {
         //use d3 to read the csv according to the name of selected date
         d3.csv("assets/data/mtrStations/geocodedLightRail.csv", function (data) {
 
@@ -37,7 +37,7 @@ function hideShowlightRail() {
         });
     }
     else {
-        if(map.getZoom()>13){
+        if(map.getZoom()>12){
         //use d3 to read the csv according to the name of selected date
         d3.csv("assets/data/mtrStations/geocodedLightRail.csv", function (data) {
 

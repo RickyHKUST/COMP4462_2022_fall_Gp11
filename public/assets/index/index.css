@@ -25,4 +25,13 @@ body{
 #timeline{
     bottom: 30px;
     position: relative;
+    left: 50%;
+    width: 90%;
+    transform: translateX(-50%);
+}
+
+#timeline_value{
+    position:relative;
+    bottom: 60px;
+    left: 30px;
 }
