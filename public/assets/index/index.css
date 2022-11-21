@@ -1,0 +1,36 @@
+body{
+    height:99vh;
+    display:flex;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+#canvas{
+    margin: 5px;
+    width: 70%;
+    border: black solid 1px;
+}
+
+#map{
+    width: 100%;
+    height: 100%;
+}
+
+#panel{
+    margin: 5px;
+    width: 30%;
+}
+
+#timeline{
+    bottom: 30px;
+    position: relative;
+    left: 50%;
+    width: 90%;
+    transform: translateX(-50%);
+}
+
+#timeline_value{
+    position:relative;
+    bottom: 60px;
+    left: 30px;
+}
