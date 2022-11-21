@@ -7,59 +7,66 @@ var markers = []; // to manipulate the markers after created
 var busStopLocation = []; //an array to store the bus stop location (latitude, longitude)
 var minibusStopLocation = []; 
 
-let renderBusStop = () => {
+let renderBusStop = (month) => {
 
 	busStopLocation = []; //clear this array when option changed
-	minibusStopLocation = [];
+	miniBusStopLocation = [];
+	//use d3 to read the csv according to the name of selected date
+
+	//Now you can use 'data' variable as an array of objects
+
 	markers.forEach(data => data.setMap(null));
 
 	//get and store the values of the checkboxs selected 
 	$.each($("input[name='selectTypesBus']:checked"), function () {
-		let temp = $(this).val();
+
+		var busType = $(this).val();
 		//use d3 to read the csv according to the name of selected date
 		d3.csv("assets/data/" + $(this).val() + "/" + $("#targetMonth")[0].value + ".csv", function (data) {
 			//Now you can use 'data' variable as an array of objects
-			
-			/*There are many row, each contains a XY coordinate.
-			However, this XY is using HK1980 Grid coordinate(not supported by google), 
-			so here we convert it to WGS84 degree
-			After that we use an array to store the result
-			*/
-			if (temp == "miniBusStop") {
-				data.forEach(minibusStop => {
-					[longitude, latitude] = proj4('EPSG:2326', 'EPSG:4326', [parseInt(minibusStop.X), parseInt(minibusStop.Y)]);
-	
-					//push the objects one by one
-					minibusStopLocation.push({
-						position: new google.maps.LatLng(latitude, longitude),
-						type: "minibus",
-					});
-				})
-			}
-			else {
-				data.forEach(busStop => {
-					[longitude, latitude] = proj4('EPSG:2326', 'EPSG:4326', [parseInt(busStop.X), parseInt(busStop.Y)]);
 
+			/*There are many row, each contains a XY coordinate.
+			 However, this XY is using HK1980 Grid coordinate(not supported by google), 
+			 so here we convert it to WGS84 degree
+			 After that we use an array to store the result
+			*/
+			data.forEach(busStop => {
+				[longitude, latitude] = proj4('EPSG:2326', 'EPSG:4326', [parseInt(busStop.X), parseInt(busStop.Y)]);
+
+
+				if (busType == "busStop")
 					//push the objects one by one
 					busStopLocation.push({
 						position: new google.maps.LatLng(latitude, longitude),
 						type: "bus",
 					});
-				})
-			}
-			
+				else if (busType == "miniBusStop")
+					//push the objects one by one
+					miniBusStopLocation.push({
+						position: new google.maps.LatLng(latitude, longitude),
+						type: "minibus",
+					});
+
+
+			})
 
 			// Create the icon of the markers.
 			// some icon provided by google: http://kml4earth.appspot.com/icons.html
 			var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';  //can use or not use
 
 			const icon = {
-				url: "assets/map/icons/default-marker.png", // url (local icon)
-				scaledSize: new google.maps.Size(5, 5), // scaled size
+				url: $("#targetMonth")[0].value == "2022-11" ? "http://maps.google.com/mapfiles/ms/icons/red-pushpin.png" : "http://maps.google.com/mapfiles/ms/icons/red-dot.png", // url (local icon)
+				scaledSize: new google.maps.Size(10, 10), // scaled size
 				origin: new google.maps.Point(0, 0), // origin
 				anchor: new google.maps.Point(0, 0) // anchor
 			};
 
+			const icon2 = {
+				url: $("#targetMonth")[0].value == "2022-11" ? "http://maps.google.com/mapfiles/ms/icons/blue-pushpin.png" : "http://maps.google.com/mapfiles/ms/icons/blue-dot.png", // url (local icon)
+				scaledSize: new google.maps.Size(10, 10), // scaled size
+				origin: new google.maps.Point(0, 0), // origin
+				anchor: new google.maps.Point(0, 0) // anchor
+			};
 
 
 			//add marker to the array of busStopLocation
@@ -71,25 +78,40 @@ let renderBusStop = () => {
 					map: map,
 				});
 				markers.push(marker);//store the marker for next time renew (see setMap(null)); otherwise it will exist forever
+
+
 			}) //end of for loop
 
-			minibusStopLocation.forEach(location => {
+			//add marker to the array of miniBusStopLocation
+			miniBusStopLocation.forEach(location => {
 				marker = new google.maps.Marker({
 					position: location.position,
 					//icon: iconBase + 'parking_lot_maps.png',
-					icon: icon,
+					icon: icon2,
 					map: map,
 				});
 				markers.push(marker);//store the marker for next time renew (see setMap(null)); otherwise it will exist forever
-			}) //end of for loop
+
+			}) //end of for loop		
+
+
+
 		});
 
 	});
-	
 }
 
-$("#targetMonth")[0].addEventListener("change", renderBusStop);
+function getFormattedMonth(offset) {
+	const startMonth = 3;
+	const startYear = 2021;
+	month = (startMonth - 1 + parseInt(offset)) % 12 + 1;
+	if (month < 10) { month = '0' + month; }
+	year = Math.floor(startYear + ((2 + parseInt(offset)) / 12));
+	return year + '-' + month;
+}
 
-$('input[name=selectTypesBus]').change(function () {
-	renderBusStop();
-});
+$('#timeline').on('input', (e) => $("#timeline_value").html(getFormattedMonth(e.target.value)))
+$('#timeline').change((e) => renderBusStop(getFormattedMonth(e.target.value)))
+$('input').change(e => renderBusStop(getFormattedMonth($('#timeline').value)))
+
+renderBusStop('2021-03')
