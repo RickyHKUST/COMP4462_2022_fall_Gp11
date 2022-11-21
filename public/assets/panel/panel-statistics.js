@@ -1,12 +1,66 @@
 var chart;
 
+$("#modal-btn").click(()=>{
+    if(chart){chart.destroy()}
+})
+
+$("#barChart").click(()=>{
+
+    if(chart){chart.destroy()}
+
+    data_bar = {
+        labels: ['Mong Kok', 'Central', 'Wan Chai', 'Sha Tin', 'Admiralty', 'Sai Ying Pun'],
+        datasets: [{
+            label: '# of Housing Estates',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    }
+
+    chart = new Chart("statistics-modal-chart", {
+        type: 'bar',
+        data: data_bar,
+        options: {
+            scales: {
+                x:{
+                    title:{
+                        display: true,
+                        text: $('#x-axis')[0].value
+                    }
+                },
+                y: {
+                    title:{
+                        display: true,
+                        text: $('#y-axis')[0].value
+                    }
+                }
+            }
+        }
+    });
+})
+
 $("#scatter").click(()=>{
 
     if(chart){chart.destroy()}
 
-    chart = new Chart("chart-scatter", {
+    chart = new Chart("statistics-modal-chart", {
         type: 'scatter',
-        // type: 'bar',
         data: {
             datasets: [{
                 label: 'Scatter Plot Testing',
@@ -21,7 +75,6 @@ $("#scatter").click(()=>{
                 backgroundColor: $('#color')[0].value
             }],
         },
-        // data: data_bar,
         options: {
             scales: {
                 x:{
@@ -33,7 +86,6 @@ $("#scatter").click(()=>{
                     }
                 },
                 y: {
-                    // beginAtZero: true,
                     title:{
                         display: true,
                         text: $('#y-axis')[0].value
@@ -71,7 +123,7 @@ $("#boxplot").click(()=>{
                 }
             ]
         }
-        chart = new Chart("chart-scatter", {
+        chart = new Chart("statistics-modal-chart", {
             type: 'boxplot',
             data: boxplotData,
             options: {
