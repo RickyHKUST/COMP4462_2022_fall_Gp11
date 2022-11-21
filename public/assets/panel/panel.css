@@ -61,7 +61,6 @@
     padding: 18px;
 }
 
-/* https://www.sliderrevolution.com/resources/css-select-styles/ (mostafa)*/
 .container {
     width: 500px;
     margin: 20px auto 0;
@@ -86,13 +85,21 @@ select {
     cursor: pointer;
     position: absolute;
     right: 0;
+    text-align: right;
 }
 
 .select > ul > li{
     list-style: none;
     display: none;
+    background-color: #e8faff;
+    border-radius: 2px;
+    border:1px solid #e8faff;
+    box-shadow: 0 0 4px #719ECE;
 }
 
+.select > ul > li:hover{
+    background-color: #a0ebff;
+}
 .select > ul > li:first-child{
     display: block;
 }

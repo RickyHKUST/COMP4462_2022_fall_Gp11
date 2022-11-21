@@ -18,7 +18,7 @@ $(".modal-btn").click(()=>{
                     {x: 10,y: 5},
                     {x: 0.5,y: 5.5}
                 ],
-                backgroundColor: $('#Color')[0].value
+                backgroundColor: $('#color')[0].value
             }],
         },
         // data: data_bar,
@@ -29,14 +29,14 @@ $(".modal-btn").click(()=>{
                     position: 'bottom',
                     title:{
                         display: true,
-                        text: $('#X-axis')[0].value
+                        text: $('#x-axis')[0].value
                     }
                 },
                 y: {
                     // beginAtZero: true,
                     title:{
                         display: true,
-                        text: $('#Y-axis')[0].value
+                        text: $('#y-axis')[0].value
                     }
                 }
             }
