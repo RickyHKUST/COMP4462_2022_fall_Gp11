@@ -5,7 +5,7 @@ proj4.defs('EPSG:2326', '+proj=tmerc +lat_0=22.31213333333334 +lon_0=114.1785555
 var markers = []; // to manipulate the markers after created
 //clear this array when option changed
 var busStopLocation = []; //an array to store the bus stop location (latitude, longitude)
-var miniBusStopLocation = []; //an array to store the bus stop location (latitude, longitude)
+var minibusStopLocation = []; 
 
 let renderBusStop = (month) => {
 
