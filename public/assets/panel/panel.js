@@ -52,11 +52,7 @@ var optionForDistrict = [
 
 function appendScatterOption(list, jQueryObject){
     list.forEach(e => {
-        jQueryObject.append($('<li>', {
-            value: e.value,
-            text: e.name
-        }
-        ));
+        jQueryObject.append($(`<li data-value="${e.value}">${e.name}</li>`));
     })
 }
 

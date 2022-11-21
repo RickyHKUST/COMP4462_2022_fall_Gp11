@@ -46,5 +46,12 @@ function selectPlace(e){
 
 $("#place-names").on("change",selectPlace);
 
+$("[name='place-names'] ul li").click(() => {
+  if($("[name='place-names'] ul li:visible").length==1){
+    location = $("[name='place-names'] ul li:visible")[0].dataset.value;
+    selectPlace(location);
+  }
+});
+
 var map;
 window.initMap = initMap;

@@ -8,7 +8,6 @@ $(".modal-btn").click(()=>{
     xElement = $("[name='x-axis'] ul li:visible")[0];
     yElement = $("[name='y-axis'] ul li:visible")[0];
     colorElement = $("[name='color'] ul li:visible")[0];
-    console.log(xElement.innerHTML);
 })
 
 $("#barChart").click(()=>{
