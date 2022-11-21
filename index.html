@@ -69,10 +69,22 @@
                                     <h2 class="modal-title">Generated graph</h2>
                                 </div>
                                 <div class="modal-body">
-                                    <h2>We suggest these graphs...</h2>
-                                    <button class="plotOption" id="scatter" style="background-image: url('./assets/panel/icons/scatter-plot.png');"></button>
-                                    <button class="plotOption" id="boxplot" style="background-image: url('./assets/panel/icons/box-plot.png');"></button>
-                                    <canvas id="chart-scatter" class="chart" width="400" height="400"></canvas>
+                                    <h6>We suggest these graphs...</h6>
+                                    <div class="d-flex justify-content-around">
+                                        <div class="plotOption">
+                                            <button id="scatter" style="background-image: url('./assets/panel/icons/scatter-plot.png');"></button>
+                                            scatter plot
+                                        </div>
+                                        <div class="plotOption">
+                                            <button id="barChart" style="background-image: url('./assets/panel/icons/bar-chart.png');"></button>
+                                            bar chart
+                                        </div>
+                                        <div class="plotOption">
+                                            <button id="boxplot" style="background-image: url('./assets/panel/icons/box-plot.png');"></button>
+                                            box plot
+                                        </div>
+                                    </div>
+                                    <canvas id="statistics-modal-chart" class="chart" width="400" height="400"></canvas>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -94,10 +106,8 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr30gUlrpF5Qwhr4t0R_IrqmqKxHLB1IU&region=HK&language=en&callback=initMap" async defer></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/assets/map/map.css">
-    <script type="text/javascript" src="/assets/panel/panel-bar.js"></script>
     <script type="text/javascript" src="/assets/panel/panel-statistics.js"></script>
     <script type="text/javascript" src="/assets/panel/panel.js"></script>
-    <script type="text/javascript" src="/assets/panel/panel-data-options.js"></script>
     <script type="text/javascript" src="assets/map/mapInit.js"></script>
     <script type="text/javascript" src="assets/map/addBusStop.js"></script>
 </html>

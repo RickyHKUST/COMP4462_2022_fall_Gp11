@@ -136,9 +136,17 @@ select:hover{
     padding-left: 5px;
 }
 
-.plotOption{
-    width: 60px;
-    height: 60px;
+div.plotOption{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.plotOption > button{
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
     background-repeat: round;
+    cursor: pointer;
     border: none;
 }
