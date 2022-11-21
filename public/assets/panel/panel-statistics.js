@@ -1,7 +1,14 @@
 var chart;
+var xElement;
+var yElement;
+var colorElement;
 
-$("#modal-btn").click(()=>{
+$(".modal-btn").click(()=>{
     if(chart){chart.destroy()}
+    xElement = $("[name='x-axis'] ul li:visible")[0];
+    yElement = $("[name='y-axis'] ul li:visible")[0];
+    colorElement = $("[name='color'] ul li:visible")[0];
+    console.log(xElement.innerHTML);
 })
 
 $("#barChart").click(()=>{
@@ -41,13 +48,13 @@ $("#barChart").click(()=>{
                 x:{
                     title:{
                         display: true,
-                        text: $('#x-axis')[0].value
+                        text: xElement.innerHTML
                     }
                 },
                 y: {
                     title:{
                         display: true,
-                        text: $('#y-axis')[0].value
+                        text: yElement.innerHTML
                     }
                 }
             }
@@ -63,7 +70,7 @@ $("#scatter").click(()=>{
         type: 'scatter',
         data: {
             datasets: [{
-                label: 'Scatter Plot Testing',
+                label: colorElement.innerHTML,
                 data: [
                     {x: 30,y: 25},
                     {x: -10,y: 0},
@@ -82,13 +89,13 @@ $("#scatter").click(()=>{
                     position: 'bottom',
                     title:{
                         display: true,
-                        text: $('#x-axis')[0].value
+                        text: xElement.innerHTML
                     }
                 },
                 y: {
                     title:{
                         display: true,
-                        text: $('#y-axis')[0].value
+                        text: yElement.innerHTML
                     }
                 }
             }
@@ -112,7 +119,7 @@ $("#boxplot").click(()=>{
             labels:districts,
             datasets:[
                 {
-                    label:searchBy,
+                    label:yElement.innerHTML,
                     backgroundColor: 'rgba(255,0,0,0.5)',
                     borderColor: 'red',
                     borderWidth: 1,
