@@ -30,30 +30,34 @@
     border-bottom-left-radius: 0px;
 }
 
-#filter, #statistics{
+.accordion-child{
     display: none;
     background-color: white;
     background: #e8faff;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
+    padding: 15px;
+}
+
+.accordion-child > *{
+    padding-bottom:30px;
 }
 
 .accordion:focus{
     outline: none;
 }
 
-.active#filter, .active#statistics{
-    display:block;
+.active.accordion-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.modal-btn{
-    border-radius: 12px;
-    cursor: pointer;
-    background-color: #6a698b;
-    border: none;
-    color: white;
-    padding: 18px 20px;
-    font-size: 18px;
+.accordion-child > h5{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    text-decoration: underline;
 }
 
 .mapOptions{
@@ -70,7 +74,6 @@
     display: flex;
     justify-content: space-between;
     font-size: 18px;
-    margin: 6px 0px;
 }
 
 select {
@@ -90,10 +93,13 @@ select {
     list-style: none;
     display: none;
     background-color: #e8faff;
-    border-radius: 2px;
-    border:1px solid #e8faff;
-    box-shadow: 0 0 4px #719ECE;
+    box-shadow: 0 0 4px #719ece;
     margin-bottom: 10px;
+    padding: 10px;
+    background-image: linear-gradient(to right, #9bb6f1 0%, #49d7ff 100%);
+    border-radius: 8px;
+    color: white;
+    font-size: 21px;
 }
 
 .select > ul > li:hover{
@@ -113,10 +119,16 @@ select:hover{
 }
 
 .modal-btn{ 
-    background-color: gray;
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: 18px 20px;
+    font-size: 18px;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgb(153, 153, 153);
+    box-shadow: 0 0 10px #1c81e1;
     transition: all .5s ease;
+    background-color: #1c81e1;
+    font-weight: 700;
 }
 
 .modal-btn:hover {
@@ -127,12 +139,13 @@ select:hover{
     outline: none;
 }
 
-.modalbutton{
-    padding: 10px;
-}
-
 .dropdown label{
     padding-left: 5px;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+    height: 51.5px;
+    line-height: 51.5px;
 }
 
 div.plotOption{

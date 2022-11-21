@@ -9,7 +9,8 @@ var optionForScatterX = [
     {value:"mtr_dist",name:"Nearest MTR station distance"},
     {value:"#bus_100",name:"Number of bus stops within 100m"},
     {value:"#minibus_100",name:"Number of minibus stops within 100m"},
-    {value:"#mtr_100",name:"Number of MTR stations within 100m"}
+    {value:"#mtr_100",name:"Number of MTR stations within 100m"},
+    {value:"district",name:"District"}
 ]
 
 var optionForScatterY = [
@@ -18,12 +19,14 @@ var optionForScatterY = [
     {value:"mtr_dist",name:"Nearest MTR station distance"},
     {value:"#bus_100",name:"Number of bus stops within 100m"},
     {value:"#minibus_100",name:"Number of minibus stops within 100m"},
-    {value:"#mtr_100",name:"Number of MTR stations within 100m"}
+    {value:"#mtr_100",name:"Number of MTR stations within 100m"},
+    {value:"#_private_house",name:"Number of prviate house"},
+    {value:"#_public_house",name:"Number of public house"}
 ]
 
 var optionForScatterColor = [
-    {value: "", name:"By district"},
-    {value: "", name:"By distance"}
+    {value: "by_district", name:"By district"},
+    {value: "by_distance", name:"By distance"}
 ]
 
 var optionForDistrict = [
