@@ -37,7 +37,9 @@ var busAndMtrCheckbox = [
     {input:'<input type="checkbox" id="bus" name="selectTypesBus" value="busStop">',label:'<label for="bus">Bus Stops</label>'},
     {input:'<input type="checkbox" id="minibus" name="selectTypesBus" value="miniBusStop">',label:'<label for="minibus">Minibus Stops</label>'},
     {input:'<input type="checkbox" id="mtr" name="selectTypesMtr" value="mtr">',label:'<label for="mtr">MTR Stations</label>'},
-    {input:'<input type="checkbox" id="lightRail" name="selectTypeslightRail" value="lightRail">',label:'<label for="lightRail">Light Rail Stations</label>'}
+    {input:'<input type="checkbox" id="lightRail" name="selectTypeslightRail" value="lightRail">',label:'<label for="lightRail">Light Rail Stations</label>'},
+    {input:'<input type="checkbox" id="public" name="publichousing" value="publichousing">',label:'<label for="public">Public Housing</label>'},
+    {input:'<input type="checkbox" id="private" name="sprivatehousing" value="publichousing">',label:'<label for="private">Private Housing</label>'}
 ]
 
 busAndMtrCheckbox.forEach(option=>{
@@ -49,3 +51,46 @@ busAndMtrCheckbox.forEach(option=>{
     });
     
     
+$(".accordion").click(function(e){
+    e.target.classList.toggle("active");
+    e.target.nextElementSibling.classList.toggle("active");
+})
+
+var filtering_context = ''+
+'<div class="context"> Select which kinds of data you would like to filter </context>'+
+'<br>'+
+    '<div class="box">'+
+        '<input type="checkbox" class="checkbox" id="housing" value="Housing">'+
+        '<label for="Housing"> Housing </label>'+
+    '</div>'+
+    '<div class="box">'+
+        '<input type="checkbox" class="checkbox" id="transportation" value="Transportation>'+
+        '<label for="Transportation"> Transportation </label>'+
+    '</div>'
+$('#filter').append(filtering_context);
+
+new Chart("chart", {
+    type: 'scatter',
+    // type: 'bar',
+    data: data_scatter,
+    // data: data_bar,
+    options: {
+        scales: {
+            x:{
+                type: 'linear',
+                position: 'bottom',
+                title:{
+                    display: true,
+                    text: '# of housing estates'
+                }
+            },
+            y: {
+                // beginAtZero: true,
+                title:{
+                    display: true,
+                    text: '# of bus stops'
+                }
+            }
+        }
+    }
+});
