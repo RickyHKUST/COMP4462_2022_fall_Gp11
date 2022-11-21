@@ -47,7 +47,18 @@
             </div>
             <label for="place-names">Choose a district:</label>
             <select name="place-names" id="place-names"> </select>
+            <br>
+            <label for="start">Time:</label>
+            <input type="month" id="targetMonth" name="targetMonth"
+                   min="2021-03" max="2022-11" value="2021-03"></input>
+            <div id="checkboxForbus"></div>
+            <div id="slidecontainer">
+                    <label>Meters: </label>
+                    <input id="slider" type="range" min="100" max="500" value="100">
+                    <span id="m_value">100</span>
+            </div>
         </div>
+        <!-- <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script> -->
     </body>
     <link rel="stylesheet" type="text/css" href="/assets/index/index.css">
     <link rel="stylesheet" type="text/css" href="/assets/panel/panel.css">
@@ -55,12 +66,19 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr30gUlrpF5Qwhr4t0R_IrqmqKxHLB1IU&region=HK&language=en&callback=initMap" async defer></script>
     <link rel="stylesheet" type="text/css" href="/assets/map/map.css">
     <script type="text/javascript" src="/assets/panel/panel-bar.js"></script>
     <script type="text/javascript" src="/assets/panel/panel-scatter.js"></script>
     <script type="text/javascript" src="/assets/panel/panel.js"></script>
     <script type="text/javascript" src="/assets/panel/panel-data-options.js"></script>
     <script type="text/javascript" src="assets/map/mapInit.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr30gUlrpF5Qwhr4t0R_IrqmqKxHLB1IU&region=HK&language=en&libraries=geometry&callback=initMap" async defer></script>
+
     <script type="text/javascript" src="assets/map/addBusStop.js"></script>
+    <script type="text/javascript" src="assets/map/mtrStation.js"></script>
+    <script type="text/javascript" src="assets/map/lightRail.js"></script>
+    <script type="text/javascript" src="assets/map/addPublicHousing.js"></script>
+    <script type="text/javascript" src="assets/map/addPrivateHousing.js"></script>
+    <script type="text/javascript" src="assets/map/showInfoWindow.js"></script>
 </html>
