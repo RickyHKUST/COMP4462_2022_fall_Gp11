@@ -63,57 +63,69 @@ $("#barChart").click(()=>{
 
 $("#scatter").click(()=>{
 
-    if(chart){chart.destroy()}
+    if(chart){chart.destroy()};
 
-    chart = new Chart("statistics-modal-chart", {
-        type: 'scatter',
-        data: {
-            datasets: [{
-                label: colorElement.innerHTML,
-                data: [
-                    {x: 30,y: 25},
-                    {x: -10,y: 0},
-                    {x: -10,y: 0},
-                    {x: 0,y: 10},
-                    {x: 10,y: 5},
-                    {x: 0.5,y: 5.5}
-                ],
-                backgroundColor: $('#color')[0].value
-            }],
-        },
-        options: {
-            scales: {
-                x:{
-                    type: 'linear',
-                    position: 'bottom',
-                    title:{
-                        display: true,
-                        text: xElement.innerHTML
-                    }
-                },
-                y: {
-                    title:{
-                        display: true,
-                        text: yElement.innerHTML
+    xLabel = xElement.getAttribute('data-value');
+    yLabel = yElement.getAttribute('data-value');
+
+    scatterData = [];
+
+    $.getJSON('./assets/panel/data/nearestTransportation.json',(json)=>{
+        for(var district in json){
+            data = [];
+            for(var i = 0; i<json[district][xLabel].length && i<json[district][yLabel].length; i++){
+                data.push({x:json[district][xLabel][i],y:json[district][yLabel][i]});
+            }
+            scatterData.push(
+                {
+                    label: district,
+                    data: data,
+                    backgroundColor: $('#color')[0].value
+                }
+            )
+        }
+        
+        chart = new Chart("statistics-modal-chart", {
+            type: 'scatter',
+            data: {
+                datasets: scatterData,
+            },
+            options: {
+                scales: {
+                    x:{
+                        type: 'linear',
+                        position: 'bottom',
+                        title:{
+                            display: true,
+                            text: xElement.innerHTML
+                        }
+                    },
+                    y: {
+                        title:{
+                            display: true,
+                            text: yElement.innerHTML
+                        }
                     }
                 }
             }
-        }
-    });
+        });
+    })
 })
 
 $("#boxplot").click(()=>{
 
-    var searchBy = 'NearestBus';
+    var searchBy = yElement.getAttribute('data-value');
 
     if(chart){chart.destroy()}
 
-    $.getJSON('./assets/panel/mockData.json',(data)=>{
-        const districts = Object.keys(data);
+    $.getJSON('./assets/panel/data/nearestTransportation.json',(data)=>{
         const dataset = [];
-        districts.forEach(district => {
+        const districts = [];
+        for(var district in data){
             dataset.push(data[district][searchBy]);
-        })
+            districts.push(district);
+        }
+        console.log(dataset);
         boxplotData = {
             labels:districts,
             datasets:[

@@ -29,28 +29,21 @@ var busAndMtrCheckbox = [
     {input:'<input type="checkbox" id="private" name="sprivatehousing" value="publichousing">',label:'<label for="private">Private Housing</label>'}
 ]
 
-var optionForScatterX = [
-    {value:"bus_dist",name:"Nearest bus stop distance"},
-    {value:"minibus_dist",name:"Nearest minibus stop distance"},
-    {value:"mtr_dist",name:"Nearest MTR station distance"},
-    {value:"#bus_100",name:"Number of bus stops within 100m"},
-    {value:"#minibus_100",name:"Number of minibus stops within 100m"},
-    {value:"#mtr_100",name:"Number of MTR stations within 100m"},
-    {value:"district",name:"District"}
+var optionForPlotX = [
+    {value:"NearestBus",name:"Nearest bus stop distance","type":"quantitative"},
+    {value:"NearestMinibus",name:"Nearest minibus stop distance","type":"quantitative"},
+    {value:"NearestMTR",name:"Nearest MTR station distance","type":"quantitative"},
+    {value:"district",name:"District","type":"qualitative"}
 ]
 
-var optionForScatterY = [
-    {value:"bus_dist",name:"Nearest bus stop distance"},
-    {value:"minibus_dist",name:"Nearest minibus stop distance"},
-    {value:"mtr_dist",name:"Nearest MTR station distance"},
-    {value:"#bus_100",name:"Number of bus stops within 100m"},
-    {value:"#minibus_100",name:"Number of minibus stops within 100m"},
-    {value:"#mtr_100",name:"Number of MTR stations within 100m"},
-    {value:"#_private_house",name:"Number of prviate house"},
-    {value:"#_public_house",name:"Number of public house"}
+var optionForPlotY = [
+    {value:"NearestBus",name:"Nearest bus stop distance","type":"quantitative"},
+    {value:"NearestMinibus",name:"Nearest minibus stop distance","type":"quantitative"},
+    {value:"NearestMTR",name:"Nearest MTR station distance","type":"quantitative"}
 ]
 
-var optionForScatterColor = [
+var optionForPlotColor = [
+    {value: "default", name:"Default"},
     {value: "by_district", name:"By district"},
     {value: "by_distance", name:"By distance"}
 ]
@@ -83,9 +76,9 @@ function appendScatterOption(list, jQueryObject){
     })
 }
 
-appendScatterOption(optionForScatterX,$('#x-axis > ul'));
-appendScatterOption(optionForScatterY,$('#y-axis > ul'));
-appendScatterOption(optionForScatterColor,$('#color > ul'));
+appendScatterOption(optionForPlotX,$('#x-axis > ul'));
+appendScatterOption(optionForPlotY,$('#y-axis > ul'));
+appendScatterOption(optionForPlotColor,$('#color > ul'));
 appendScatterOption(optionForDistrict,$('#place-names > ul'));
 
 busAndMtrCheckbox.forEach(option=>{
