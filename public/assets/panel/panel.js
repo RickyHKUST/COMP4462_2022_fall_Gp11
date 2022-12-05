@@ -49,7 +49,7 @@ var optionForPlotY = [
 ]
 
 var optionForPlotColor = [
-    {name:"(Select color)"},
+    {name:"(Select color encoding)"},
     {value: "", name:"Default"},
     {value: "by_district", name:"By district"}
 ]
