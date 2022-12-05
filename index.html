@@ -31,11 +31,20 @@
                         </ul>
                     </div>
                 </div>
-                <div id="checkboxForbus"></div>
+                <div id="checkboxForbus">
+                    <label for="map-items">Items to show on map:</label>
+                    <br>
+                    <div id="checkbox-container"></div>
+                </div>
                 <div id="slidecontainer">
-                        <label>Meters: </label>
-                        <input id="slider" type="range" min="100" max="500" value="100">
-                        <span id="m_value">100</span>
+                    <div class="hover-container">
+                        <p class="hover-target" tabindex="0">Meters:</p>
+                        <aside class="hover-popup">
+                          <p>Slide to adjust the transportations inside of the indicated radius of housing</p>
+                        </aside>
+                    </div>
+                    <input id="slider" type="range" min="100" max="500" value="100">
+                    <span id="m_value">100</span>
                 </div>
             </div>
             <button class="accordion">Statistics</button>

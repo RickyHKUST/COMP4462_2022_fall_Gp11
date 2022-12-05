@@ -87,10 +87,8 @@ appendScatterOption(optionForDistrict,$('#place-names > ul'));
 
 busAndMtrCheckbox.forEach(option=>{
 
-    $('#checkboxForbus')
-    .append(option.input)
-    .append(option.label)
-    .append('<br>');
+    $('#checkbox-container')
+    .append(`<div class="checkbox-item">${option.input}${option.label}</div>`)
     });
     
     
