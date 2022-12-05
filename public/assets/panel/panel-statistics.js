@@ -1,24 +1,25 @@
 var panelChart;
-var xElement;
-var yElement;
 var colorElement;
+
+colors = [  '#E6B0AA','#D7BDE2','#A9CCE3','#A3E4D7','#A9DFBF','#F9E79F','#F5CBA7',
+            '#E74C3C','#8E44AD','#3498DB','#16A085','#2ECC71','#F39C12','#D35400',
+            '#641E16','#512E5F','#154360','#0E6251','#145A32','#7D6608','#784212'];
 
 $(".modal-btn").click(()=>{
 
     if(panelChart){panelChart.destroy()}
 
-    xElement = $(".select[name='x-axis'] ul li:visible")[0];
-    xLabel = xElement.getAttribute('data-value');
-    xType = xElement.getAttribute('data-type');
+    xLabel = $(".select[name='x-axis'] ul li:visible")[0].getAttribute('data-value');
+    xType = $(".select[name='x-axis'] ul li:visible")[0].getAttribute('data-type');
+    xText = $(".select[name='x-axis'] ul li:visible")[0].innerHTML;
 
-    yElement = $(".select[name='y-axis'] ul li:visible")[0];
-    yLabel = yElement.getAttribute('data-value');
-    yType = yElement.getAttribute('data-type');
+    yLabel =  $(".select[name='y-axis'] ul li:visible")[0].getAttribute('data-value');
+    yType =  $(".select[name='y-axis'] ul li:visible")[0].getAttribute('data-type');
+    yText =  $(".select[name='y-axis'] ul li:visible")[0].innerHTML;
 
-    districtElement = $(".select[name='district'] ul li:visible")[0];
-    districtLabel = districtElement.getAttribute('data-value');
+    districtLabel = $(".select[name='district'] ul li:visible")[0].getAttribute('data-value');
 
-    colorElement = $(".select[name='color'] ul li:visible")[0];
+    colorLabel = $(".select[name='color'] ul li:visible")[0].getAttribute('data-value');
 
     $(".plotOption").removeClass("d-none");
 
@@ -75,7 +76,7 @@ $("#barChart").click(()=>{
             data: {
                 labels: labels,
                 datasets: [{
-                    label: yElement.innerHTML,
+                    label: yText,
                     data: barData,
                     borderWidth: 1
                 }]
@@ -85,13 +86,13 @@ $("#barChart").click(()=>{
                     x:{
                         title:{
                             display: true,
-                            text: xElement.innerHTML
+                            text: xText
                         }
                     },
                     y: {
                         title:{
                             display: true,
-                            text: yElement.innerHTML
+                            text: yText
                         }
                     }
                 }
@@ -108,6 +109,7 @@ $("#scatter").click(()=>{
 
         scatterData = [];
 
+        counter = 0;
         for(var district in json){
             if(districtLabel=="" || districtLabel==district){        
                 data = [];
@@ -118,7 +120,7 @@ $("#scatter").click(()=>{
                     {
                         label: district,
                         data: data,
-                        backgroundColor: $('#color')[0].value
+                        backgroundColor: colorLabel==''?colors[2]:colors[counter++]
                     }
                 )
             }
@@ -136,13 +138,13 @@ $("#scatter").click(()=>{
                         position: 'bottom',
                         title:{
                             display: true,
-                            text: xElement.innerHTML
+                            text: xText
                         }
                     },
                     y: {
                         title:{
                             display: true,
-                            text: yElement.innerHTML
+                            text: yText
                         }
                     }
                 }
@@ -168,7 +170,7 @@ $("#boxplot").click(()=>{
             labels:districts,
             datasets:[
                 {
-                    label:yElement.innerHTML,
+                    label:yText,
                     backgroundColor: 'rgba(255,0,0,0.5)',
                     borderColor: 'red',
                     borderWidth: 1,
