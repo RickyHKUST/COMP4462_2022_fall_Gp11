@@ -74,7 +74,7 @@ var optionForPlotDistrict = [
 
 function appendScatterOption(list, jQueryObject){
     list.forEach(e => {
-        jQueryObject.append($(`<li data-value="${e.value}">${e.name}</li>`));
+        jQueryObject.append($(`<li data-value="${e.value}" data-type="${e.type?e.type:''}">${e.name}</li>`));
     })
 }
 

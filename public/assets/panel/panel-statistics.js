@@ -4,11 +4,34 @@ var yElement;
 var colorElement;
 
 $(".modal-btn").click(()=>{
+
     if(chart){chart.destroy()}
+
     xElement = $(".select[name='x-axis'] ul li:visible")[0];
+    xLabel = xElement.getAttribute('data-value');
+    xType = xElement.getAttribute('data-type');
     yElement = $(".select[name='y-axis'] ul li:visible")[0];
+    yLabel = yElement.getAttribute('data-value');
+    yType = yElement.getAttribute('data-type');
     colorElement = $(".select[name='color'] ul li:visible")[0];
     districtElement = $(".select[name='district'] ul li:visible")[0];
+
+    $(".plotOption").removeClass("d-none");
+
+    if(xType=="quantitative"){
+        $(".plotOption > #barChart").parent().addClass("d-none");
+        $(".plotOption > #boxplot").parent().addClass("d-none");
+    }
+    if(xType=="qualitative"){
+        $(".plotOption > #scatter").parent().addClass("d-none");
+    }
+    if(yLabel=="BuildingNumber" || yLabel=="BuildingNumberPerKm2"){
+        $(".plotOption > #scatter").parent().addClass("d-none");
+        $(".plotOption > #boxplot").parent().addClass("d-none");
+    }
+    if(yLabel!="BuildingNumber" && yLabel!="BuildingNumberPerKm2"){
+        $(".plotOption > #barChart").parent().addClass("d-none");
+    }
 })
 
 $("#barChart").click(()=>{
