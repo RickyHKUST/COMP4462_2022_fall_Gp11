@@ -106,7 +106,21 @@ select {
     cursor: pointer;
     position: absolute;
     right: 0;
-    text-align: right;
+    text-align: center;
+}
+
+.select#place-names{
+    width:250px;
+}
+
+.select#x-axis, .select#y-axis, .select#district, .select#color{
+    width:340px;
+}
+
+.select > ul{
+    background-color: #e8faff;
+    padding-left: 0px;
+    border-radius: 10px;
 }
 
 .select > ul > li{
@@ -123,7 +137,7 @@ select {
 }
 
 .select > ul > li:hover{
-    background-color: #a0ebff;
+    background-image: linear-gradient(to right, #6688d3 0%, #0ecbff 100%);
 }
 .select > ul > li:first-child{
     display: block;
