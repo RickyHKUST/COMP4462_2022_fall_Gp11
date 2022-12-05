@@ -1,6 +1,10 @@
 var panelChart;
 var colorElement;
 
+colors = [  '#E6B0AA','#D7BDE2','#A9CCE3','#A3E4D7','#A9DFBF','#F9E79F','#F5CBA7',
+            '#E74C3C','#8E44AD','#3498DB','#16A085','#2ECC71','#F39C12','#D35400',
+            '#641E16','#512E5F','#154360','#0E6251','#145A32','#7D6608','#784212'];
+
 $(".modal-btn").click(()=>{
 
     if(panelChart){panelChart.destroy()}
@@ -15,7 +19,7 @@ $(".modal-btn").click(()=>{
 
     districtLabel = $(".select[name='district'] ul li:visible")[0].getAttribute('data-value');
 
-    colorElement = $(".select[name='color'] ul li:visible")[0];
+    colorLabel = $(".select[name='color'] ul li:visible")[0].getAttribute('data-value');
 
     $(".plotOption").removeClass("d-none");
 
@@ -105,6 +109,7 @@ $("#scatter").click(()=>{
 
         scatterData = [];
 
+        counter = 0;
         for(var district in json){
             if(districtLabel=="" || districtLabel==district){        
                 data = [];
@@ -115,7 +120,7 @@ $("#scatter").click(()=>{
                     {
                         label: district,
                         data: data,
-                        backgroundColor: $('#color')[0].value
+                        backgroundColor: colorLabel==''?colors[2]:colors[counter++]
                     }
                 )
             }

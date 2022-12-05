@@ -24,9 +24,8 @@ var optionForPlotY = [
 ]
 
 var optionForPlotColor = [
-    {value: "default", name:"Default"},
-    {value: "by_district", name:"By district"},
-    {value: "by_distance", name:"By distance"}
+    {value: "", name:"Default"},
+    {value: "by_district", name:"By district"}
 ]
 
 var optionForDistrict = [
