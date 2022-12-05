@@ -178,11 +178,13 @@ bottom: 100%;
 position: absolute;
 display: flex;
 flex-direction: column;
-width: 320px;
+width: 280px;
 margin: min(1rem, 20px);
+font-family: sans-serif;
+font-weight: 500;
 font-size: 18px;
 background-image: linear-gradient(to right, #afc4f1 0%, #70e0ff 100%);  
-border-radius: 8px;
+border-radius: 16px;
 padding: 1.5em;
 z-index: 42;
 transform: scale(0);
@@ -199,11 +201,11 @@ transform: scale(1);
 .hover-popup::before {
 content: '';
 position: absolute;
-left: 2.5%;
+left: 3%;
 border-left: 10px solid transparent;
 border-right: 10px solid transparent;
 border-top: 10px solid #afc4f1;
-bottom: -10px;
+bottom: -8px;
 }
 
 .hover-popup::after {
