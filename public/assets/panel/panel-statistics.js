@@ -45,16 +45,10 @@ $("#barChart").click(()=>{
     
     $.getJSON('./assets/panel/data/buildingAroundMTR.json',(json)=>{
 
-        labels = [];
+        i = 1;
+        labels = Array(5).fill().map(()=>`${i}km around the MTR station`);
         barData = [];
-        for(var i = 1;i<=5;i++){
-            if(districtLabel==''){
-                labels.push(`${i}km around the MTR station in Hong Kong`);
-            }
-            else{
-                labels.push(`${i}km around the MTR station in ${districtLabel} district`);
-            }
-        }
+        
         for(var km in json){
             var sum = 0;
             var iteration = km.match(/\d/g).join("");
@@ -65,9 +59,10 @@ $("#barChart").click(()=>{
                     }
                 }
             }
+            console.log(sum);
             switch(yLabel){
-                case "BuildingNumber": data.push(sum);break;
-                case "BuildingNumberPerKm2": data.push(sum/(iteration*iteration));break;
+                case "BuildingNumber": barData.push(sum);break;
+                case "BuildingNumberPerKm2": barData.push(sum/(iteration*iteration));break;
             }
         }
     
@@ -76,26 +71,10 @@ $("#barChart").click(()=>{
             data: {
                 labels: labels,
                 datasets: [{
-                    label: yText,
+                    label: yText+` in ${districtLabel==''?'Hong Kong':districtLabel}`,
                     data: barData,
                     borderWidth: 1
                 }]
-            },
-            options: {
-                scales: {
-                    x:{
-                        title:{
-                            display: true,
-                            text: xText
-                        }
-                    },
-                    y: {
-                        title:{
-                            display: true,
-                            text: yText
-                        }
-                    }
-                }
             }
         });
     })
