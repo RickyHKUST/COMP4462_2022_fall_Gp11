@@ -162,6 +162,14 @@ select:hover{
     transition: all .5s ease;
 }
 
+input[type=checkbox] {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 75px;
+    height: 75px;
+    margin: 10px;
+}
+
 .modal-btn{ 
     cursor: pointer;
     border: none;
@@ -187,7 +195,7 @@ select:hover{
     padding-left: 5px;
     font-family: sans-serif;
     font-weight: 600;
-    font-size: 19px;
+    font-size: 18px;
     height: 51.5px;
     line-height: 51.5px;
 }
