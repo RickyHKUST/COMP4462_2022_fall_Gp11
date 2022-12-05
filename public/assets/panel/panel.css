@@ -106,6 +106,7 @@ select {
     padding: 10px;
     background: #bfe5ef8f;
     border: 1px solid #bfe5ef;
+    border-radius: 10px;
 }
 
 .select {
@@ -122,13 +123,7 @@ select {
     width:340px;
 }
 
-.select > ul{
-    background-color: #e8faff;
-    padding-left: 0px;
-    border-radius: 10px;
-}
-
-.select > ul > li{
+.dropdown > .select > ul > li{
     cursor: pointer;
     list-style: none;
     display: none;
@@ -141,10 +136,10 @@ select {
     font-size: 21px;
 }
 
-.select > ul > li:hover{
+.dropdown > .select > ul > li:hover{
     background-image: linear-gradient(to right, #6688d3 0%, #0ecbff 100%);
 }
-.select > ul > li:first-child{
+.dropdown > .select > ul > li:first-child{
     display: block;
 }
 
