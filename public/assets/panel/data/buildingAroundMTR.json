@@ -1,0 +1,1647 @@
+{
+    "1km": {
+        "Islands": {
+            "AsiaWorld-Expo": {
+                "BuildingNumber": 1
+            },
+            "Tung Chung": {
+                "BuildingNumber": 42
+            },
+            "Airport": {
+                "BuildingNumber": 1
+            },
+            "Disneyland Resort": {
+                "BuildingNumber": 0
+            }
+        },
+        "Kwai Tsing": {
+            "Tsing Yi": {
+                "BuildingNumber": 60
+            },
+            "Lai King": {
+                "BuildingNumber": 8
+            },
+            "Kwai Hing": {
+                "BuildingNumber": 459
+            },
+            "Kwai Fong": {
+                "BuildingNumber": 21
+            }
+        },
+        "Yau Tsim Mong": {
+            "Kowloon": {
+                "BuildingNumber": 298
+            },
+            "Mong Kok East": {
+                "BuildingNumber": 1893
+            },
+            "Hung Hom": {
+                "BuildingNumber": 276
+            },
+            "Prince Edward": {
+                "BuildingNumber": 2268
+            },
+            "Mong Kok": {
+                "BuildingNumber": 1846
+            },
+            "Yau Ma Tei": {
+                "BuildingNumber": 1440
+            },
+            "East Tsim Sha Tsui": {
+                "BuildingNumber": 227
+            },
+            "Olympic": {
+                "BuildingNumber": 655
+            },
+            "Tsim Sha Tsui": {
+                "BuildingNumber": 265
+            },
+            "Austin": {
+                "BuildingNumber": 479
+            },
+            "Jordan": {
+                "BuildingNumber": 593
+            }
+        },
+        "Tsuen Wan": {
+            "Sunny Bay": {
+                "BuildingNumber": 0
+            },
+            "Tsuen Wan West": {
+                "BuildingNumber": 487
+            },
+            "Tsuen Wan": {
+                "BuildingNumber": 136
+            },
+            "Tai Wo Hau": {
+                "BuildingNumber": 529
+            }
+        },
+        "North": {
+            "Lo Wu": {
+                "BuildingNumber": 0
+            },
+            "Sheung Shui": {
+                "BuildingNumber": 75
+            },
+            "Fanling": {
+                "BuildingNumber": 75
+            }
+        },
+        "Tai Po": {
+            "Tai Wo": {
+                "BuildingNumber": 1170
+            },
+            "Tai Po Market": {
+                "BuildingNumber": 1144
+            }
+        },
+        "Sha Tin": {
+            "University": {
+                "BuildingNumber": 52
+            },
+            "Fo Tan": {
+                "BuildingNumber": 19
+            },
+            "Sha Tin": {
+                "BuildingNumber": 1804
+            },
+            "Tai Wai": {
+                "BuildingNumber": 36
+            },
+            "Wu Kai Sha": {
+                "BuildingNumber": 9
+            },
+            "Ma On Shan": {
+                "BuildingNumber": 53
+            },
+            "Heng On": {
+                "BuildingNumber": 39
+            },
+            "Tai Shui Hang": {
+                "BuildingNumber": 13
+            },
+            "Shek Mun": {
+                "BuildingNumber": 61
+            },
+            "City One": {
+                "BuildingNumber": 53
+            },
+            "Sha Tin Wai": {
+                "BuildingNumber": 1251
+            },
+            "Che Kung Temple": {
+                "BuildingNumber": 1806
+            },
+            "Hin Keng": {
+                "BuildingNumber": 19
+            }
+        },
+        "Kowloon City": {
+            "Kowloon Tong": {
+                "BuildingNumber": 142
+            },
+            "Ho Man Tin": {
+                "BuildingNumber": 2936
+            },
+            "Kai Tak": {
+                "BuildingNumber": 209
+            },
+            "Sung Wong Toi": {
+                "BuildingNumber": 827
+            },
+            "To Kwa Wan": {
+                "BuildingNumber": 3409
+            },
+            "Whampo": {
+                "BuildingNumber": 241
+            }
+        },
+        "Central and Western": {
+            "Admiralty": {
+                "BuildingNumber": 2495
+            },
+            "Sheung Wan": {
+                "BuildingNumber": 2248
+            },
+            "Sai Ying Pun": {
+                "BuildingNumber": 2107
+            },
+            "HKU": {
+                "BuildingNumber": 1055
+            },
+            "Kennedy Town": {
+                "BuildingNumber": 686
+            },
+            "Hong Kong": {
+                "BuildingNumber": 607
+            },
+            "Exhibition Centre": {
+                "BuildingNumber": 2337
+            },
+            "Central": {
+                "BuildingNumber": 622
+            }
+        },
+        "Yuen Long": {
+            "Lok Ma Chau": {
+                "BuildingNumber": 0
+            },
+            "Kam Sheung Road": {
+                "BuildingNumber": 45
+            },
+            "Yuen Long": {
+                "BuildingNumber": 6692
+            },
+            "Long Ping": {
+                "BuildingNumber": 6935
+            },
+            "Tin Shui Wai": {
+                "BuildingNumber": 49
+            }
+        },
+        "Eastern": {
+            "Heng Fa Chuen": {
+                "BuildingNumber": 12
+            },
+            "Shau Kei Wan": {
+                "BuildingNumber": 338
+            },
+            "Sai Wan Ho": {
+                "BuildingNumber": 349
+            },
+            "Tai Koo": {
+                "BuildingNumber": 74
+            },
+            "Quarry Bay": {
+                "BuildingNumber": 67
+            },
+            "North Point": {
+                "BuildingNumber": 123
+            },
+            "Fortress Hill": {
+                "BuildingNumber": 101
+            },
+            "Chai Wan": {
+                "BuildingNumber": 23
+            }
+        },
+        "Wan Chai": {
+            "Tin Hau": {
+                "BuildingNumber": 119
+            },
+            "Causeway Bay": {
+                "BuildingNumber": 100
+            },
+            "Wan Chai": {
+                "BuildingNumber": 2328
+            }
+        },
+        "Sai Kung": {
+            "Tiu Keng Leng": {
+                "BuildingNumber": 57
+            },
+            "Po Lam": {
+                "BuildingNumber": 32
+            },
+            "LOHAS Park": {
+                "BuildingNumber": 126
+            },
+            "Hang Hau": {
+                "BuildingNumber": 0
+            }
+        },
+        "Kwun Tong": {
+            "Yau Tong": {
+                "BuildingNumber": 698
+            },
+            "Lam Tin": {
+                "BuildingNumber": 76
+            },
+            "Kwun Tong": {
+                "BuildingNumber": 722
+            },
+            "Ngau Tau Kok": {
+                "BuildingNumber": 724
+            },
+            "Kowloon Bay": {
+                "BuildingNumber": 204
+            },
+            "Tseung Kwan O": {
+                "BuildingNumber": 0
+            }
+        },
+        "Wong Tai Sin": {
+            "Choi Hung": {
+                "BuildingNumber": 78
+            },
+            "Diamond Hill": {
+                "BuildingNumber": 231
+            },
+            "Wong Tai Sin": {
+                "BuildingNumber": 224
+            },
+            "Lok Fu": {
+                "BuildingNumber": 192
+            }
+        },
+        "Sham Shui Po": {
+            "Shek Kip Mei": {
+                "BuildingNumber": 1224
+            },
+            "Nam Cheong": {
+                "BuildingNumber": 407
+            },
+            "Mei Foo": {
+                "BuildingNumber": 28
+            },
+            "Lai Chi Kok": {
+                "BuildingNumber": 57
+            },
+            "Cheung Sha Wan": {
+                "BuildingNumber": 459
+            },
+            "Sham Shui Po": {
+                "BuildingNumber": 1165
+            }
+        },
+        "Tuen Mun": {
+            "Siu Hong": {
+                "BuildingNumber": 61
+            },
+            "Tuen Mun": {
+                "BuildingNumber": 1093
+            }
+        },
+        "Southern": {
+            "Ocean Park": {
+                "BuildingNumber": 0
+            },
+            "Wong Chuk Hang": {
+                "BuildingNumber": 36
+            },
+            "Lei Tung": {
+                "BuildingNumber": 150
+            },
+            "South Horizons": {
+                "BuildingNumber": 156
+            }
+        }
+    },
+    "2km": {
+        "Islands": {
+            "AsiaWorld-Expo": {
+                "BuildingNumber": 1
+            },
+            "Tung Chung": {
+                "BuildingNumber": 77
+            },
+            "Airport": {
+                "BuildingNumber": 1
+            },
+            "Disneyland Resort": {
+                "BuildingNumber": 0
+            }
+        },
+        "Kwai Tsing": {
+            "Tsing Yi": {
+                "BuildingNumber": 671
+            },
+            "Lai King": {
+                "BuildingNumber": 70
+            },
+            "Kwai Hing": {
+                "BuildingNumber": 612
+            },
+            "Kwai Fong": {
+                "BuildingNumber": 595
+            }
+        },
+        "Yau Tsim Mong": {
+            "Kowloon": {
+                "BuildingNumber": 1236
+            },
+            "Mong Kok East": {
+                "BuildingNumber": 6745
+            },
+            "Hung Hom": {
+                "BuildingNumber": 4200
+            },
+            "Prince Edward": {
+                "BuildingNumber": 5777
+            },
+            "Mong Kok": {
+                "BuildingNumber": 6228
+            },
+            "Yau Ma Tei": {
+                "BuildingNumber": 5861
+            },
+            "East Tsim Sha Tsui": {
+                "BuildingNumber": 3584
+            },
+            "Olympic": {
+                "BuildingNumber": 3049
+            },
+            "Tsim Sha Tsui": {
+                "BuildingNumber": 3069
+            },
+            "Austin": {
+                "BuildingNumber": 1964
+            },
+            "Jordan": {
+                "BuildingNumber": 4599
+            }
+        },
+        "Tsuen Wan": {
+            "Sunny Bay": {
+                "BuildingNumber": 0
+            },
+            "Tsuen Wan West": {
+                "BuildingNumber": 696
+            },
+            "Tsuen Wan": {
+                "BuildingNumber": 1052
+            },
+            "Tai Wo Hau": {
+                "BuildingNumber": 650
+            }
+        },
+        "North": {
+            "Lo Wu": {
+                "BuildingNumber": 0
+            },
+            "Sheung Shui": {
+                "BuildingNumber": 108
+            },
+            "Fanling": {
+                "BuildingNumber": 136
+            }
+        },
+        "Tai Po": {
+            "Tai Wo": {
+                "BuildingNumber": 1238
+            },
+            "Tai Po Market": {
+                "BuildingNumber": 1284
+            }
+        },
+        "Sha Tin": {
+            "University": {
+                "BuildingNumber": 1839
+            },
+            "Fo Tan": {
+                "BuildingNumber": 142
+            },
+            "Sha Tin": {
+                "BuildingNumber": 1845
+            },
+            "Tai Wai": {
+                "BuildingNumber": 1828
+            },
+            "Wu Kai Sha": {
+                "BuildingNumber": 49
+            },
+            "Ma On Shan": {
+                "BuildingNumber": 76
+            },
+            "Heng On": {
+                "BuildingNumber": 82
+            },
+            "Tai Shui Hang": {
+                "BuildingNumber": 91
+            },
+            "Shek Mun": {
+                "BuildingNumber": 79
+            },
+            "City One": {
+                "BuildingNumber": 1317
+            },
+            "Sha Tin Wai": {
+                "BuildingNumber": 1862
+            },
+            "Che Kung Temple": {
+                "BuildingNumber": 1838
+            },
+            "Hin Keng": {
+                "BuildingNumber": 39
+            }
+        },
+        "Kowloon City": {
+            "Kowloon Tong": {
+                "BuildingNumber": 2463
+            },
+            "Ho Man Tin": {
+                "BuildingNumber": 5189
+            },
+            "Kai Tak": {
+                "BuildingNumber": 1447
+            },
+            "Sung Wong Toi": {
+                "BuildingNumber": 4405
+            },
+            "To Kwa Wan": {
+                "BuildingNumber": 5156
+            },
+            "Whampo": {
+                "BuildingNumber": 3818
+            }
+        },
+        "Central and Western": {
+            "Admiralty": {
+                "BuildingNumber": 4658
+            },
+            "Sheung Wan": {
+                "BuildingNumber": 2630
+            },
+            "Sai Ying Pun": {
+                "BuildingNumber": 3236
+            },
+            "HKU": {
+                "BuildingNumber": 3093
+            },
+            "Kennedy Town": {
+                "BuildingNumber": 2680
+            },
+            "Hong Kong": {
+                "BuildingNumber": 4976
+            },
+            "Exhibition Centre": {
+                "BuildingNumber": 2678
+            },
+            "Central": {
+                "BuildingNumber": 4997
+            }
+        },
+        "Yuen Long": {
+            "Lok Ma Chau": {
+                "BuildingNumber": 0
+            },
+            "Kam Sheung Road": {
+                "BuildingNumber": 48
+            },
+            "Yuen Long": {
+                "BuildingNumber": 8348
+            },
+            "Long Ping": {
+                "BuildingNumber": 8352
+            },
+            "Tin Shui Wai": {
+                "BuildingNumber": 155
+            }
+        },
+        "Eastern": {
+            "Heng Fa Chuen": {
+                "BuildingNumber": 1028
+            },
+            "Shau Kei Wan": {
+                "BuildingNumber": 1061
+            },
+            "Sai Wan Ho": {
+                "BuildingNumber": 1059
+            },
+            "Tai Koo": {
+                "BuildingNumber": 424
+            },
+            "Quarry Bay": {
+                "BuildingNumber": 218
+            },
+            "North Point": {
+                "BuildingNumber": 227
+            },
+            "Fortress Hill": {
+                "BuildingNumber": 241
+            },
+            "Chai Wan": {
+                "BuildingNumber": 321
+            }
+        },
+        "Wan Chai": {
+            "Tin Hau": {
+                "BuildingNumber": 2510
+            },
+            "Causeway Bay": {
+                "BuildingNumber": 2499
+            },
+            "Wan Chai": {
+                "BuildingNumber": 2726
+            }
+        },
+        "Sai Kung": {
+            "Tiu Keng Leng": {
+                "BuildingNumber": 219
+            },
+            "Po Lam": {
+                "BuildingNumber": 102
+            },
+            "LOHAS Park": {
+                "BuildingNumber": 205
+            },
+            "Hang Hau": {
+                "BuildingNumber": 0
+            }
+        },
+        "Kwun Tong": {
+            "Yau Tong": {
+                "BuildingNumber": 767
+            },
+            "Lam Tin": {
+                "BuildingNumber": 1455
+            },
+            "Kwun Tong": {
+                "BuildingNumber": 818
+            },
+            "Ngau Tau Kok": {
+                "BuildingNumber": 962
+            },
+            "Kowloon Bay": {
+                "BuildingNumber": 989
+            },
+            "Tseung Kwan O": {
+                "BuildingNumber": 221
+            }
+        },
+        "Wong Tai Sin": {
+            "Choi Hung": {
+                "BuildingNumber": 550
+            },
+            "Diamond Hill": {
+                "BuildingNumber": 592
+            },
+            "Wong Tai Sin": {
+                "BuildingNumber": 681
+            },
+            "Lok Fu": {
+                "BuildingNumber": 1113
+            }
+        },
+        "Sham Shui Po": {
+            "Shek Kip Mei": {
+                "BuildingNumber": 2925
+            },
+            "Nam Cheong": {
+                "BuildingNumber": 2267
+            },
+            "Mei Foo": {
+                "BuildingNumber": 114
+            },
+            "Lai Chi Kok": {
+                "BuildingNumber": 732
+            },
+            "Cheung Sha Wan": {
+                "BuildingNumber": 1480
+            },
+            "Sham Shui Po": {
+                "BuildingNumber": 2765
+            }
+        },
+        "Tuen Mun": {
+            "Siu Hong": {
+                "BuildingNumber": 83
+            },
+            "Tuen Mun": {
+                "BuildingNumber": 1185
+            }
+        },
+        "Southern": {
+            "Ocean Park": {
+                "BuildingNumber": 217
+            },
+            "Wong Chuk Hang": {
+                "BuildingNumber": 310
+            },
+            "Lei Tung": {
+                "BuildingNumber": 213
+            },
+            "South Horizons": {
+                "BuildingNumber": 255
+            }
+        }
+    },
+    "3km": {
+        "Islands": {
+            "AsiaWorld-Expo": {
+                "BuildingNumber": 1
+            },
+            "Tung Chung": {
+                "BuildingNumber": 84
+            },
+            "Airport": {
+                "BuildingNumber": 52
+            },
+            "Disneyland Resort": {
+                "BuildingNumber": 2
+            }
+        },
+        "Kwai Tsing": {
+            "Tsing Yi": {
+                "BuildingNumber": 1157
+            },
+            "Lai King": {
+                "BuildingNumber": 722
+            },
+            "Kwai Hing": {
+                "BuildingNumber": 1093
+            },
+            "Kwai Fong": {
+                "BuildingNumber": 1112
+            }
+        },
+        "Yau Tsim Mong": {
+            "Kowloon": {
+                "BuildingNumber": 10617
+            },
+            "Mong Kok East": {
+                "BuildingNumber": 7306
+            },
+            "Hung Hom": {
+                "BuildingNumber": 8569
+            },
+            "Prince Edward": {
+                "BuildingNumber": 7223
+            },
+            "Mong Kok": {
+                "BuildingNumber": 7290
+            },
+            "Yau Ma Tei": {
+                "BuildingNumber": 7194
+            },
+            "East Tsim Sha Tsui": {
+                "BuildingNumber": 8107
+            },
+            "Olympic": {
+                "BuildingNumber": 6608
+            },
+            "Tsim Sha Tsui": {
+                "BuildingNumber": 8494
+            },
+            "Austin": {
+                "BuildingNumber": 9460
+            },
+            "Jordan": {
+                "BuildingNumber": 8952
+            }
+        },
+        "Tsuen Wan": {
+            "Sunny Bay": {
+                "BuildingNumber": 18
+            },
+            "Tsuen Wan West": {
+                "BuildingNumber": 1186
+            },
+            "Tsuen Wan": {
+                "BuildingNumber": 1189
+            },
+            "Tai Wo Hau": {
+                "BuildingNumber": 1188
+            }
+        },
+        "North": {
+            "Lo Wu": {
+                "BuildingNumber": 11
+            },
+            "Sheung Shui": {
+                "BuildingNumber": 179
+            },
+            "Fanling": {
+                "BuildingNumber": 138
+            }
+        },
+        "Tai Po": {
+            "Tai Wo": {
+                "BuildingNumber": 1353
+            },
+            "Tai Po Market": {
+                "BuildingNumber": 1366
+            }
+        },
+        "Sha Tin": {
+            "University": {
+                "BuildingNumber": 1955
+            },
+            "Fo Tan": {
+                "BuildingNumber": 3670
+            },
+            "Sha Tin": {
+                "BuildingNumber": 1920
+            },
+            "Tai Wai": {
+                "BuildingNumber": 1865
+            },
+            "Wu Kai Sha": {
+                "BuildingNumber": 72
+            },
+            "Ma On Shan": {
+                "BuildingNumber": 144
+            },
+            "Heng On": {
+                "BuildingNumber": 1924
+            },
+            "Tai Shui Hang": {
+                "BuildingNumber": 1895
+            },
+            "Shek Mun": {
+                "BuildingNumber": 1974
+            },
+            "City One": {
+                "BuildingNumber": 1947
+            },
+            "Sha Tin Wai": {
+                "BuildingNumber": 1919
+            },
+            "Che Kung Temple": {
+                "BuildingNumber": 1906
+            },
+            "Hin Keng": {
+                "BuildingNumber": 1884
+            }
+        },
+        "Kowloon City": {
+            "Kowloon Tong": {
+                "BuildingNumber": 6811
+            },
+            "Ho Man Tin": {
+                "BuildingNumber": 6872
+            },
+            "Kai Tak": {
+                "BuildingNumber": 4776
+            },
+            "Sung Wong Toi": {
+                "BuildingNumber": 6800
+            },
+            "To Kwa Wan": {
+                "BuildingNumber": 7165
+            },
+            "Whampo": {
+                "BuildingNumber": 6136
+            }
+        },
+        "Central and Western": {
+            "Admiralty": {
+                "BuildingNumber": 5589
+            },
+            "Sheung Wan": {
+                "BuildingNumber": 6314
+            },
+            "Sai Ying Pun": {
+                "BuildingNumber": 3715
+            },
+            "HKU": {
+                "BuildingNumber": 3680
+            },
+            "Kennedy Town": {
+                "BuildingNumber": 3456
+            },
+            "Hong Kong": {
+                "BuildingNumber": 6321
+            },
+            "Exhibition Centre": {
+                "BuildingNumber": 5347
+            },
+            "Central": {
+                "BuildingNumber": 5703
+            }
+        },
+        "Yuen Long": {
+            "Lok Ma Chau": {
+                "BuildingNumber": 0
+            },
+            "Kam Sheung Road": {
+                "BuildingNumber": 143
+            },
+            "Yuen Long": {
+                "BuildingNumber": 8401
+            },
+            "Long Ping": {
+                "BuildingNumber": 8447
+            },
+            "Tin Shui Wai": {
+                "BuildingNumber": 7140
+            }
+        },
+        "Eastern": {
+            "Heng Fa Chuen": {
+                "BuildingNumber": 1087
+            },
+            "Shau Kei Wan": {
+                "BuildingNumber": 1141
+            },
+            "Sai Wan Ho": {
+                "BuildingNumber": 1217
+            },
+            "Tai Koo": {
+                "BuildingNumber": 1282
+            },
+            "Quarry Bay": {
+                "BuildingNumber": 665
+            },
+            "North Point": {
+                "BuildingNumber": 938
+            },
+            "Fortress Hill": {
+                "BuildingNumber": 3039
+            },
+            "Chai Wan": {
+                "BuildingNumber": 1037
+            }
+        },
+        "Wan Chai": {
+            "Tin Hau": {
+                "BuildingNumber": 2978
+            },
+            "Causeway Bay": {
+                "BuildingNumber": 3080
+            },
+            "Wan Chai": {
+                "BuildingNumber": 5132
+            }
+        },
+        "Sai Kung": {
+            "Tiu Keng Leng": {
+                "BuildingNumber": 1071
+            },
+            "Po Lam": {
+                "BuildingNumber": 260
+            },
+            "LOHAS Park": {
+                "BuildingNumber": 236
+            },
+            "Hang Hau": {
+                "BuildingNumber": 0
+            }
+        },
+        "Kwun Tong": {
+            "Yau Tong": {
+                "BuildingNumber": 1983
+            },
+            "Lam Tin": {
+                "BuildingNumber": 1630
+            },
+            "Kwun Tong": {
+                "BuildingNumber": 1714
+            },
+            "Ngau Tau Kok": {
+                "BuildingNumber": 1429
+            },
+            "Kowloon Bay": {
+                "BuildingNumber": 2191
+            },
+            "Tseung Kwan O": {
+                "BuildingNumber": 941
+            }
+        },
+        "Wong Tai Sin": {
+            "Choi Hung": {
+                "BuildingNumber": 1601
+            },
+            "Diamond Hill": {
+                "BuildingNumber": 1797
+            },
+            "Wong Tai Sin": {
+                "BuildingNumber": 4456
+            },
+            "Lok Fu": {
+                "BuildingNumber": 6552
+            }
+        },
+        "Sham Shui Po": {
+            "Shek Kip Mei": {
+                "BuildingNumber": 6972
+            },
+            "Nam Cheong": {
+                "BuildingNumber": 3265
+            },
+            "Mei Foo": {
+                "BuildingNumber": 996
+            },
+            "Lai Chi Kok": {
+                "BuildingNumber": 2371
+            },
+            "Cheung Sha Wan": {
+                "BuildingNumber": 2914
+            },
+            "Sham Shui Po": {
+                "BuildingNumber": 6390
+            }
+        },
+        "Tuen Mun": {
+            "Siu Hong": {
+                "BuildingNumber": 1236
+            },
+            "Tuen Mun": {
+                "BuildingNumber": 1395
+            }
+        },
+        "Southern": {
+            "Ocean Park": {
+                "BuildingNumber": 520
+            },
+            "Wong Chuk Hang": {
+                "BuildingNumber": 886
+            },
+            "Lei Tung": {
+                "BuildingNumber": 601
+            },
+            "South Horizons": {
+                "BuildingNumber": 551
+            }
+        }
+    },
+    "4km": {
+        "Islands": {
+            "AsiaWorld-Expo": {
+                "BuildingNumber": 76
+            },
+            "Tung Chung": {
+                "BuildingNumber": 85
+            },
+            "Airport": {
+                "BuildingNumber": 79
+            },
+            "Disneyland Resort": {
+                "BuildingNumber": 155
+            }
+        },
+        "Kwai Tsing": {
+            "Tsing Yi": {
+                "BuildingNumber": 1220
+            },
+            "Lai King": {
+                "BuildingNumber": 1364
+            },
+            "Kwai Hing": {
+                "BuildingNumber": 1274
+            },
+            "Kwai Fong": {
+                "BuildingNumber": 1295
+            }
+        },
+        "Yau Tsim Mong": {
+            "Kowloon": {
+                "BuildingNumber": 12237
+            },
+            "Mong Kok East": {
+                "BuildingNumber": 7677
+            },
+            "Hung Hom": {
+                "BuildingNumber": 10583
+            },
+            "Prince Edward": {
+                "BuildingNumber": 7568
+            },
+            "Mong Kok": {
+                "BuildingNumber": 7455
+            },
+            "Yau Ma Tei": {
+                "BuildingNumber": 10426
+            },
+            "East Tsim Sha Tsui": {
+                "BuildingNumber": 12082
+            },
+            "Olympic": {
+                "BuildingNumber": 7923
+            },
+            "Tsim Sha Tsui": {
+                "BuildingNumber": 12316
+            },
+            "Austin": {
+                "BuildingNumber": 12327
+            },
+            "Jordan": {
+                "BuildingNumber": 12293
+            }
+        },
+        "Tsuen Wan": {
+            "Sunny Bay": {
+                "BuildingNumber": 122
+            },
+            "Tsuen Wan West": {
+                "BuildingNumber": 1206
+            },
+            "Tsuen Wan": {
+                "BuildingNumber": 1210
+            },
+            "Tai Wo Hau": {
+                "BuildingNumber": 1225
+            }
+        },
+        "North": {
+            "Lo Wu": {
+                "BuildingNumber": 73
+            },
+            "Sheung Shui": {
+                "BuildingNumber": 184
+            },
+            "Fanling": {
+                "BuildingNumber": 212
+            }
+        },
+        "Tai Po": {
+            "Tai Wo": {
+                "BuildingNumber": 1465
+            },
+            "Tai Po Market": {
+                "BuildingNumber": 1522
+            }
+        },
+        "Sha Tin": {
+            "University": {
+                "BuildingNumber": 2067
+            },
+            "Fo Tan": {
+                "BuildingNumber": 3724
+            },
+            "Sha Tin": {
+                "BuildingNumber": 2011
+            },
+            "Tai Wai": {
+                "BuildingNumber": 2106
+            },
+            "Wu Kai Sha": {
+                "BuildingNumber": 118
+            },
+            "Ma On Shan": {
+                "BuildingNumber": 1937
+            },
+            "Heng On": {
+                "BuildingNumber": 1964
+            },
+            "Tai Shui Hang": {
+                "BuildingNumber": 2027
+            },
+            "Shek Mun": {
+                "BuildingNumber": 3703
+            },
+            "City One": {
+                "BuildingNumber": 2009
+            },
+            "Sha Tin Wai": {
+                "BuildingNumber": 2134
+            },
+            "Che Kung Temple": {
+                "BuildingNumber": 2118
+            },
+            "Hin Keng": {
+                "BuildingNumber": 2785
+            }
+        },
+        "Kowloon City": {
+            "Kowloon Tong": {
+                "BuildingNumber": 7632
+            },
+            "Ho Man Tin": {
+                "BuildingNumber": 10176
+            },
+            "Kai Tak": {
+                "BuildingNumber": 7886
+            },
+            "Sung Wong Toi": {
+                "BuildingNumber": 8486
+            },
+            "To Kwa Wan": {
+                "BuildingNumber": 8540
+            },
+            "Whampo": {
+                "BuildingNumber": 10387
+            }
+        },
+        "Central and Western": {
+            "Admiralty": {
+                "BuildingNumber": 7319
+            },
+            "Sheung Wan": {
+                "BuildingNumber": 7131
+            },
+            "Sai Ying Pun": {
+                "BuildingNumber": 6639
+            },
+            "HKU": {
+                "BuildingNumber": 6129
+            },
+            "Kennedy Town": {
+                "BuildingNumber": 3780
+            },
+            "Hong Kong": {
+                "BuildingNumber": 7428
+            },
+            "Exhibition Centre": {
+                "BuildingNumber": 9505
+            },
+            "Central": {
+                "BuildingNumber": 7243
+            }
+        },
+        "Yuen Long": {
+            "Lok Ma Chau": {
+                "BuildingNumber": 73
+            },
+            "Kam Sheung Road": {
+                "BuildingNumber": 9138
+            },
+            "Yuen Long": {
+                "BuildingNumber": 8460
+            },
+            "Long Ping": {
+                "BuildingNumber": 8555
+            },
+            "Tin Shui Wai": {
+                "BuildingNumber": 8551
+            }
+        },
+        "Eastern": {
+            "Heng Fa Chuen": {
+                "BuildingNumber": 1352
+            },
+            "Shau Kei Wan": {
+                "BuildingNumber": 2004
+            },
+            "Sai Wan Ho": {
+                "BuildingNumber": 2092
+            },
+            "Tai Koo": {
+                "BuildingNumber": 2212
+            },
+            "Quarry Bay": {
+                "BuildingNumber": 5452
+            },
+            "North Point": {
+                "BuildingNumber": 8662
+            },
+            "Fortress Hill": {
+                "BuildingNumber": 7625
+            },
+            "Chai Wan": {
+                "BuildingNumber": 1384
+            }
+        },
+        "Wan Chai": {
+            "Tin Hau": {
+                "BuildingNumber": 7382
+            },
+            "Causeway Bay": {
+                "BuildingNumber": 6321
+            },
+            "Wan Chai": {
+                "BuildingNumber": 6590
+            }
+        },
+        "Sai Kung": {
+            "Tiu Keng Leng": {
+                "BuildingNumber": 1806
+            },
+            "Po Lam": {
+                "BuildingNumber": 1070
+            },
+            "LOHAS Park": {
+                "BuildingNumber": 997
+            },
+            "Hang Hau": {
+                "BuildingNumber": 0
+            }
+        },
+        "Kwun Tong": {
+            "Yau Tong": {
+                "BuildingNumber": 2236
+            },
+            "Lam Tin": {
+                "BuildingNumber": 2376
+            },
+            "Kwun Tong": {
+                "BuildingNumber": 2629
+            },
+            "Ngau Tau Kok": {
+                "BuildingNumber": 5934
+            },
+            "Kowloon Bay": {
+                "BuildingNumber": 5525
+            },
+            "Tseung Kwan O": {
+                "BuildingNumber": 1159
+            }
+        },
+        "Wong Tai Sin": {
+            "Choi Hung": {
+                "BuildingNumber": 5490
+            },
+            "Diamond Hill": {
+                "BuildingNumber": 7975
+            },
+            "Wong Tai Sin": {
+                "BuildingNumber": 8282
+            },
+            "Lok Fu": {
+                "BuildingNumber": 8776
+            }
+        },
+        "Sham Shui Po": {
+            "Shek Kip Mei": {
+                "BuildingNumber": 7585
+            },
+            "Nam Cheong": {
+                "BuildingNumber": 7200
+            },
+            "Mei Foo": {
+                "BuildingNumber": 3159
+            },
+            "Lai Chi Kok": {
+                "BuildingNumber": 3705
+            },
+            "Cheung Sha Wan": {
+                "BuildingNumber": 6656
+            },
+            "Sham Shui Po": {
+                "BuildingNumber": 7448
+            }
+        },
+        "Tuen Mun": {
+            "Siu Hong": {
+                "BuildingNumber": 1328
+            },
+            "Tuen Mun": {
+                "BuildingNumber": 1416
+            }
+        },
+        "Southern": {
+            "Ocean Park": {
+                "BuildingNumber": 906
+            },
+            "Wong Chuk Hang": {
+                "BuildingNumber": 3656
+            },
+            "Lei Tung": {
+                "BuildingNumber": 989
+            },
+            "South Horizons": {
+                "BuildingNumber": 978
+            }
+        }
+    },
+    "5km": {
+        "Islands": {
+            "AsiaWorld-Expo": {
+                "BuildingNumber": 79
+            },
+            "Tung Chung": {
+                "BuildingNumber": 85
+            },
+            "Airport": {
+                "BuildingNumber": 80
+            },
+            "Disneyland Resort": {
+                "BuildingNumber": 177
+            }
+        },
+        "Kwai Tsing": {
+            "Tsing Yi": {
+                "BuildingNumber": 1240
+            },
+            "Lai King": {
+                "BuildingNumber": 2450
+            },
+            "Kwai Hing": {
+                "BuildingNumber": 1793
+            },
+            "Kwai Fong": {
+                "BuildingNumber": 1936
+            }
+        },
+        "Yau Tsim Mong": {
+            "Kowloon": {
+                "BuildingNumber": 13490
+            },
+            "Mong Kok East": {
+                "BuildingNumber": 11029
+            },
+            "Hung Hom": {
+                "BuildingNumber": 13803
+            },
+            "Prince Edward": {
+                "BuildingNumber": 10644
+            },
+            "Mong Kok": {
+                "BuildingNumber": 12791
+            },
+            "Yau Ma Tei": {
+                "BuildingNumber": 12970
+            },
+            "East Tsim Sha Tsui": {
+                "BuildingNumber": 13701
+            },
+            "Olympic": {
+                "BuildingNumber": 13101
+            },
+            "Tsim Sha Tsui": {
+                "BuildingNumber": 13650
+            },
+            "Austin": {
+                "BuildingNumber": 13543
+            },
+            "Jordan": {
+                "BuildingNumber": 13582
+            }
+        },
+        "Tsuen Wan": {
+            "Sunny Bay": {
+                "BuildingNumber": 192
+            },
+            "Tsuen Wan West": {
+                "BuildingNumber": 1229
+            },
+            "Tsuen Wan": {
+                "BuildingNumber": 1227
+            },
+            "Tai Wo Hau": {
+                "BuildingNumber": 1272
+            }
+        },
+        "North": {
+            "Lo Wu": {
+                "BuildingNumber": 146
+            },
+            "Sheung Shui": {
+                "BuildingNumber": 187
+            },
+            "Fanling": {
+                "BuildingNumber": 267
+            }
+        },
+        "Tai Po": {
+            "Tai Wo": {
+                "BuildingNumber": 1585
+            },
+            "Tai Po Market": {
+                "BuildingNumber": 3278
+            }
+        },
+        "Sha Tin": {
+            "University": {
+                "BuildingNumber": 3900
+            },
+            "Fo Tan": {
+                "BuildingNumber": 3888
+            },
+            "Sha Tin": {
+                "BuildingNumber": 3923
+            },
+            "Tai Wai": {
+                "BuildingNumber": 2966
+            },
+            "Wu Kai Sha": {
+                "BuildingNumber": 1939
+            },
+            "Ma On Shan": {
+                "BuildingNumber": 1990
+            },
+            "Heng On": {
+                "BuildingNumber": 2064
+            },
+            "Tai Shui Hang": {
+                "BuildingNumber": 2594
+            },
+            "Shek Mun": {
+                "BuildingNumber": 3940
+            },
+            "City One": {
+                "BuildingNumber": 3902
+            },
+            "Sha Tin Wai": {
+                "BuildingNumber": 4018
+            },
+            "Che Kung Temple": {
+                "BuildingNumber": 2436
+            },
+            "Hin Keng": {
+                "BuildingNumber": 5515
+            }
+        },
+        "Kowloon City": {
+            "Kowloon Tong": {
+                "BuildingNumber": 9102
+            },
+            "Ho Man Tin": {
+                "BuildingNumber": 13471
+            },
+            "Kai Tak": {
+                "BuildingNumber": 9929
+            },
+            "Sung Wong Toi": {
+                "BuildingNumber": 8726
+            },
+            "To Kwa Wan": {
+                "BuildingNumber": 11172
+            },
+            "Whampo": {
+                "BuildingNumber": 12224
+            }
+        },
+        "Central and Western": {
+            "Admiralty": {
+                "BuildingNumber": 12093
+            },
+            "Sheung Wan": {
+                "BuildingNumber": 12194
+            },
+            "Sai Ying Pun": {
+                "BuildingNumber": 8441
+            },
+            "HKU": {
+                "BuildingNumber": 7095
+            },
+            "Kennedy Town": {
+                "BuildingNumber": 6367
+            },
+            "Hong Kong": {
+                "BuildingNumber": 12630
+            },
+            "Exhibition Centre": {
+                "BuildingNumber": 12832
+            },
+            "Central": {
+                "BuildingNumber": 12020
+            }
+        },
+        "Yuen Long": {
+            "Lok Ma Chau": {
+                "BuildingNumber": 111
+            },
+            "Kam Sheung Road": {
+                "BuildingNumber": 9394
+            },
+            "Yuen Long": {
+                "BuildingNumber": 8669
+            },
+            "Long Ping": {
+                "BuildingNumber": 8563
+            },
+            "Tin Shui Wai": {
+                "BuildingNumber": 8600
+            }
+        },
+        "Eastern": {
+            "Heng Fa Chuen": {
+                "BuildingNumber": 2516
+            },
+            "Shau Kei Wan": {
+                "BuildingNumber": 2712
+            },
+            "Sai Wan Ho": {
+                "BuildingNumber": 2797
+            },
+            "Tai Koo": {
+                "BuildingNumber": 8323
+            },
+            "Quarry Bay": {
+                "BuildingNumber": 9137
+            },
+            "North Point": {
+                "BuildingNumber": 11043
+            },
+            "Fortress Hill": {
+                "BuildingNumber": 13241
+            },
+            "Chai Wan": {
+                "BuildingNumber": 1784
+            }
+        },
+        "Wan Chai": {
+            "Tin Hau": {
+                "BuildingNumber": 12569
+            },
+            "Causeway Bay": {
+                "BuildingNumber": 11633
+            },
+            "Wan Chai": {
+                "BuildingNumber": 12038
+            }
+        },
+        "Sai Kung": {
+            "Tiu Keng Leng": {
+                "BuildingNumber": 2337
+            },
+            "Po Lam": {
+                "BuildingNumber": 2282
+            },
+            "LOHAS Park": {
+                "BuildingNumber": 1731
+            },
+            "Hang Hau": {
+                "BuildingNumber": 0
+            }
+        },
+        "Kwun Tong": {
+            "Yau Tong": {
+                "BuildingNumber": 2531
+            },
+            "Lam Tin": {
+                "BuildingNumber": 3496
+            },
+            "Kwun Tong": {
+                "BuildingNumber": 6589
+            },
+            "Ngau Tau Kok": {
+                "BuildingNumber": 7249
+            },
+            "Kowloon Bay": {
+                "BuildingNumber": 8422
+            },
+            "Tseung Kwan O": {
+                "BuildingNumber": 2129
+            }
+        },
+        "Wong Tai Sin": {
+            "Choi Hung": {
+                "BuildingNumber": 9166
+            },
+            "Diamond Hill": {
+                "BuildingNumber": 9592
+            },
+            "Wong Tai Sin": {
+                "BuildingNumber": 10277
+            },
+            "Lok Fu": {
+                "BuildingNumber": 9771
+            }
+        },
+        "Sham Shui Po": {
+            "Shek Kip Mei": {
+                "BuildingNumber": 7827
+            },
+            "Nam Cheong": {
+                "BuildingNumber": 9788
+            },
+            "Mei Foo": {
+                "BuildingNumber": 4159
+            },
+            "Lai Chi Kok": {
+                "BuildingNumber": 7854
+            },
+            "Cheung Sha Wan": {
+                "BuildingNumber": 8074
+            },
+            "Sham Shui Po": {
+                "BuildingNumber": 7795
+            }
+        },
+        "Tuen Mun": {
+            "Siu Hong": {
+                "BuildingNumber": 1566
+            },
+            "Tuen Mun": {
+                "BuildingNumber": 1494
+            }
+        },
+        "Southern": {
+            "Ocean Park": {
+                "BuildingNumber": 2250
+            },
+            "Wong Chuk Hang": {
+                "BuildingNumber": 5900
+            },
+            "Lei Tung": {
+                "BuildingNumber": 5753
+            },
+            "South Horizons": {
+                "BuildingNumber": 6667
+            }
+        }
+    }
+}
