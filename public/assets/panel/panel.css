@@ -59,7 +59,7 @@
 .active.accordion-child{
     display: flex;
     flex-direction: column;
-    max-height: 380px;
+    max-height: 520px;
     align-items: center;
     overflow-y: scroll;
 }
