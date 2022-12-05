@@ -1,5 +1,4 @@
 var optionForDistrict = [
-    {name:"(Select district)"},
     {value:"Hong Kong",name:"Hong Kong"},
     {value:"Hong Kong Islands",name:"Islands"},
     {value:"Hong Kong Kwai Tsing",name:"Kwai Tsing"},
@@ -31,7 +30,7 @@ var busAndMtrCheckbox = [
 ]
 
 var optionForPlotX = [
-    {name:"(Select x-axis)"},
+    {name:"(Select x-axis)","type":"none"},
     {value:"NearestBus",name:"Nearest bus stop distance","type":"quantitative"},
     {value:"NearestMinibus",name:"Nearest minibus stop distance","type":"quantitative"},
     {value:"NearestMTR",name:"Nearest MTR station distance","type":"quantitative"},
@@ -40,7 +39,7 @@ var optionForPlotX = [
 ]
 
 var optionForPlotY = [
-    {name:"(Select y-axis)"},
+    {name:"(Select y-axis)","type":"none"},
     {value:"NearestBus",name:"Nearest bus stop distance","type":"quantitative"},
     {value:"NearestMinibus",name:"Nearest minibus stop distance","type":"quantitative"},
     {value:"NearestMTR",name:"Nearest MTR station distance","type":"quantitative"},
@@ -49,13 +48,11 @@ var optionForPlotY = [
 ]
 
 var optionForPlotColor = [
-    {name:"(Select color encoding)"},
     {value: "", name:"Default"},
     {value: "by_district", name:"By district"}
 ]
 
 var optionForPlotDistrict = [
-    {name:"(Select specific district)"},
     {value: "", name:"Default"},
     {value: "Central and Western", name:"Central and Western"},
     {value: "Islands", name:"Islands"},

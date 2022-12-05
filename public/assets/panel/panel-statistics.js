@@ -23,6 +23,14 @@ $(".modal-btn").click(()=>{
 
     $(".plotOption").removeClass("d-none");
 
+    if(xType=="none"){
+        $(".plotOption").addClass("d-none");
+        alert('Please select the x-axis');
+    }
+    if(yType=="none"){
+        $(".plotOption").addClass("d-none");
+        alert('Please select the y-axis');
+    }
     if(xType=="quantitative"){
         $(".plotOption > #barChart").parent().addClass("d-none");
         $(".plotOption > #boxplot").parent().addClass("d-none");
