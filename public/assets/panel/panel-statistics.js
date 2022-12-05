@@ -125,8 +125,12 @@ $("#boxplot").click(()=>{
         const dataset = [];
         const districts = [];
         for(var district in data){
-            dataset.push(data[district][searchBy]);
-            districts.push(district);
+            if(districtElement.getAttribute('data-value')=="" || districtElement.getAttribute('data-value')==district){
+                dataset.push(data[district][searchBy]);
+                districts.push(district);
+                console.log(districtElement.getAttribute('data-value'));
+                console.log(district);
+            }
         }
         console.log(dataset);
         boxplotData = {
