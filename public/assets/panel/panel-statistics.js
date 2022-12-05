@@ -1,11 +1,11 @@
-var chart;
+var panelChart;
 var xElement;
 var yElement;
 var colorElement;
 
 $(".modal-btn").click(()=>{
 
-    if(chart){chart.destroy()}
+    if(panelChart){panelChart.destroy()}
 
     xElement = $(".select[name='x-axis'] ul li:visible")[0];
     xLabel = xElement.getAttribute('data-value');
@@ -40,7 +40,7 @@ $(".modal-btn").click(()=>{
 
 $("#barChart").click(()=>{
 
-    if(chart){chart.destroy()};
+    if(panelChart){panelChart.destroy()};
     
     $.getJSON('./assets/panel/data/buildingAroundMTR.json',(json)=>{
 
@@ -70,7 +70,7 @@ $("#barChart").click(()=>{
             }
         }
     
-        chart = new Chart("statistics-modal-chart", {
+        panelChart = new Chart("statistics-modal-chart", {
             type: 'bar',
             data: {
                 labels: labels,
@@ -102,7 +102,7 @@ $("#barChart").click(()=>{
 
 $("#scatter").click(()=>{
 
-    if(chart){chart.destroy()};
+    if(panelChart){panelChart.destroy()};
 
     $.getJSON('./assets/panel/data/nearestTransportation.json',(json)=>{
 
@@ -124,7 +124,7 @@ $("#scatter").click(()=>{
             }
         }
         
-        chart = new Chart("statistics-modal-chart", {
+        panelChart = new Chart("statistics-modal-chart", {
             type: 'scatter',
             data: {
                 datasets: scatterData,
@@ -153,7 +153,7 @@ $("#scatter").click(()=>{
 
 $("#boxplot").click(()=>{
 
-    if(chart){chart.destroy()}
+    if(panelChart){panelChart.destroy()}
 
     $.getJSON('./assets/panel/data/nearestTransportation.json',(data)=>{
         const dataset = [];
@@ -179,7 +179,7 @@ $("#boxplot").click(()=>{
                 }
             ]
         }
-        chart = new Chart("statistics-modal-chart", {
+        panelChart = new Chart("statistics-modal-chart", {
             type: 'boxplot',
             data: boxplotData,
             options: {
