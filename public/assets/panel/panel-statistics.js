@@ -1,124 +1,163 @@
-var chart;
-var xElement;
-var yElement;
+var panelChart;
 var colorElement;
 
+colors = [  '#E6B0AA','#D7BDE2','#A9CCE3','#A3E4D7','#A9DFBF','#F9E79F','#F5CBA7',
+            '#E74C3C','#8E44AD','#3498DB','#16A085','#2ECC71','#F39C12','#D35400',
+            '#641E16','#512E5F','#154360','#0E6251','#145A32','#7D6608','#784212'];
+
 $(".modal-btn").click(()=>{
-    if(chart){chart.destroy()}
-    xElement = $("[name='x-axis'] ul li:visible")[0];
-    yElement = $("[name='y-axis'] ul li:visible")[0];
-    colorElement = $("[name='color'] ul li:visible")[0];
+
+    if(panelChart){panelChart.destroy()}
+
+    xLabel = $(".select[name='x-axis'] ul li:visible")[0].getAttribute('data-value');
+    xType = $(".select[name='x-axis'] ul li:visible")[0].getAttribute('data-type');
+    xText = $(".select[name='x-axis'] ul li:visible")[0].innerHTML;
+
+    yLabel =  $(".select[name='y-axis'] ul li:visible")[0].getAttribute('data-value');
+    yType =  $(".select[name='y-axis'] ul li:visible")[0].getAttribute('data-type');
+    yText =  $(".select[name='y-axis'] ul li:visible")[0].innerHTML;
+
+    districtLabel = $(".select[name='district'] ul li:visible")[0].getAttribute('data-value');
+
+    colorLabel = $(".select[name='color'] ul li:visible")[0].getAttribute('data-value');
+
+    $(".plotOption").removeClass("d-none");
+
+    if(xType=="none"){
+        $(".plotOption").addClass("d-none");
+        alert('Please select the x-axis');
+    }
+    if(yType=="none"){
+        $(".plotOption").addClass("d-none");
+        alert('Please select the y-axis');
+    }
+    if(xType=="quantitative"){
+        $(".plotOption > #barChart").parent().addClass("d-none");
+        $(".plotOption > #boxplot").parent().addClass("d-none");
+    }
+    if(xType=="qualitative"){
+        $(".plotOption > #scatter").parent().addClass("d-none");
+    }
+    if(yLabel=="BuildingNumber" || yLabel=="BuildingNumberPerKm2"){
+        $(".plotOption > #scatter").parent().addClass("d-none");
+        $(".plotOption > #boxplot").parent().addClass("d-none");
+    }
+    if(yLabel!="BuildingNumber" && yLabel!="BuildingNumberPerKm2"){
+        $(".plotOption > #barChart").parent().addClass("d-none");
+    }
 })
 
 $("#barChart").click(()=>{
 
-    if(chart){chart.destroy()}
+    if(panelChart){panelChart.destroy()};
+    
+    $.getJSON('./assets/panel/data/buildingAroundMTR.json',(json)=>{
 
-    data_bar = {
-        labels: ['Mong Kok', 'Central', 'Wan Chai', 'Sha Tin', 'Admiralty', 'Sai Ying Pun'],
-        datasets: [{
-            label: '# of Housing Estates',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    }
-
-    chart = new Chart("statistics-modal-chart", {
-        type: 'bar',
-        data: data_bar,
-        options: {
-            scales: {
-                x:{
-                    title:{
-                        display: true,
-                        text: xElement.innerHTML
-                    }
-                },
-                y: {
-                    title:{
-                        display: true,
-                        text: yElement.innerHTML
+        i = 1;
+        labels = Array(5).fill().map(()=>`${i}km around the MTR station`);
+        barData = [];
+        
+        for(var km in json){
+            var sum = 0;
+            var iteration = km.match(/\d/g).join("");
+            for(var district in json[km]){
+                if(districtLabel=='' || districtLabel == district){
+                    for(var station in json[km][district]){
+                        sum += json[km][district][station]['BuildingNumber']
                     }
                 }
             }
+            console.log(sum);
+            switch(yLabel){
+                case "BuildingNumber": barData.push(sum);break;
+                case "BuildingNumberPerKm2": barData.push(sum/(iteration*iteration));break;
+            }
         }
-    });
+    
+        panelChart = new Chart("statistics-modal-chart", {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: yText+` in ${districtLabel==''?'Hong Kong':districtLabel}`,
+                    data: barData,
+                    borderWidth: 1
+                }]
+            }
+        });
+    })
 })
 
 $("#scatter").click(()=>{
 
-    if(chart){chart.destroy()}
+    if(panelChart){panelChart.destroy()};
 
-    chart = new Chart("statistics-modal-chart", {
-        type: 'scatter',
-        data: {
-            datasets: [{
-                label: colorElement.innerHTML,
-                data: [
-                    {x: 30,y: 25},
-                    {x: -10,y: 0},
-                    {x: -10,y: 0},
-                    {x: 0,y: 10},
-                    {x: 10,y: 5},
-                    {x: 0.5,y: 5.5}
-                ],
-                backgroundColor: $('#color')[0].value
-            }],
-        },
-        options: {
-            scales: {
-                x:{
-                    type: 'linear',
-                    position: 'bottom',
-                    title:{
-                        display: true,
-                        text: xElement.innerHTML
+    $.getJSON('./assets/panel/data/nearestTransportation.json',(json)=>{
+
+        scatterData = [];
+
+        counter = 0;
+        for(var district in json){
+            if(districtLabel=="" || districtLabel==district){        
+                data = [];
+                for(var i = 0; i<json[district][xLabel].length && i<json[district][yLabel].length; i++){
+                    data.push({x:json[district][xLabel][i],y:json[district][yLabel][i]});
+                }
+                scatterData.push(
+                    {
+                        label: district,
+                        data: data,
+                        backgroundColor: colorLabel==''?colors[2]:colors[counter++]
                     }
-                },
-                y: {
-                    title:{
-                        display: true,
-                        text: yElement.innerHTML
+                )
+            }
+        }
+        
+        panelChart = new Chart("statistics-modal-chart", {
+            type: 'scatter',
+            data: {
+                datasets: scatterData,
+            },
+            options: {
+                scales: {
+                    x:{
+                        type: 'linear',
+                        position: 'bottom',
+                        title:{
+                            display: true,
+                            text: xText
+                        }
+                    },
+                    y: {
+                        title:{
+                            display: true,
+                            text: yText
+                        }
                     }
                 }
             }
-        }
-    });
+        });
+    })
 })
 
 $("#boxplot").click(()=>{
 
-    var searchBy = 'NearestBus';
+    if(panelChart){panelChart.destroy()}
 
-    if(chart){chart.destroy()}
-
-    $.getJSON('./assets/panel/mockData.json',(data)=>{
-        const districts = Object.keys(data);
+    $.getJSON('./assets/panel/data/nearestTransportation.json',(data)=>{
         const dataset = [];
-        districts.forEach(district => {
-            dataset.push(data[district][searchBy]);
-        })
+        const districts = [];
+        for(var district in data){
+            if(districtLabel=="" || districtLabel==district){
+                dataset.push(data[district][yLabel]);
+                districts.push(district);
+            }
+        }
         boxplotData = {
             labels:districts,
             datasets:[
                 {
-                    label:yElement.innerHTML,
+                    label:yText,
                     backgroundColor: 'rgba(255,0,0,0.5)',
                     borderColor: 'red',
                     borderWidth: 1,
@@ -129,7 +168,7 @@ $("#boxplot").click(()=>{
                 }
             ]
         }
-        chart = new Chart("statistics-modal-chart", {
+        panelChart = new Chart("statistics-modal-chart", {
             type: 'boxplot',
             data: boxplotData,
             options: {
