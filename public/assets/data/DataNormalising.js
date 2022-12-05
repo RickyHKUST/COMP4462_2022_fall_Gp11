@@ -2,20 +2,18 @@
 
 const fs = require('fs');
 const maths = require('mathjs');
-const NormalDistribution = require('normal-distribution');
 function semiSort(array){
     let max = array.length;
-    for(var i=parseInt(Math.random() * (max - max/10) + max/10); i<array.length; i+=parseInt(max/(Math.random() * (9.9 - 8) + 8))){
-        for(var j=i+parseInt(max/(Math.random() * (25 - 10) + 10)); j<max && j>i; j--){
-            let k = Math.random() * ((j-i) - 1) + 1
-            if(array[j]<array[j-k]){
-                let temp = array[j]
-                array[j] = array[j-k]
-                array[j-k] = temp
+    for(var offset = 0;offset<3;offset++){
+        for(var i = 0;i<max/2;i++){
+            if(array[i]>array[max-i-offset]){
+                let temp = array[max-i-offset];
+                array[max-i-offset] = array[i];
+                array[i] = temp;
             }
         }
     }
-    return array
+    return array;
 }
 
 function generateData(mean,sd,size){
@@ -28,7 +26,7 @@ function generateData(mean,sd,size){
     }
     return array;
 }
-let data = JSON.parse(fs.readFileSync('C:/Users/IVAN/Desktop/HKUST/2022Fall/COMP4462/COMP4462_2022_fall_Gp11/public/assets/data/privatehousingnearest.json'));
+let data = JSON.parse(fs.readFileSync('C:/Users/RickyL/Documents/GitHub/COMP4462_2022_fall_Gp11/public/assets/data/privatehousingnearest.json'));
 let obj = {};
 
 for(var district in data){
@@ -38,8 +36,6 @@ for(var district in data){
         console.log(transport);
         let res;
         var array = data[district][transport]
-        // var Q1 = +maths.quantileSeq(array,1/4);
-        // var Q3 = +maths.quantileSeq(array,3/4);
         var sd = maths.std(array)
         var mean = maths.mean(array);
         if (mean > 3000) {
@@ -51,43 +47,9 @@ for(var district in data){
             sd = Math.random() * (300 - 250) + 250
         }
         res = generateData(mean,sd,array.length);
-        let size;
-        if (res.length < 1000) {
-            size = parseInt(res.length * 4*2.2**(-Math.log10(res.length)));
-        }
-        if (res.length > 1000 && res.length < 10000) {
-            size = parseInt(res.length * 4*2.2**(-Math.log10(res.length)));
-        }
-        if (res.length > 10000 && res.length < 100000) {
-            size = parseInt(res.length * 4*2.2**(-Math.log10(res.length)));
-        }
-        
-        switch (transport) {
-            case "NearestBus":
-                for (let i=0; i<size*5; i++){
-                    res = semiSort(res);
-                }
-                console.log("after calling");
-                console.log(res);
-                obj[district]["NearestBus"] = res;
-                break;
-            case "NearestMTR": 
-                for (let i=0; i<size*5; i++){
-                    res = semiSort(res);
-                }
-                console.log("after calling");
-                console.log(res);
-                obj[district]["NearestMTR"] = res;
-                break;
-            case "NearestMinibus": 
-                for (let i=0; i<size*5; i++){
-                    res = semiSort(res);
-                }
-                console.log("after calling");
-                console.log(res);
-                obj[district]["NearestMinibus"] = res;
-                break;
-        }
+        res = semiSort(res);
+        obj[district][transport] = res;
+
     }
 }
-fs.writeFileSync("C:/Users/IVAN/Desktop/HKUST/2022Fall/COMP4462/COMP4462_2022_fall_Gp11/public/assets/data/mockNormalizedData.json", JSON.stringify(obj, null, " "));
+fs.writeFileSync("C:/Users/RickyL/Documents/GitHub/COMP4462_2022_fall_Gp11/public/assets/data/mockNormalizedData.json", JSON.stringify(obj, null, " "));
