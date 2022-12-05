@@ -11,13 +11,15 @@ var optionForPlotX = [
     {value:"NearestBus",name:"Nearest bus stop distance","type":"quantitative"},
     {value:"NearestMinibus",name:"Nearest minibus stop distance","type":"quantitative"},
     {value:"NearestMTR",name:"Nearest MTR station distance","type":"quantitative"},
-    {value:"district",name:"District","type":"qualitative"}
+    {value:"district",name:"District","type":"qualitative"},
+    {value:"MTRDistance",name:"1/2/3/4/5km to MTR","type":"qualitative"}
 ]
 
 var optionForPlotY = [
     {value:"NearestBus",name:"Nearest bus stop distance","type":"quantitative"},
     {value:"NearestMinibus",name:"Nearest minibus stop distance","type":"quantitative"},
-    {value:"NearestMTR",name:"Nearest MTR station distance","type":"quantitative"}
+    {value:"NearestMTR",name:"Nearest MTR station distance","type":"quantitative"},
+    {value:"BuildingNumber",name:"Number of Building","type":"quantitative"}
 ]
 
 var optionForPlotColor = [
