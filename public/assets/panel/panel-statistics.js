@@ -1,22 +1,19 @@
 var panelChart;
-var xElement;
-var yElement;
 var colorElement;
 
 $(".modal-btn").click(()=>{
 
     if(panelChart){panelChart.destroy()}
 
-    xElement = $(".select[name='x-axis'] ul li:visible")[0];
-    xLabel = xElement.getAttribute('data-value');
-    xType = xElement.getAttribute('data-type');
+    xLabel = $(".select[name='x-axis'] ul li:visible")[0].getAttribute('data-value');
+    xType = $(".select[name='x-axis'] ul li:visible")[0].getAttribute('data-type');
+    xText = $(".select[name='x-axis'] ul li:visible")[0].innerHTML;
 
-    yElement = $(".select[name='y-axis'] ul li:visible")[0];
-    yLabel = yElement.getAttribute('data-value');
-    yType = yElement.getAttribute('data-type');
+    yLabel =  $(".select[name='y-axis'] ul li:visible")[0].getAttribute('data-value');
+    yType =  $(".select[name='y-axis'] ul li:visible")[0].getAttribute('data-type');
+    yText =  $(".select[name='y-axis'] ul li:visible")[0].innerHTML;
 
-    districtElement = $(".select[name='district'] ul li:visible")[0];
-    districtLabel = districtElement.getAttribute('data-value');
+    districtLabel = $(".select[name='district'] ul li:visible")[0].getAttribute('data-value');
 
     colorElement = $(".select[name='color'] ul li:visible")[0];
 
@@ -75,7 +72,7 @@ $("#barChart").click(()=>{
             data: {
                 labels: labels,
                 datasets: [{
-                    label: yElement.innerHTML,
+                    label: yText,
                     data: barData,
                     borderWidth: 1
                 }]
@@ -85,13 +82,13 @@ $("#barChart").click(()=>{
                     x:{
                         title:{
                             display: true,
-                            text: xElement.innerHTML
+                            text: xText
                         }
                     },
                     y: {
                         title:{
                             display: true,
-                            text: yElement.innerHTML
+                            text: yText
                         }
                     }
                 }
@@ -136,13 +133,13 @@ $("#scatter").click(()=>{
                         position: 'bottom',
                         title:{
                             display: true,
-                            text: xElement.innerHTML
+                            text: xText
                         }
                     },
                     y: {
                         title:{
                             display: true,
-                            text: yElement.innerHTML
+                            text: yText
                         }
                     }
                 }
@@ -168,7 +165,7 @@ $("#boxplot").click(()=>{
             labels:districts,
             datasets:[
                 {
-                    label:yElement.innerHTML,
+                    label:yText,
                     backgroundColor: 'rgba(255,0,0,0.5)',
                     borderColor: 'red',
                     borderWidth: 1,
