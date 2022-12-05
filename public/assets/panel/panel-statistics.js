@@ -5,9 +5,10 @@ var colorElement;
 
 $(".modal-btn").click(()=>{
     if(chart){chart.destroy()}
-    xElement = $("[name='x-axis'] ul li:visible")[0];
-    yElement = $("[name='y-axis'] ul li:visible")[0];
-    colorElement = $("[name='color'] ul li:visible")[0];
+    xElement = $(".select[name='x-axis'] ul li:visible")[0];
+    yElement = $(".select[name='y-axis'] ul li:visible")[0];
+    colorElement = $(".select[name='color'] ul li:visible")[0];
+    districtElement = $(".select[name='district'] ul li:visible")[0];
 })
 
 $("#barChart").click(()=>{
@@ -72,17 +73,19 @@ $("#scatter").click(()=>{
 
     $.getJSON('./assets/panel/data/nearestTransportation.json',(json)=>{
         for(var district in json){
-            data = [];
-            for(var i = 0; i<json[district][xLabel].length && i<json[district][yLabel].length; i++){
-                data.push({x:json[district][xLabel][i],y:json[district][yLabel][i]});
-            }
-            scatterData.push(
-                {
-                    label: district,
-                    data: data,
-                    backgroundColor: $('#color')[0].value
+            if(districtElement.getAttribute('data-value')=="" || districtElement.getAttribute('data-value')==district){        
+                data = [];
+                for(var i = 0; i<json[district][xLabel].length && i<json[district][yLabel].length; i++){
+                    data.push({x:json[district][xLabel][i],y:json[district][yLabel][i]});
                 }
-            )
+                scatterData.push(
+                    {
+                        label: district,
+                        data: data,
+                        backgroundColor: $('#color')[0].value
+                    }
+                )
+            }
         }
         
         chart = new Chart("statistics-modal-chart", {

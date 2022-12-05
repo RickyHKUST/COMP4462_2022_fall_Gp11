@@ -1,25 +1,3 @@
-//zoom in after selected
-var optionForDistrict = [
-    {value:"Hong Kong Tung Chung Station",name:"Islands"},
-    {value:"Hong Kong Kwai Tsing",name:"Kwai Tsing"},
-    {value:"Hong Kong Sheung Shui",name:"North"},
-    {value:"Hong Kong Sai Kung",name:"Sai Kung"},
-    {value:"Hong Kong Sha Tin",name:"Sha Tin"},
-    {value:"Hong Kong Tai Po",name:"Tai Po"},
-    {value:"Hong Kong Tsuen Wan",name:"Tsuen Wan"},
-    {value:"Hong Kong Tuen Mun",name:"Tuen Mun"},
-    {value:"Hong Kong Yuen Long",name:"Yuen Long"},
-    {value:"Hong Kong Kowloon City",name:"Kowloon City"},
-    {value:"Hong Kong Kwun Tong",name:"Kwun Tong"},
-    {value:"Hong Kong Sham Shui Po",name:"Sham Shui Po"},
-    {value:"Hong Kong Wong Tai Sin station",name:"Wong Tai Sin"},
-    {value:"Hong Kong Yau Tsim Mong",name:"Yau Tsim Mong"},
-    {value:"Hong Kong Central and Western",name:"Central and Western"},
-    {value:"Hong Kong Eastern",name:"Eastern"},
-    {value:"Hong Kong Southern",name:"Southern"},
-    {value:"Hong Kong Wan Chai",name:"Wan Chai"},
-]
-
 var busAndMtrCheckbox = [
     {input:'<input type="checkbox" id="bus" name="selectTypesBus" value="busStop">',label:'<label for="bus">Bus Stops</label>'},
     {input:'<input type="checkbox" id="minibus" name="selectTypesBus" value="miniBusStop">',label:'<label for="minibus">Minibus Stops</label>'},
@@ -70,15 +48,37 @@ var optionForDistrict = [
     {value:"Hong Kong Wan Chai",name:"Wan Chai"},
 ]
 
+var optionForPlotDistrict = [
+    {value: "", name:"Default"},
+    {value: "Central and Western", name:"Central and Western"},
+    {value: "Islands", name:"Islands"},
+    {value: "Kwun Tong", name:"Kwun Tong"},
+    {value: "Eastern", name:"Eastern"},
+    {value: "Wan Chai", name:"Wan Chai"},
+    {value: "Yuen Long", name:"Yuen Long"},
+    {value: "Tsuen Wan", name:"Tsuen Wan"},
+    {value: "Sha Tin", name:"Sha Tin"},
+    {value: "Kowloon City", name:"Kowloon City"},
+    {value: "Sham Shui Po", name:"Sham Shui Po"},
+    {value: "Tuen Mun", name:"Tuen Mun"},
+    {value: "Southern", name:"Southern"},
+    {value: "Kwai Tsing", name:"Kwai Tsing"},
+    {value: "Tai Po", name:"Tai Po"},
+    {value: "Yau Tsim Mong", name:"Yau Tsim Mong"},
+    {value: "Sai Kung", name:"Sai Kung"},
+    {value: "North", name:"North"},
+]
+
 function appendScatterOption(list, jQueryObject){
     list.forEach(e => {
         jQueryObject.append($(`<li data-value="${e.value}">${e.name}</li>`));
     })
 }
 
-appendScatterOption(optionForPlotX,$('#x-axis > ul'));
-appendScatterOption(optionForPlotY,$('#y-axis > ul'));
-appendScatterOption(optionForPlotColor,$('#color > ul'));
+appendScatterOption(optionForPlotX,$('.select#x-axis > ul'));
+appendScatterOption(optionForPlotY,$('.select#y-axis > ul'));
+appendScatterOption(optionForPlotColor,$('.select#color > ul'));
+appendScatterOption(optionForPlotDistrict,$('.select#district > ul'));
 appendScatterOption(optionForDistrict,$('#place-names > ul'));
 
 busAndMtrCheckbox.forEach(option=>{
