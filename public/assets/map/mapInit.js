@@ -52,6 +52,8 @@ $("[name='place-names'] ul li").click(() => {
   if($("[name='place-names'] ul li:visible").length==1){
     locationName = $("[name='place-names'] ul li:visible")[0].dataset.value;
     selectPlace(locationName);
+    hideShowMtrStations();
+    hideShowlightRail();
   }
 });
 
