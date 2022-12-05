@@ -10,11 +10,15 @@ $(".modal-btn").click(()=>{
     xElement = $(".select[name='x-axis'] ul li:visible")[0];
     xLabel = xElement.getAttribute('data-value');
     xType = xElement.getAttribute('data-type');
+
     yElement = $(".select[name='y-axis'] ul li:visible")[0];
     yLabel = yElement.getAttribute('data-value');
     yType = yElement.getAttribute('data-type');
-    colorElement = $(".select[name='color'] ul li:visible")[0];
+
     districtElement = $(".select[name='district'] ul li:visible")[0];
+    districtLabel = districtElement.getAttribute('data-value');
+
+    colorElement = $(".select[name='color'] ul li:visible")[0];
 
     $(".plotOption").removeClass("d-none");
 
@@ -37,14 +41,11 @@ $(".modal-btn").click(()=>{
 $("#barChart").click(()=>{
 
     if(chart){chart.destroy()};
-
-    yLabel = yElement.getAttribute('data-value');
-    districtLabel = districtElement.getAttribute('data-value');
     
     $.getJSON('./assets/panel/data/buildingAroundMTR.json',(json)=>{
 
         labels = [];
-        data = [];
+        barData = [];
         for(var i = 1;i<=5;i++){
             if(districtLabel==''){
                 labels.push(`${i}km around the MTR station in Hong Kong`);
@@ -68,19 +69,17 @@ $("#barChart").click(()=>{
                 case "BuildingNumberPerKm2": data.push(sum/(iteration*iteration));break;
             }
         }
-
-        barData = {
-            labels: labels,
-            datasets: [{
-                label: yElement.innerHTML,
-                data: data,
-                borderWidth: 1
-            }]
-        }
     
         chart = new Chart("statistics-modal-chart", {
             type: 'bar',
-            data: barData,
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: yElement.innerHTML,
+                    data: barData,
+                    borderWidth: 1
+                }]
+            },
             options: {
                 scales: {
                     x:{
@@ -104,10 +103,6 @@ $("#barChart").click(()=>{
 $("#scatter").click(()=>{
 
     if(chart){chart.destroy()};
-
-    xLabel = xElement.getAttribute('data-value');
-    yLabel = yElement.getAttribute('data-value');
-    districtLabel = districtElement.getAttribute('data-value');
 
     $.getJSON('./assets/panel/data/nearestTransportation.json',(json)=>{
 
@@ -160,20 +155,15 @@ $("#boxplot").click(()=>{
 
     if(chart){chart.destroy()}
 
-    yLabel = yElement.getAttribute('data-value');
-
     $.getJSON('./assets/panel/data/nearestTransportation.json',(data)=>{
         const dataset = [];
         const districts = [];
         for(var district in data){
-            if(districtElement.getAttribute('data-value')=="" || districtElement.getAttribute('data-value')==district){
+            if(districtLabel=="" || districtLabel==district){
                 dataset.push(data[district][yLabel]);
                 districts.push(district);
-                console.log(districtElement.getAttribute('data-value'));
-                console.log(district);
             }
         }
-        console.log(dataset);
         boxplotData = {
             labels:districts,
             datasets:[
