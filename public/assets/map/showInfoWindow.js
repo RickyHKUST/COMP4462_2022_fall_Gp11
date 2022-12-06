@@ -5,6 +5,8 @@ let mtrcount = 0;
 let transport = [];
 
 let infowindowarr = [];
+let slider = $("#slider");
+let output = $("#m_value");
 
 let showInfoWindow = (marker, name) => {
     const delay = 10000;
@@ -54,8 +56,6 @@ let showInfoWindow = (marker, name) => {
 }
 
 let showTotalStops = (house_marker) => {
-    let slider = $("#slider");
-    let output = $("#m_value");
 
     let house_lat = house_marker.position.lat();
     let house_lng = house_marker.position.lng();
@@ -109,3 +109,7 @@ let counting = (house_lat, house_lng, meter, transportloc) => {
     })
     return count;
 }
+
+slider.on("change", function() {
+    output.html(slider[0].value)
+})

@@ -37,10 +37,11 @@
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     padding: 15px;
+    height: 380px;
 }
 
-.accordion-child > *{
-    padding-bottom:30px;
+.accordion-child > *:first-child{
+    padding-bottom:20px;
 }
 
 .accordion:focus{
@@ -50,7 +51,7 @@
 .active.accordion-child{
     display: flex;
     flex-direction: column;
-    max-height: 380px;
+    max-height: 520px;
     align-items: center;
     overflow-y: scroll;
 }
@@ -94,27 +95,135 @@
     display: flex;
     justify-content: space-between;
     font-size: 18px;
+    user-select: none;
+    padding-bottom:50px;
 }
 
 select {
-    cursor: pointer;
     display: block;
     padding: 5px;
 }
 
-.select {
-    cursor: pointer;
-    position: absolute;
-    right: 0;
-    text-align: right;
+.dropdown > .select > ul{
+    padding: 10px;
+    background: #bfe5ef8f;
+    border: 1px solid #bfe5ef;
+    border-radius: 10px;
 }
 
-.select > ul > li{
+.select {
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+
+.select#place-names{
+    width:250px;
+}
+
+.select#x-axis, .select#y-axis, .select#district, .select#color{
+    width:100%;
+    top: 40px;
+}
+
+#checkboxForbus{
+    width: 100%;
+}
+
+#checkbox-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 10px;
+    justify-content: space-evenly;
+}
+
+.checkbox-item{
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 8px;
+    color: rgb(10, 10, 10);
+    font-size: 18px;
+}
+
+.checkbox-item > label{
+    cursor: pointer;
+    padding: 10px;
+}
+
+input[type='checkbox']{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+#slidecontainer{
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.hover-container {
+    position: relative;
+}
+
+.hover-target {
+position: relative;
+font-size: 18px;
+}
+
+.hover-popup {
+bottom: 100%;
+position: absolute;
+display: flex;
+flex-direction: column;
+width: 280px;
+margin: min(1rem, 20px);
+font-family: sans-serif;
+font-weight: 500;
+font-size: 18px;
+background-image: linear-gradient(to right, #afc4f1 0%, #70e0ff 100%);  
+border-radius: 16px;
+padding: 1.5em;
+z-index: 42;
+transform: scale(0);
+transition: transform 300ms ease;
+transform-origin: bottom left;
+}
+
+.hover-target:hover + .hover-popup,
+.hover-target:focus + .hover-popup,
+.hover-popup:hover{
+transform: scale(1);
+}
+
+.hover-popup::before {
+content: '';
+position: absolute;
+left: 3%;
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+border-top: 10px solid #afc4f1;
+bottom: -8px;
+}
+
+.hover-popup::after {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+  
+.dropdown > .select > ul > li{
+    cursor: pointer;
     list-style: none;
     display: none;
     background-color: #e8faff;
     box-shadow: 0 0 4px #719ece;
-    margin-bottom: 10px;
     padding: 10px;
     background-image: linear-gradient(to right, #9bb6f1 0%, #49d7ff 100%);
     border-radius: 8px;
@@ -122,10 +231,10 @@ select {
     font-size: 21px;
 }
 
-.select > ul > li:hover{
-    background-color: #a0ebff;
+.dropdown > .select > ul > li:hover{
+    background-image: linear-gradient(to right, #6688d3 0%, #0ecbff 100%);
 }
-.select > ul > li:first-child{
+.dropdown > .select > ul > li:first-child{
     display: block;
 }
 
@@ -159,11 +268,11 @@ select:hover{
     outline: none;
 }
 
-.dropdown label{
+.dropdown label, #checkboxForbus > label{
     padding-left: 5px;
     font-family: sans-serif;
     font-weight: 600;
-    font-size: 19px;
+    font-size: 18px;
     height: 51.5px;
     line-height: 51.5px;
 }
@@ -181,4 +290,8 @@ div.plotOption > button{
     background-repeat: round;
     cursor: pointer;
     border: none;
+}
+
+.modalbutton{
+    padding-top: 25px;
 }

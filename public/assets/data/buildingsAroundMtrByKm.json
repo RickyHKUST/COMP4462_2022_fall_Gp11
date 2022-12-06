@@ -1,0 +1,1647 @@
+{
+    "1km": {
+        "Islands": {
+            "AsiaWorld-Expo": {
+                "total": 1
+            },
+            "Tung Chung": {
+                "total": 42
+            },
+            "Airport": {
+                "total": 1
+            },
+            "Disneyland Resort": {
+                "total": 0
+            }
+        },
+        "Kwai Tsing": {
+            "Tsing Yi": {
+                "total": 60
+            },
+            "Lai King": {
+                "total": 8
+            },
+            "Kwai Hing": {
+                "total": 459
+            },
+            "Kwai Fong": {
+                "total": 21
+            }
+        },
+        "Yau Tsim Mong": {
+            "Kowloon": {
+                "total": 298
+            },
+            "Mong Kok East": {
+                "total": 1893
+            },
+            "Hung Hom": {
+                "total": 276
+            },
+            "Prince Edward": {
+                "total": 2268
+            },
+            "Mong Kok": {
+                "total": 1846
+            },
+            "Yau Ma Tei": {
+                "total": 1440
+            },
+            "East Tsim Sha Tsui": {
+                "total": 227
+            },
+            "Olympic": {
+                "total": 655
+            },
+            "Tsim Sha Tsui": {
+                "total": 265
+            },
+            "Austin": {
+                "total": 479
+            },
+            "Jordan": {
+                "total": 593
+            }
+        },
+        "Tsuen Wan": {
+            "Sunny Bay": {
+                "total": 0
+            },
+            "Tsuen Wan West": {
+                "total": 487
+            },
+            "Tsuen Wan": {
+                "total": 136
+            },
+            "Tai Wo Hau": {
+                "total": 529
+            }
+        },
+        "North": {
+            "Lo Wu": {
+                "total": 0
+            },
+            "Sheung Shui": {
+                "total": 75
+            },
+            "Fanling": {
+                "total": 75
+            }
+        },
+        "Tai Po": {
+            "Tai Wo": {
+                "total": 1170
+            },
+            "Tai Po Market": {
+                "total": 1144
+            }
+        },
+        "Sha Tin": {
+            "University": {
+                "total": 52
+            },
+            "Fo Tan": {
+                "total": 19
+            },
+            "Sha Tin": {
+                "total": 1804
+            },
+            "Tai Wai": {
+                "total": 36
+            },
+            "Wu Kai Sha": {
+                "total": 9
+            },
+            "Ma On Shan": {
+                "total": 53
+            },
+            "Heng On": {
+                "total": 39
+            },
+            "Tai Shui Hang": {
+                "total": 13
+            },
+            "Shek Mun": {
+                "total": 61
+            },
+            "City One": {
+                "total": 53
+            },
+            "Sha Tin Wai": {
+                "total": 1251
+            },
+            "Che Kung Temple": {
+                "total": 1806
+            },
+            "Hin Keng": {
+                "total": 19
+            }
+        },
+        "Kowloon City": {
+            "Kowloon Tong": {
+                "total": 142
+            },
+            "Ho Man Tin": {
+                "total": 2936
+            },
+            "Kai Tak": {
+                "total": 209
+            },
+            "Sung Wong Toi": {
+                "total": 827
+            },
+            "To Kwa Wan": {
+                "total": 3409
+            },
+            "Whampo": {
+                "total": 241
+            }
+        },
+        "Central and Western": {
+            "Admiralty": {
+                "total": 2495
+            },
+            "Sheung Wan": {
+                "total": 2248
+            },
+            "Sai Ying Pun": {
+                "total": 2107
+            },
+            "HKU": {
+                "total": 1055
+            },
+            "Kennedy Town": {
+                "total": 686
+            },
+            "Hong Kong": {
+                "total": 607
+            },
+            "Exhibition Centre": {
+                "total": 2337
+            },
+            "Central": {
+                "total": 622
+            }
+        },
+        "Yuen Long": {
+            "Lok Ma Chau": {
+                "total": 0
+            },
+            "Kam Sheung Road": {
+                "total": 45
+            },
+            "Yuen Long": {
+                "total": 6692
+            },
+            "Long Ping": {
+                "total": 6935
+            },
+            "Tin Shui Wai": {
+                "total": 49
+            }
+        },
+        "Eastern": {
+            "Heng Fa Chuen": {
+                "total": 12
+            },
+            "Shau Kei Wan": {
+                "total": 338
+            },
+            "Sai Wan Ho": {
+                "total": 349
+            },
+            "Tai Koo": {
+                "total": 74
+            },
+            "Quarry Bay": {
+                "total": 67
+            },
+            "North Point": {
+                "total": 123
+            },
+            "Fortress Hill": {
+                "total": 101
+            },
+            "Chai Wan": {
+                "total": 23
+            }
+        },
+        "Wan Chai": {
+            "Tin Hau": {
+                "total": 119
+            },
+            "Causeway Bay": {
+                "total": 100
+            },
+            "Wan Chai": {
+                "total": 2328
+            }
+        },
+        "Sai Kung": {
+            "Tiu Keng Leng": {
+                "total": 57
+            },
+            "Po Lam": {
+                "total": 32
+            },
+            "LOHAS Park": {
+                "total": 126
+            },
+            "Hang Hau": {
+                "total": 0
+            }
+        },
+        "Kwun Tong": {
+            "Yau Tong": {
+                "total": 698
+            },
+            "Lam Tin": {
+                "total": 76
+            },
+            "Kwun Tong": {
+                "total": 722
+            },
+            "Ngau Tau Kok": {
+                "total": 724
+            },
+            "Kowloon Bay": {
+                "total": 204
+            },
+            "Tseung Kwan O": {
+                "total": 0
+            }
+        },
+        "Wong Tai Sin": {
+            "Choi Hung": {
+                "total": 78
+            },
+            "Diamond Hill": {
+                "total": 231
+            },
+            "Wong Tai Sin": {
+                "total": 224
+            },
+            "Lok Fu": {
+                "total": 192
+            }
+        },
+        "Sham Shui Po": {
+            "Shek Kip Mei": {
+                "total": 1224
+            },
+            "Nam Cheong": {
+                "total": 407
+            },
+            "Mei Foo": {
+                "total": 28
+            },
+            "Lai Chi Kok": {
+                "total": 57
+            },
+            "Cheung Sha Wan": {
+                "total": 459
+            },
+            "Sham Shui Po": {
+                "total": 1165
+            }
+        },
+        "Tuen Mun": {
+            "Siu Hong": {
+                "total": 61
+            },
+            "Tuen Mun": {
+                "total": 1093
+            }
+        },
+        "Southern": {
+            "Ocean Park": {
+                "total": 0
+            },
+            "Wong Chuk Hang": {
+                "total": 36
+            },
+            "Lei Tung": {
+                "total": 150
+            },
+            "South Horizons": {
+                "total": 156
+            }
+        }
+    },
+    "2km": {
+        "Islands": {
+            "AsiaWorld-Expo": {
+                "total": 1
+            },
+            "Tung Chung": {
+                "total": 77
+            },
+            "Airport": {
+                "total": 1
+            },
+            "Disneyland Resort": {
+                "total": 0
+            }
+        },
+        "Kwai Tsing": {
+            "Tsing Yi": {
+                "total": 671
+            },
+            "Lai King": {
+                "total": 70
+            },
+            "Kwai Hing": {
+                "total": 612
+            },
+            "Kwai Fong": {
+                "total": 595
+            }
+        },
+        "Yau Tsim Mong": {
+            "Kowloon": {
+                "total": 1236
+            },
+            "Mong Kok East": {
+                "total": 6745
+            },
+            "Hung Hom": {
+                "total": 4200
+            },
+            "Prince Edward": {
+                "total": 5777
+            },
+            "Mong Kok": {
+                "total": 6228
+            },
+            "Yau Ma Tei": {
+                "total": 5861
+            },
+            "East Tsim Sha Tsui": {
+                "total": 3584
+            },
+            "Olympic": {
+                "total": 3049
+            },
+            "Tsim Sha Tsui": {
+                "total": 3069
+            },
+            "Austin": {
+                "total": 1964
+            },
+            "Jordan": {
+                "total": 4599
+            }
+        },
+        "Tsuen Wan": {
+            "Sunny Bay": {
+                "total": 0
+            },
+            "Tsuen Wan West": {
+                "total": 696
+            },
+            "Tsuen Wan": {
+                "total": 1052
+            },
+            "Tai Wo Hau": {
+                "total": 650
+            }
+        },
+        "North": {
+            "Lo Wu": {
+                "total": 0
+            },
+            "Sheung Shui": {
+                "total": 108
+            },
+            "Fanling": {
+                "total": 136
+            }
+        },
+        "Tai Po": {
+            "Tai Wo": {
+                "total": 1238
+            },
+            "Tai Po Market": {
+                "total": 1284
+            }
+        },
+        "Sha Tin": {
+            "University": {
+                "total": 1839
+            },
+            "Fo Tan": {
+                "total": 142
+            },
+            "Sha Tin": {
+                "total": 1845
+            },
+            "Tai Wai": {
+                "total": 1828
+            },
+            "Wu Kai Sha": {
+                "total": 49
+            },
+            "Ma On Shan": {
+                "total": 76
+            },
+            "Heng On": {
+                "total": 82
+            },
+            "Tai Shui Hang": {
+                "total": 91
+            },
+            "Shek Mun": {
+                "total": 79
+            },
+            "City One": {
+                "total": 1317
+            },
+            "Sha Tin Wai": {
+                "total": 1862
+            },
+            "Che Kung Temple": {
+                "total": 1838
+            },
+            "Hin Keng": {
+                "total": 39
+            }
+        },
+        "Kowloon City": {
+            "Kowloon Tong": {
+                "total": 2463
+            },
+            "Ho Man Tin": {
+                "total": 5189
+            },
+            "Kai Tak": {
+                "total": 1447
+            },
+            "Sung Wong Toi": {
+                "total": 4405
+            },
+            "To Kwa Wan": {
+                "total": 5156
+            },
+            "Whampo": {
+                "total": 3818
+            }
+        },
+        "Central and Western": {
+            "Admiralty": {
+                "total": 4658
+            },
+            "Sheung Wan": {
+                "total": 2630
+            },
+            "Sai Ying Pun": {
+                "total": 3236
+            },
+            "HKU": {
+                "total": 3093
+            },
+            "Kennedy Town": {
+                "total": 2680
+            },
+            "Hong Kong": {
+                "total": 4976
+            },
+            "Exhibition Centre": {
+                "total": 2678
+            },
+            "Central": {
+                "total": 4997
+            }
+        },
+        "Yuen Long": {
+            "Lok Ma Chau": {
+                "total": 0
+            },
+            "Kam Sheung Road": {
+                "total": 48
+            },
+            "Yuen Long": {
+                "total": 8348
+            },
+            "Long Ping": {
+                "total": 8352
+            },
+            "Tin Shui Wai": {
+                "total": 155
+            }
+        },
+        "Eastern": {
+            "Heng Fa Chuen": {
+                "total": 1028
+            },
+            "Shau Kei Wan": {
+                "total": 1061
+            },
+            "Sai Wan Ho": {
+                "total": 1059
+            },
+            "Tai Koo": {
+                "total": 424
+            },
+            "Quarry Bay": {
+                "total": 218
+            },
+            "North Point": {
+                "total": 227
+            },
+            "Fortress Hill": {
+                "total": 241
+            },
+            "Chai Wan": {
+                "total": 321
+            }
+        },
+        "Wan Chai": {
+            "Tin Hau": {
+                "total": 2510
+            },
+            "Causeway Bay": {
+                "total": 2499
+            },
+            "Wan Chai": {
+                "total": 2726
+            }
+        },
+        "Sai Kung": {
+            "Tiu Keng Leng": {
+                "total": 219
+            },
+            "Po Lam": {
+                "total": 102
+            },
+            "LOHAS Park": {
+                "total": 205
+            },
+            "Hang Hau": {
+                "total": 0
+            }
+        },
+        "Kwun Tong": {
+            "Yau Tong": {
+                "total": 767
+            },
+            "Lam Tin": {
+                "total": 1455
+            },
+            "Kwun Tong": {
+                "total": 818
+            },
+            "Ngau Tau Kok": {
+                "total": 962
+            },
+            "Kowloon Bay": {
+                "total": 989
+            },
+            "Tseung Kwan O": {
+                "total": 221
+            }
+        },
+        "Wong Tai Sin": {
+            "Choi Hung": {
+                "total": 550
+            },
+            "Diamond Hill": {
+                "total": 592
+            },
+            "Wong Tai Sin": {
+                "total": 681
+            },
+            "Lok Fu": {
+                "total": 1113
+            }
+        },
+        "Sham Shui Po": {
+            "Shek Kip Mei": {
+                "total": 2925
+            },
+            "Nam Cheong": {
+                "total": 2267
+            },
+            "Mei Foo": {
+                "total": 114
+            },
+            "Lai Chi Kok": {
+                "total": 732
+            },
+            "Cheung Sha Wan": {
+                "total": 1480
+            },
+            "Sham Shui Po": {
+                "total": 2765
+            }
+        },
+        "Tuen Mun": {
+            "Siu Hong": {
+                "total": 83
+            },
+            "Tuen Mun": {
+                "total": 1185
+            }
+        },
+        "Southern": {
+            "Ocean Park": {
+                "total": 217
+            },
+            "Wong Chuk Hang": {
+                "total": 310
+            },
+            "Lei Tung": {
+                "total": 213
+            },
+            "South Horizons": {
+                "total": 255
+            }
+        }
+    },
+    "3km": {
+        "Islands": {
+            "AsiaWorld-Expo": {
+                "total": 1
+            },
+            "Tung Chung": {
+                "total": 84
+            },
+            "Airport": {
+                "total": 52
+            },
+            "Disneyland Resort": {
+                "total": 2
+            }
+        },
+        "Kwai Tsing": {
+            "Tsing Yi": {
+                "total": 1157
+            },
+            "Lai King": {
+                "total": 722
+            },
+            "Kwai Hing": {
+                "total": 1093
+            },
+            "Kwai Fong": {
+                "total": 1112
+            }
+        },
+        "Yau Tsim Mong": {
+            "Kowloon": {
+                "total": 10617
+            },
+            "Mong Kok East": {
+                "total": 7306
+            },
+            "Hung Hom": {
+                "total": 8569
+            },
+            "Prince Edward": {
+                "total": 7223
+            },
+            "Mong Kok": {
+                "total": 7290
+            },
+            "Yau Ma Tei": {
+                "total": 7194
+            },
+            "East Tsim Sha Tsui": {
+                "total": 8107
+            },
+            "Olympic": {
+                "total": 6608
+            },
+            "Tsim Sha Tsui": {
+                "total": 8494
+            },
+            "Austin": {
+                "total": 9460
+            },
+            "Jordan": {
+                "total": 8952
+            }
+        },
+        "Tsuen Wan": {
+            "Sunny Bay": {
+                "total": 18
+            },
+            "Tsuen Wan West": {
+                "total": 1186
+            },
+            "Tsuen Wan": {
+                "total": 1189
+            },
+            "Tai Wo Hau": {
+                "total": 1188
+            }
+        },
+        "North": {
+            "Lo Wu": {
+                "total": 11
+            },
+            "Sheung Shui": {
+                "total": 179
+            },
+            "Fanling": {
+                "total": 138
+            }
+        },
+        "Tai Po": {
+            "Tai Wo": {
+                "total": 1353
+            },
+            "Tai Po Market": {
+                "total": 1366
+            }
+        },
+        "Sha Tin": {
+            "University": {
+                "total": 1955
+            },
+            "Fo Tan": {
+                "total": 3670
+            },
+            "Sha Tin": {
+                "total": 1920
+            },
+            "Tai Wai": {
+                "total": 1865
+            },
+            "Wu Kai Sha": {
+                "total": 72
+            },
+            "Ma On Shan": {
+                "total": 144
+            },
+            "Heng On": {
+                "total": 1924
+            },
+            "Tai Shui Hang": {
+                "total": 1895
+            },
+            "Shek Mun": {
+                "total": 1974
+            },
+            "City One": {
+                "total": 1947
+            },
+            "Sha Tin Wai": {
+                "total": 1919
+            },
+            "Che Kung Temple": {
+                "total": 1906
+            },
+            "Hin Keng": {
+                "total": 1884
+            }
+        },
+        "Kowloon City": {
+            "Kowloon Tong": {
+                "total": 6811
+            },
+            "Ho Man Tin": {
+                "total": 6872
+            },
+            "Kai Tak": {
+                "total": 4776
+            },
+            "Sung Wong Toi": {
+                "total": 6800
+            },
+            "To Kwa Wan": {
+                "total": 7165
+            },
+            "Whampo": {
+                "total": 6136
+            }
+        },
+        "Central and Western": {
+            "Admiralty": {
+                "total": 5589
+            },
+            "Sheung Wan": {
+                "total": 6314
+            },
+            "Sai Ying Pun": {
+                "total": 3715
+            },
+            "HKU": {
+                "total": 3680
+            },
+            "Kennedy Town": {
+                "total": 3456
+            },
+            "Hong Kong": {
+                "total": 6321
+            },
+            "Exhibition Centre": {
+                "total": 5347
+            },
+            "Central": {
+                "total": 5703
+            }
+        },
+        "Yuen Long": {
+            "Lok Ma Chau": {
+                "total": 0
+            },
+            "Kam Sheung Road": {
+                "total": 143
+            },
+            "Yuen Long": {
+                "total": 8401
+            },
+            "Long Ping": {
+                "total": 8447
+            },
+            "Tin Shui Wai": {
+                "total": 7140
+            }
+        },
+        "Eastern": {
+            "Heng Fa Chuen": {
+                "total": 1087
+            },
+            "Shau Kei Wan": {
+                "total": 1141
+            },
+            "Sai Wan Ho": {
+                "total": 1217
+            },
+            "Tai Koo": {
+                "total": 1282
+            },
+            "Quarry Bay": {
+                "total": 665
+            },
+            "North Point": {
+                "total": 938
+            },
+            "Fortress Hill": {
+                "total": 3039
+            },
+            "Chai Wan": {
+                "total": 1037
+            }
+        },
+        "Wan Chai": {
+            "Tin Hau": {
+                "total": 2978
+            },
+            "Causeway Bay": {
+                "total": 3080
+            },
+            "Wan Chai": {
+                "total": 5132
+            }
+        },
+        "Sai Kung": {
+            "Tiu Keng Leng": {
+                "total": 1071
+            },
+            "Po Lam": {
+                "total": 260
+            },
+            "LOHAS Park": {
+                "total": 236
+            },
+            "Hang Hau": {
+                "total": 0
+            }
+        },
+        "Kwun Tong": {
+            "Yau Tong": {
+                "total": 1983
+            },
+            "Lam Tin": {
+                "total": 1630
+            },
+            "Kwun Tong": {
+                "total": 1714
+            },
+            "Ngau Tau Kok": {
+                "total": 1429
+            },
+            "Kowloon Bay": {
+                "total": 2191
+            },
+            "Tseung Kwan O": {
+                "total": 941
+            }
+        },
+        "Wong Tai Sin": {
+            "Choi Hung": {
+                "total": 1601
+            },
+            "Diamond Hill": {
+                "total": 1797
+            },
+            "Wong Tai Sin": {
+                "total": 4456
+            },
+            "Lok Fu": {
+                "total": 6552
+            }
+        },
+        "Sham Shui Po": {
+            "Shek Kip Mei": {
+                "total": 6972
+            },
+            "Nam Cheong": {
+                "total": 3265
+            },
+            "Mei Foo": {
+                "total": 996
+            },
+            "Lai Chi Kok": {
+                "total": 2371
+            },
+            "Cheung Sha Wan": {
+                "total": 2914
+            },
+            "Sham Shui Po": {
+                "total": 6390
+            }
+        },
+        "Tuen Mun": {
+            "Siu Hong": {
+                "total": 1236
+            },
+            "Tuen Mun": {
+                "total": 1395
+            }
+        },
+        "Southern": {
+            "Ocean Park": {
+                "total": 520
+            },
+            "Wong Chuk Hang": {
+                "total": 886
+            },
+            "Lei Tung": {
+                "total": 601
+            },
+            "South Horizons": {
+                "total": 551
+            }
+        }
+    },
+    "4km": {
+        "Islands": {
+            "AsiaWorld-Expo": {
+                "total": 76
+            },
+            "Tung Chung": {
+                "total": 85
+            },
+            "Airport": {
+                "total": 79
+            },
+            "Disneyland Resort": {
+                "total": 155
+            }
+        },
+        "Kwai Tsing": {
+            "Tsing Yi": {
+                "total": 1220
+            },
+            "Lai King": {
+                "total": 1364
+            },
+            "Kwai Hing": {
+                "total": 1274
+            },
+            "Kwai Fong": {
+                "total": 1295
+            }
+        },
+        "Yau Tsim Mong": {
+            "Kowloon": {
+                "total": 12237
+            },
+            "Mong Kok East": {
+                "total": 7677
+            },
+            "Hung Hom": {
+                "total": 10583
+            },
+            "Prince Edward": {
+                "total": 7568
+            },
+            "Mong Kok": {
+                "total": 7455
+            },
+            "Yau Ma Tei": {
+                "total": 10426
+            },
+            "East Tsim Sha Tsui": {
+                "total": 12082
+            },
+            "Olympic": {
+                "total": 7923
+            },
+            "Tsim Sha Tsui": {
+                "total": 12316
+            },
+            "Austin": {
+                "total": 12327
+            },
+            "Jordan": {
+                "total": 12293
+            }
+        },
+        "Tsuen Wan": {
+            "Sunny Bay": {
+                "total": 122
+            },
+            "Tsuen Wan West": {
+                "total": 1206
+            },
+            "Tsuen Wan": {
+                "total": 1210
+            },
+            "Tai Wo Hau": {
+                "total": 1225
+            }
+        },
+        "North": {
+            "Lo Wu": {
+                "total": 73
+            },
+            "Sheung Shui": {
+                "total": 184
+            },
+            "Fanling": {
+                "total": 212
+            }
+        },
+        "Tai Po": {
+            "Tai Wo": {
+                "total": 1465
+            },
+            "Tai Po Market": {
+                "total": 1522
+            }
+        },
+        "Sha Tin": {
+            "University": {
+                "total": 2067
+            },
+            "Fo Tan": {
+                "total": 3724
+            },
+            "Sha Tin": {
+                "total": 2011
+            },
+            "Tai Wai": {
+                "total": 2106
+            },
+            "Wu Kai Sha": {
+                "total": 118
+            },
+            "Ma On Shan": {
+                "total": 1937
+            },
+            "Heng On": {
+                "total": 1964
+            },
+            "Tai Shui Hang": {
+                "total": 2027
+            },
+            "Shek Mun": {
+                "total": 3703
+            },
+            "City One": {
+                "total": 2009
+            },
+            "Sha Tin Wai": {
+                "total": 2134
+            },
+            "Che Kung Temple": {
+                "total": 2118
+            },
+            "Hin Keng": {
+                "total": 2785
+            }
+        },
+        "Kowloon City": {
+            "Kowloon Tong": {
+                "total": 7632
+            },
+            "Ho Man Tin": {
+                "total": 10176
+            },
+            "Kai Tak": {
+                "total": 7886
+            },
+            "Sung Wong Toi": {
+                "total": 8486
+            },
+            "To Kwa Wan": {
+                "total": 8540
+            },
+            "Whampo": {
+                "total": 10387
+            }
+        },
+        "Central and Western": {
+            "Admiralty": {
+                "total": 7319
+            },
+            "Sheung Wan": {
+                "total": 7131
+            },
+            "Sai Ying Pun": {
+                "total": 6639
+            },
+            "HKU": {
+                "total": 6129
+            },
+            "Kennedy Town": {
+                "total": 3780
+            },
+            "Hong Kong": {
+                "total": 7428
+            },
+            "Exhibition Centre": {
+                "total": 9505
+            },
+            "Central": {
+                "total": 7243
+            }
+        },
+        "Yuen Long": {
+            "Lok Ma Chau": {
+                "total": 73
+            },
+            "Kam Sheung Road": {
+                "total": 9138
+            },
+            "Yuen Long": {
+                "total": 8460
+            },
+            "Long Ping": {
+                "total": 8555
+            },
+            "Tin Shui Wai": {
+                "total": 8551
+            }
+        },
+        "Eastern": {
+            "Heng Fa Chuen": {
+                "total": 1352
+            },
+            "Shau Kei Wan": {
+                "total": 2004
+            },
+            "Sai Wan Ho": {
+                "total": 2092
+            },
+            "Tai Koo": {
+                "total": 2212
+            },
+            "Quarry Bay": {
+                "total": 5452
+            },
+            "North Point": {
+                "total": 8662
+            },
+            "Fortress Hill": {
+                "total": 7625
+            },
+            "Chai Wan": {
+                "total": 1384
+            }
+        },
+        "Wan Chai": {
+            "Tin Hau": {
+                "total": 7382
+            },
+            "Causeway Bay": {
+                "total": 6321
+            },
+            "Wan Chai": {
+                "total": 6590
+            }
+        },
+        "Sai Kung": {
+            "Tiu Keng Leng": {
+                "total": 1806
+            },
+            "Po Lam": {
+                "total": 1070
+            },
+            "LOHAS Park": {
+                "total": 997
+            },
+            "Hang Hau": {
+                "total": 0
+            }
+        },
+        "Kwun Tong": {
+            "Yau Tong": {
+                "total": 2236
+            },
+            "Lam Tin": {
+                "total": 2376
+            },
+            "Kwun Tong": {
+                "total": 2629
+            },
+            "Ngau Tau Kok": {
+                "total": 5934
+            },
+            "Kowloon Bay": {
+                "total": 5525
+            },
+            "Tseung Kwan O": {
+                "total": 1159
+            }
+        },
+        "Wong Tai Sin": {
+            "Choi Hung": {
+                "total": 5490
+            },
+            "Diamond Hill": {
+                "total": 7975
+            },
+            "Wong Tai Sin": {
+                "total": 8282
+            },
+            "Lok Fu": {
+                "total": 8776
+            }
+        },
+        "Sham Shui Po": {
+            "Shek Kip Mei": {
+                "total": 7585
+            },
+            "Nam Cheong": {
+                "total": 7200
+            },
+            "Mei Foo": {
+                "total": 3159
+            },
+            "Lai Chi Kok": {
+                "total": 3705
+            },
+            "Cheung Sha Wan": {
+                "total": 6656
+            },
+            "Sham Shui Po": {
+                "total": 7448
+            }
+        },
+        "Tuen Mun": {
+            "Siu Hong": {
+                "total": 1328
+            },
+            "Tuen Mun": {
+                "total": 1416
+            }
+        },
+        "Southern": {
+            "Ocean Park": {
+                "total": 906
+            },
+            "Wong Chuk Hang": {
+                "total": 3656
+            },
+            "Lei Tung": {
+                "total": 989
+            },
+            "South Horizons": {
+                "total": 978
+            }
+        }
+    },
+    "5km": {
+        "Islands": {
+            "AsiaWorld-Expo": {
+                "total": 79
+            },
+            "Tung Chung": {
+                "total": 85
+            },
+            "Airport": {
+                "total": 80
+            },
+            "Disneyland Resort": {
+                "total": 177
+            }
+        },
+        "Kwai Tsing": {
+            "Tsing Yi": {
+                "total": 1240
+            },
+            "Lai King": {
+                "total": 2450
+            },
+            "Kwai Hing": {
+                "total": 1793
+            },
+            "Kwai Fong": {
+                "total": 1936
+            }
+        },
+        "Yau Tsim Mong": {
+            "Kowloon": {
+                "total": 13490
+            },
+            "Mong Kok East": {
+                "total": 11029
+            },
+            "Hung Hom": {
+                "total": 13803
+            },
+            "Prince Edward": {
+                "total": 10644
+            },
+            "Mong Kok": {
+                "total": 12791
+            },
+            "Yau Ma Tei": {
+                "total": 12970
+            },
+            "East Tsim Sha Tsui": {
+                "total": 13701
+            },
+            "Olympic": {
+                "total": 13101
+            },
+            "Tsim Sha Tsui": {
+                "total": 13650
+            },
+            "Austin": {
+                "total": 13543
+            },
+            "Jordan": {
+                "total": 13582
+            }
+        },
+        "Tsuen Wan": {
+            "Sunny Bay": {
+                "total": 192
+            },
+            "Tsuen Wan West": {
+                "total": 1229
+            },
+            "Tsuen Wan": {
+                "total": 1227
+            },
+            "Tai Wo Hau": {
+                "total": 1272
+            }
+        },
+        "North": {
+            "Lo Wu": {
+                "total": 146
+            },
+            "Sheung Shui": {
+                "total": 187
+            },
+            "Fanling": {
+                "total": 267
+            }
+        },
+        "Tai Po": {
+            "Tai Wo": {
+                "total": 1585
+            },
+            "Tai Po Market": {
+                "total": 3278
+            }
+        },
+        "Sha Tin": {
+            "University": {
+                "total": 3900
+            },
+            "Fo Tan": {
+                "total": 3888
+            },
+            "Sha Tin": {
+                "total": 3923
+            },
+            "Tai Wai": {
+                "total": 2966
+            },
+            "Wu Kai Sha": {
+                "total": 1939
+            },
+            "Ma On Shan": {
+                "total": 1990
+            },
+            "Heng On": {
+                "total": 2064
+            },
+            "Tai Shui Hang": {
+                "total": 2594
+            },
+            "Shek Mun": {
+                "total": 3940
+            },
+            "City One": {
+                "total": 3902
+            },
+            "Sha Tin Wai": {
+                "total": 4018
+            },
+            "Che Kung Temple": {
+                "total": 2436
+            },
+            "Hin Keng": {
+                "total": 5515
+            }
+        },
+        "Kowloon City": {
+            "Kowloon Tong": {
+                "total": 9102
+            },
+            "Ho Man Tin": {
+                "total": 13471
+            },
+            "Kai Tak": {
+                "total": 9929
+            },
+            "Sung Wong Toi": {
+                "total": 8726
+            },
+            "To Kwa Wan": {
+                "total": 11172
+            },
+            "Whampo": {
+                "total": 12224
+            }
+        },
+        "Central and Western": {
+            "Admiralty": {
+                "total": 12093
+            },
+            "Sheung Wan": {
+                "total": 12194
+            },
+            "Sai Ying Pun": {
+                "total": 8441
+            },
+            "HKU": {
+                "total": 7095
+            },
+            "Kennedy Town": {
+                "total": 6367
+            },
+            "Hong Kong": {
+                "total": 12630
+            },
+            "Exhibition Centre": {
+                "total": 12832
+            },
+            "Central": {
+                "total": 12020
+            }
+        },
+        "Yuen Long": {
+            "Lok Ma Chau": {
+                "total": 111
+            },
+            "Kam Sheung Road": {
+                "total": 9394
+            },
+            "Yuen Long": {
+                "total": 8669
+            },
+            "Long Ping": {
+                "total": 8563
+            },
+            "Tin Shui Wai": {
+                "total": 8600
+            }
+        },
+        "Eastern": {
+            "Heng Fa Chuen": {
+                "total": 2516
+            },
+            "Shau Kei Wan": {
+                "total": 2712
+            },
+            "Sai Wan Ho": {
+                "total": 2797
+            },
+            "Tai Koo": {
+                "total": 8323
+            },
+            "Quarry Bay": {
+                "total": 9137
+            },
+            "North Point": {
+                "total": 11043
+            },
+            "Fortress Hill": {
+                "total": 13241
+            },
+            "Chai Wan": {
+                "total": 1784
+            }
+        },
+        "Wan Chai": {
+            "Tin Hau": {
+                "total": 12569
+            },
+            "Causeway Bay": {
+                "total": 11633
+            },
+            "Wan Chai": {
+                "total": 12038
+            }
+        },
+        "Sai Kung": {
+            "Tiu Keng Leng": {
+                "total": 2337
+            },
+            "Po Lam": {
+                "total": 2282
+            },
+            "LOHAS Park": {
+                "total": 1731
+            },
+            "Hang Hau": {
+                "total": 0
+            }
+        },
+        "Kwun Tong": {
+            "Yau Tong": {
+                "total": 2531
+            },
+            "Lam Tin": {
+                "total": 3496
+            },
+            "Kwun Tong": {
+                "total": 6589
+            },
+            "Ngau Tau Kok": {
+                "total": 7249
+            },
+            "Kowloon Bay": {
+                "total": 8422
+            },
+            "Tseung Kwan O": {
+                "total": 2129
+            }
+        },
+        "Wong Tai Sin": {
+            "Choi Hung": {
+                "total": 9166
+            },
+            "Diamond Hill": {
+                "total": 9592
+            },
+            "Wong Tai Sin": {
+                "total": 10277
+            },
+            "Lok Fu": {
+                "total": 9771
+            }
+        },
+        "Sham Shui Po": {
+            "Shek Kip Mei": {
+                "total": 7827
+            },
+            "Nam Cheong": {
+                "total": 9788
+            },
+            "Mei Foo": {
+                "total": 4159
+            },
+            "Lai Chi Kok": {
+                "total": 7854
+            },
+            "Cheung Sha Wan": {
+                "total": 8074
+            },
+            "Sham Shui Po": {
+                "total": 7795
+            }
+        },
+        "Tuen Mun": {
+            "Siu Hong": {
+                "total": 1566
+            },
+            "Tuen Mun": {
+                "total": 1494
+            }
+        },
+        "Southern": {
+            "Ocean Park": {
+                "total": 2250
+            },
+            "Wong Chuk Hang": {
+                "total": 5900
+            },
+            "Lei Tung": {
+                "total": 5753
+            },
+            "South Horizons": {
+                "total": 6667
+            }
+        }
+    }
+}

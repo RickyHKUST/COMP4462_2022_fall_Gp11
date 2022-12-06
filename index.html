@@ -31,32 +31,48 @@
                         </ul>
                     </div>
                 </div>
-                <div id="checkboxForbus"></div>
+                <div id="checkboxForbus">
+                    <label for="map-items">Items to show on map:</label>
+                    <br>
+                    <div id="checkbox-container"></div>
+                </div>
                 <div id="slidecontainer">
-                        <label>Meters: </label>
-                        <input id="slider" type="range" min="100" max="500" value="100">
-                        <span id="m_value">100</span>
+                    <div class="hover-container">
+                        <p class="hover-target" tabindex="0">Meters:</p>
+                        <aside class="hover-popup">
+                          <p>Slide to adjust the transportations inside of the indicated radius of housing</p>
+                        </aside>
+                    </div>
+                    <input id="slider" type="range" min="100" max="500" value="100">
+                    <span id="m_value">100</span>
                 </div>
             </div>
             <button class="accordion">Statistics</button>
             <div class="accordion-child" id="statistics">
-                <h5>Options for scatter plot:</h5>
-                <div class="dropdown" style="z-index:2">
+                <h5>Plot options:</h5>
+                <div class="dropdown" style="z-index:3">
                     <label for="X-axis">X-axis:</label>
                     <div class="select" name="x-axis" id="x-axis">
                         <ul>
                         </ul>
                     </div>
                 </div>
-                <div class="dropdown" style="z-index:1">
+                <div class="dropdown" style="z-index:2">
                     <label for="Y-axis">Y-axis:</label>
                     <div class="select" name="y-axis" id="y-axis">
                         <ul>
                         </ul>
                     </div>
                 </div>
-                <div class="dropdown">
-                    <label for="Color">Color:</label>
+                <div class="dropdown" style="z-index:1">
+                    <label for="District">Specific District:</label>
+                    <div class="select" name="district" id="district">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown" style="z-index:0">
+                    <label for="Color">Color encoding:</label>
                     <div class="select" name="color" id="color">
                         <ul>
                         </ul>
