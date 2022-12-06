@@ -54,7 +54,7 @@ $("#barChart").click(()=>{
     $.getJSON('./assets/panel/data/buildingAroundMTR.json',(json)=>{
 
         i = 1;
-        labels = Array(5).fill().map(()=>`${i}km around the MTR station`);
+        labels = Array(5).fill().map((_, i)=>`${i+1}km around the MTR station`);
         barData = [];
         
         for(var km in json){
