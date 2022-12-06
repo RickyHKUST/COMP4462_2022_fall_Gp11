@@ -44,7 +44,7 @@ var optionForPlotY = [
     {value:"NearestMinibus",name:"Nearest minibus stop distance","type":"quantitative"},
     {value:"NearestMTR",name:"Nearest MTR station distance","type":"quantitative"},
     {value:"BuildingNumber",name:"Number of Building","type":"quantitative"},
-    {value:"BuildingNumberPerKm2",name:"Number of Building per km2","type":"quantitative"}
+    {value:"BuildingNumberPerKm2",name:"Number of Building per km^2","type":"quantitative"}
 ]
 
 var optionForPlotColor = [
