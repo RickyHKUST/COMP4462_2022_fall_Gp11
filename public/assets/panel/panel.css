@@ -291,3 +291,7 @@ div.plotOption > button{
     cursor: pointer;
     border: none;
 }
+
+.modalbutton{
+    padding-top: 25px;
+}
